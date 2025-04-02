@@ -1,0 +1,1000 @@
+[2025-03-28T22:34:30.505Z] <@U0105PTF3E2>: <https://docs.google.com/document/d/1aV9At0vyOmop9EydQwF6ia4Ea3QFxPeJqwaMtjl6gAI/edit?tab=t.0#heading=h.tbyc1yaxb04b>
+[2025-03-28T22:30:25.017Z] <@U0105PTF3E2>: last message
+[2025-03-28T22:14:47.817Z] <@U0105PTF3E2>: ya
+[2025-03-28T21:53:35.059Z] <@U0105PTF3E2>: resolving this as its a dupe
+[2025-03-28T21:22:54.083Z] <@U0105PTF3E2>: finally done i think
+[2025-03-28T21:22:49.845Z] <@U0105PTF3E2>: k
+[2025-03-28T21:16:58.330Z] <@U0105PTF3E2>: brt
+[2025-03-28T21:16:52.287Z] <@U0105PTF3E2>: sorry... back on with him
+[2025-03-28T21:13:01.542Z] <@U0105PTF3E2>: k. done
+[2025-03-28T21:10:51.670Z] <@U0105PTF3E2>: rip. Kiril has a question. on call w/ him atm
+[2025-03-28T21:05:10.783Z] <@U0105PTF3E2>: k. done
+[2025-03-28T20:55:25.022Z] <@U0105PTF3E2>: "real quick"...
+[2025-03-28T20:54:31.048Z] <@U0105PTF3E2>: i got food but am on the phone w/ my CC real quick
+[2025-03-28T20:33:26.377Z] <@U0105PTF3E2>: Sup?
+[2025-03-28T20:30:48.455Z] <@U0105PTF3E2>: Y
+[2025-03-28T20:30:44.112Z] <@U0105PTF3E2>: Trying to find food
+[2025-03-28T20:24:31.011Z] <@U0105PTF3E2>: just the start
+[2025-03-28T20:24:13.336Z] <@U0105PTF3E2>: that is great. we can def do it by then
+[2025-03-28T20:23:37.801Z] <@U0105PTF3E2>: Reach out to <@U04UD3CHNSJ|Vincent> when picking this up:\n"the actual work isn't hard but we need to document what these 70 things mean and that i think is nontrivial research"
+[2025-03-28T20:23:06.627Z] <@U0105PTF3E2>: Reach out to <@U04UD3CHNSJ|Vincent> before implementing to get some details:\n"slot state changed, we probably want to preflight the processing of this. get some metrics from the factory event and monitoring in place, get a sense of what the volume is before we enrich it in case it causes an issue"
+[2025-03-28T20:19:36.099Z] <@U0105PTF3E2>: <@U04UD3CHNSJ|Vincent>, is my understanding correct that these are mostly just enriching and exposing the new factory events? shouldn't be a huge effort right?
+[2025-03-28T20:17:52.548Z] <@U0105PTF3E2>: hey all, if anyone is looking for work to do, the next two priorities is\n<https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08KYN1KGNL>\nand\n<https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08JZ01F1FW>\ndoes anyone think they can pick either of these up early next week?
+[2025-03-28T20:16:46.246Z] <@U0105PTF3E2>: i can see if anyone can get them done by next week
+[2025-03-28T20:15:44.054Z] <@U0105PTF3E2>: what is the ask specifically?\n"by what date do we expect to resolve GRAF-956 and GRAF-958?"
+[2025-03-28T20:13:37.869Z] <@U0105PTF3E2>: but he changed it to this warning and "this is for debugging only"
+[2025-03-28T20:13:18.928Z] <@U0105PTF3E2>: im pretty sure its going to fire whenever its actually out of sync. so yeah i think so right?
+[2025-03-28T20:11:54.423Z] <@U0105PTF3E2>: yeah i think so. the normal_items in the new_order_placed pubsub should always be EVERYTHING amazon ordered. the reserved_items is what now reflects what we think was "available"
+[2025-03-28T20:11:09.108Z] <@U0105PTF3E2>: the "bypass reservation" feature made it so we send all of the items now. we don't care why anything is out of stock or even check if its unavailable
+[2025-03-28T20:10:19.178Z] <@U0105PTF3E2>: we do send it now
+[2025-03-28T19:55:07.439Z] <@U0105PTF3E2>: :rolling_on_the_floor_laughing:
+[2025-03-28T19:47:45.911Z] <@U0105PTF3E2>: just making sure
+[2025-03-28T19:47:43.256Z] <@U0105PTF3E2>: k
+[2025-03-28T19:47:25.055Z] <@U0105PTF3E2>: it was an api only change really so we are already doing it
+[2025-03-28T19:47:04.311Z] <@U0105PTF3E2>: not sure if you are purposefully telling them that its in RC
+[2025-03-28T19:46:47.150Z] <@U0105PTF3E2>: the "bypass reservations" is in prod now
+[2025-03-28T19:40:38.607Z] <@U0105PTF3E2>: good. i hate having time to prepare
+[2025-03-28T19:33:51.571Z] <@U0105PTF3E2>: is it just me or did this meeting just popped up?
+[2025-03-28T19:06:24.966Z] <@U0105PTF3E2>: this is interesting though... if inventory becomes unavailable before the order makes it to the factory, that wont count against our factory perfect (will be taken out of available inventory and not added to cart, so will not end up in reserved_items). but if the inventory becomes unavailable for the exact same reason any time after the order is sent to the factory... that does count against our metrics... this feels odd\n\nthis doesn't matter in the happy path obviously. since our partners aren't necessarily keeping perfect track of every inventory count, the reality is we will sometimes get orders for items that are legitimately out of stock and we have no chance to fulfill... but system availability affecting this feels... bad :man-shrugging:
+[2025-03-28T18:57:39.000Z] <@U0105PTF3E2>: not sure what this is but im too late and its merged lol. sorry for the delay
+[2025-03-28T18:52:53.678Z] <@U0105PTF3E2>: if we only send the reserved_items , then amazon should get item short events and be aware... we can't always give them everything they order and thats a reality... the point of the reserved_items is to give any interested parties (factory, data, etc) info on what we thought was available at that time. so, this means that our factory perfect rate should probably be measured against the reserved_items  maybe? obviously we want to do our best to get the customer everything they ordered (normal_items), but we can probably only fulfil the reserved_items
+[2025-03-28T18:41:23.787Z] <@U0105PTF3E2>: oh... whoops. andre already explained it... sorry
+[2025-03-28T18:39:53.093Z] <@U0105PTF3E2>: > <@U0105PTF3E2|Michael Lobato> to confirm, factory should only be trying to pack the reserved_items?\nabsolutely not. we should always shoot for packing all of the normal_items . the reserved_items is what the cloud thinks we have in stock but the normal_items is everything the partner's customer ordered and ultimately what we should shoot for fulfilling
+[2025-03-28T17:45:26.192Z] <@U0105PTF3E2>: :thread: How should we deal with pings for @ dashboard-team
+[2025-03-28T17:18:40.485Z] <@U0105PTF3E2>: <https://docs.google.com/document/d/1M7kP0jdtxK15w1FeAFm5UOIriojrtVXF0ko7WLbpm9I/edit?tab=t.0>
+[2025-03-28T17:14:08.350Z] <@U0105PTF3E2>: HoG also uses Daily item sales. the task creator can specify how much % of DIS to retain in the system
+[2025-03-28T17:07:19.309Z] <@U0105PTF3E2>: huge shout out to <@U015EQS4HT4|Zach Boone> for this... he had this idea so long ago and it couldn't have happened at a better time. Cloud systems are struggling because of mongo sync v1.. Additional shout out to <@U04UD3CHNSJ|Vincent> for taking on supporting this effort. thank you both very much
+[2025-03-28T17:03:25.784Z] <@U0105PTF3E2>: i also need to hop to swe sync
+[2025-03-28T16:48:04.827Z] <@U0105PTF3E2>: > Mismatching role groups between the Cognitos\nwhat does this mean? between the Cognito service/instance we are using and the  one we are switching to? as in, there is no work for Fulfil and we need to wait for the roles to be updated on the new service/instance?
+[2025-03-28T16:43:33.062Z] <@U0105PTF3E2>: is the product the one below?
+[2025-03-28T16:26:24.650Z] <@U0105PTF3E2>: i really thought i was going to be able to investigate it yesterday
+[2025-03-28T16:02:23.500Z] <@U0105PTF3E2>: Re ran these yesterday and most passed. Forgot to post here
+[2025-03-28T03:47:39.023Z] <@U0105PTF3E2>: interesting spikes though... <https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingress-prometheus-nextgen?orgId=1&var-controller_class=All&var-namespace=All&var-ingress=frapi-ai&var-ingress=frapi&var-pod=All&from=1743129053122&to=1743133613382&var-datasource=P7891B9228D7E2494|https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingres[…]9053122&amp;to=1743133613382&amp;var-datasource=P7891B9228D7E2494>
+[2025-03-28T03:46:56.863Z] <@U0105PTF3E2>: i guess it dropped... so ima wait a bit and see if its fine
+[2025-03-28T03:46:10.019Z] <@U0105PTF3E2>: wait... why does the heatmap look ok but the "average" graph next to it has spikes
+[2025-03-28T03:45:37.565Z] <@U0105PTF3E2>: wtf... latency looks good on this fucking heat map...
+[2025-03-28T03:42:33.795Z] <@U0105PTF3E2>: is the <https://fulfilsolutions.slack.com/archives/C02T7GDDUQ6/p1743132880789909|frapi latency> related to this?
+[2025-03-28T03:42:04.151Z] <@U0105PTF3E2>: i was just starting to see whats up w/ these alarms
+[2025-03-28T00:20:14.722Z] <@U0105PTF3E2>: :woohoo:
+[2025-03-28T00:01:23.434Z] <@U0105PTF3E2>: :+1:
+[2025-03-27T23:08:00.654Z] <@U0105PTF3E2>: popping out for my son's breakdancing class soon. still be online sans driving
+[2025-03-27T22:38:23.335Z] <@U0105PTF3E2>: only b/c amazon was distracted... don't you dare mistake that for them being more chill in general
+[2025-03-27T22:36:28.117Z] <@U0105PTF3E2>: so, whats the plan for this? we are waiting until next week to switch? is there are particular reason we don't want to do it asap? could we at least get an official date on the calendar so we are all aligned on exactly when to switch things up?
+[2025-03-27T22:27:45.106Z] <@U0105PTF3E2>: yes, partial short use case
+[2025-03-27T22:27:29.389Z] <@U0105PTF3E2>: different if substituted.
+[2025-03-27T21:41:23.779Z] <@U0105PTF3E2>: sure
+[2025-03-27T21:41:22.830Z] <@U0105PTF3E2>: idc
+[2025-03-27T21:38:22.236Z] <@U0105PTF3E2>: want to hop on a call and get it done sometime?
+[2025-03-27T21:14:45.819Z] <@U0105PTF3E2>: also, did you end up talking w/ scott?
+[2025-03-27T21:13:12.853Z] <@U0105PTF3E2>: when u doing release notes? today?
+[2025-03-27T20:15:45.843Z] <@U0105PTF3E2>: chucklefish is great. Almost everything they put out is gold. publishing and developing
+[2025-03-27T20:13:15.109Z] <@U0105PTF3E2>: I'm heartbroken buddy. there is no replacing the impact you bring to our culture. You will be sorely missed.
+[2025-03-27T19:48:05.866Z] <@U0105PTF3E2>: <https://issues.labcollab.net/browse/GRAF-958> = <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08JZ01F1FW>. same deal. these are pretty new tickets so we just haven't gotten around to it. working on other fires still.\
+[2025-03-27T19:46:39.557Z] <@U0105PTF3E2>: <https://issues.labcollab.net/browse/GRAF-956> = <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08KYN1KGNL>. no one has had time to pick up the task but its at the top of our list. liz has the new event mostly done i think and we need to start sending it to the partner
+[2025-03-27T19:05:31.944Z] <@U0105PTF3E2>: we have a change that will be merged shortly that will fix the reserved_items being used. alternatively, data could use a different data source (im not sure what though) to determine what was in stock at the time
+[2025-03-27T17:57:42.104Z] <@U0105PTF3E2>: weird... ill have to see why i didn't get pinged by pager duty. sorry. and thank you
+[2025-03-27T17:19:32.425Z] <@U0105PTF3E2>: wtfFFF is up w/ these e2e tests?!?
+[2025-03-27T17:12:41.906Z] <@U0105PTF3E2>: plz <https://fulfilsolutions.slack.com/archives/C02T7GDDUQ6/p1743010300582289|help>, im dumb
+[2025-03-27T16:56:05.418Z] <@U0105PTF3E2>: i don't think we should revert. before this change, we would have only sent 7 items to the factory and they still would have been shorted. this just exposed the issue we have had (thats why amazon has been complaining about the discrepancy between what we were saying the amount of shorts was, and what they were saying)
+[2025-03-27T16:23:30.496Z] <@U0105PTF3E2>: so we should table working on this for now, correct?
+[2025-03-27T16:21:43.474Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1743018150569849|order shorts> -
+[2025-03-27T08:41:27.079Z] <@U0105PTF3E2>: Wtf... Did you get pinged about this? I been dealing w/ pages all week and I missed this one?
+[2025-03-27T04:10:44.202Z] <@U0105PTF3E2>: Ill make a note and check tomorrow
+[2025-03-27T04:09:29.022Z] <@U0105PTF3E2>: It def wasn't one of the partner permissions used by az?
+[2025-03-27T04:07:44.369Z] <@U0105PTF3E2>: So we need to give someone permission to something?
+[2025-03-27T00:36:35.824Z] <@U0105PTF3E2>: maybe we can just do a free form input field? allow the user to type whatever they want and we filter it on on the backend?\n\nalso, i don't like a single timestamp. a time range seems much better to me.\n\nthoughts?
+[2025-03-27T00:29:52.402Z] <@U0105PTF3E2>: how are we going to create a filter for failure conditions? is this field freeform text or something? some of these are crazy like\n```Innermost message: MarsShuttle A1A Shuttle is in a position that would collide with a tray crossing through 663e8eb36544fee453a76715```\nand drastically different than something like\n```Innermost message: InductionLoopMoveAndStopOnSensor failed```\ndo we have a list of common words or tags or something that we could do some sort of include/regex match on?\n\nwasn't this the next part of <@U07J6SYC508|Nigel Bess>’s proposal where we build specific faults/failures or something?\n\nah, i think this<https://github.com/Fulfil0518/fulfil-dashboard/pull/1618| PR> is what i was thinking about? am i conflating two completely different features?...
+[2025-03-27T00:01:54.753Z] <@U0105PTF3E2>: <@U04EH1U6NAU|Matheus Pellegrini>, you were the one who just dealt w/ this junk right? amazon says they haven't been sending 0 but still had something happen w/ expiration date. could you take a look sometime and just see if we can see what happened? you don't have to fix it (unless its super obvious), just a quick investigation
+[2025-03-26T23:01:18.969Z] <@U0105PTF3E2>: <@U06M6D24NH4|Andre Luis Moreira> /<@U06NWFAAXFE|Christian Soto>, can you confirm this? if so, can you please create a bug ticket and try to fix asap?
+[2025-03-26T23:00:41.797Z] <@U0105PTF3E2>: i think we have a bug in the bypass reservation logic. based on these skipped reservations, we should have sent the factory a message with the normal_items having all of the items that amazon wanted, but a reserved_items that is missing 44039, instead we sent this\n```"reserved_items": [\n      {\n        "product_id": 11294,\n        "quantity": 2\n      },\n      {\n        "product_id": 21884,\n        "quantity": 1\n      },\n      {\n        "product_id": 22158,\n        "quantity": 1\n      },\n      {\n        "product_id": 24530,\n        "quantity": 1\n      },\n      {\n        "product_id": 26703,\n        "quantity": 1\n      },\n      {\n        "product_id": 29221,\n        "quantity": 1\n      },\n      {\n        "product_id": 44039,\n        "quantity": 2\n      }\n    ]```
+[2025-03-26T22:57:38.447Z] <@U0105PTF3E2>: so that lines up.
+[2025-03-26T22:57:29.145Z] <@U0105PTF3E2>: the time those were created was Wednesday, March 26, 2025 12:31:00.724 PM
+[2025-03-26T22:56:41.565Z] <@U0105PTF3E2>: this is promising. the stock item reservations does have two "skipped"
+[2025-03-26T22:53:12.804Z] <@U0105PTF3E2>: the main issue right now seems to be, cloud thought that item had inventory because the "reserved_items"of the message to factory doesn't match what we think actual inventory was
+[2025-03-26T22:52:08.839Z] <@U0105PTF3E2>: well, i mean, this is partly what we wanted... regardless of what cloud thinks inventory is, we are sending all of amazon's order to factory...
+[2025-03-26T22:51:00.526Z] <@U0105PTF3E2>: however, deleted at are all <= 3/18
+[2025-03-26T22:50:39.641Z] <@U0105PTF3E2>: this is CURRENT prod mysql so doesn't tell us what it looked like at that time exactly
+[2025-03-26T22:49:38.878Z] <@U0105PTF3E2>: 2 is active, 3 is packed
+[2025-03-26T22:48:31.953Z] <@U0105PTF3E2>: here is current stock items for that product in mysql
+[2025-03-26T22:47:38.532Z] <@U0105PTF3E2>: im pretty unfamiliar with it though
+[2025-03-26T22:47:31.692Z] <@U0105PTF3E2>: the inventory report should give us insights into if we thought we had any in the system
+[2025-03-26T22:47:12.174Z] <@U0105PTF3E2>: active means that it isn't offboarded by fulfil or by amazon... it just means we can induct and dispense and whatnot
+[2025-03-26T22:46:39.997Z] <@U0105PTF3E2>: yeah this is active in the catalog, not in the system
+[2025-03-26T22:45:48.638Z] <@U0105PTF3E2>: sorry, im just taking notes as i investigate.. idk what the issue could be
+[2025-03-26T22:45:30.960Z] <@U0105PTF3E2>: its active...
+[2025-03-26T22:45:05.803Z] <@U0105PTF3E2>: i think this is the entry for the product in the catalog\n```{"product_code":"B0BBWG5C2W","product_debug_id":44039,"eligibility":"active","name":"OLIPOP Prebiotic Soda Pop, Tropical Punch, A New Kind of Soda Packed with Prebiotics, Fiber, and Botanicals, Gluten Free, Vegan, GMO Free, 12oz","temperature_environment":"chilled","image_url":"<https://m.media-amazon.com/images/I/41sM+TMKi9L.jpg>","thumbnail_url":"<https://m.media-amazon.com/images/I/41sM+TMKi9L.jpg>","fulfillment_method":"dispense_to_bag","pad_time_days":1,"inspection_schedule":null,"expirable":true,"induction_modifications":[],"scannables":[{"code":"850027702049","type":"upc-a"},{"code":"0850027702049","type":"ean"},{"code":"00850027702049","type":"gtin"},{"code":"850027702049","type":"gtin"}],"sell_by":null,"tray_storage":{"category":"non_organics","layer_id":"layer_1"},"cartonization_group_category":"not-implemented","lane_configs":[{"max_quantity_per_lane":6,"tray_type":"138"}]}```
+[2025-03-26T22:43:12.077Z] <@U0105PTF3E2>: here is catalog <https://console.cloud.google.com/storage/browser/partner-catalog-report-prod/amazon-plm?invt=AbtGag&project=fulfil-web&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22,%22s%22:%5B(%22i%22:%22objectListDisplayFields%2FtimeCreated%22,%22s%22:%221%22),(%22i%22:%22displayName%22,%22s%22:%220%22)%5D))&prefix=&forceOnObjectsSortingFiltering=true|reports>. closest one to that time i think is <https://ff72157cdcbe134fa3f6867b4a35a687e781496d15b756e8538bfb1-apidata.googleusercontent.com/download/storage/v1/b/partner-catalog-report-prod/o/amazon-plm%2Fcatalog-report-0caeb289-5b99-4699-80eb-720165c5378d.json?jk=AbSFce6w9AMZU-RvNBEYUHPZkjL_NiOvw9Ng06ChczHBZBZ1Am2-U763jPbaB4fuR_wJaiR4E7f8aoAk41Keu5_lfW2RnbfBk89n_SAp3ce8NelZTc1YrLwR6m-XxsquaD32hebeIeJf4UzyS61ut0uxYi-67IcmbWonhIqnUxlz-9w5sa1vzKbr3icuvPoe4-4XF39b_mVXtG0VhNmnNUjqmeSBxXJ9LXdSStb0AFJsISyQKEhrBBZ48HdgdeUbwD6E_pIQnroVX50fUHfvl2M5Yy2LsX61bHrbxvqy9amr4SpWyweY-MvAOeIcXbqnQ4ZeOUpfSW6eFbz-N5nAmCdZamFck89CZouM8tAGVKBgbZTkZMWz2vkEk5S47vW5m4kqaE38hZ7Sbxkf8RJzQFB6lecD5rMZ6jiCSaXlZC4jSx3a3iqarflw7Pb3Tfl1anNezwcbD9XBXg2T7kXMfpACIWlzMeniD5o4QD03iss_h9taLCRqryc3Ng5KK4uQzSPbH3TMPgN6Fv05I8I3iSzHUd19e3_cuqvxPCwknrU7gQAqTTa60y2lMuzMyaYv-NxzT7arXta-QvL0IHoY5L9yJMnkB2fkOEEOZ4b2avb1X9zZa4O0xLJeQkP6xV-SCtYFaOj6YiQvG3xRMZApJtDeEUy9BfT5k62LeYkWx0hVC5k6fkTAO0KTVYgtmEuZOVb0xVxI9KDXYNOZ1I1AU7tE70YuRfVh-xbgsaLtqzAncHJ3c9iAl4ECMku8L1owF32yzV43V2iGvUVl_CynGgzx0pAdcCgm2ZAnWX2lSybdjSiwUVufbzmSA0suICBXuUaVH12UjZ5RthK0UVJ7VeE4WiKDmmN2X0OG41xYa2sXoerAKxqD0g3ZCEDVuEWkkTdqQncADX7FUpWXXA3t0LFlFPzw5WwMN770EO80BlU5tLNJGJ7-r8WjZzq2mtQwk97bFsblSRXn-TnJy_qXzbU7KgZ1LaCRrJfWmNSOKRgUlS3MEORj83jXtof465YOuYZqWoGlrQWMexmvgpngduOWXmbtZEvUY7vVlMz-iybI0yYMwxhOxGMVzhTEtuUCK0Il0XtPwDhgadE9wRlUPjz9fsWbbKiJIvOIZxM85LS3NkCLOns2Ua7cWK4ehtTgr2CWaSVGnk2yHbW0lR-sAk-juC4NR396HqHmQlHLIpIm4GzaTUBHq4gkPl7pfFHaZC-3QUDKOC9D-Tw88Q&isca=1|this one >
+[2025-03-26T22:41:09.599Z] <@U0105PTF3E2>: i don't see that product in the inventory report...
+[2025-03-26T22:41:01.268Z] <@U0105PTF3E2>: idk if these are the right timestamps but grabbing an inventory report from <https://console.cloud.google.com/storage/browser/partner-inventory-report-prod/amazon-plm;tab=objects?invt=AbtGag&project=fulfil-web&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22,%22s%22:%5B(%22i%22:%22objectListDisplayFields%2FtimeCreated%22,%22s%22:%221%22),(%22i%22:%22displayName%22,%22s%22:%220%22)%5D))&prefix=&forceOnObjectsSortingFiltering=true|here>, around what I think is the samish time <https://ff00e63fc4520c41d514f57af6273b0506399070870d0d7ae81aa10-apidata.googleusercontent.com/download/storage/v1/b/partner-inventory-report-prod/o/amazon-plm%2Fc75c30f1-368b-4b8e-a654-5945683bd0f9.json?jk=AbSFce4Pq0_J88VQ-GrsCe1AQMWFJ0AEClfYa41SHP98vhnxNYiq9TimnESv_TxYuKw8kq28RW0FK6ROtMEPJFhuoWwySldcKSsXRyII3u_ONQuh4q2mVgmEKP5jWIn7aUXEz99JQD7XkbrAtmPFP87KrNQJDS9_K-skxJeEMX6bwoofo_wF9asg1R0-oWdtrhZ1TP85aGhoKBEYIYVQAtL8iFviN223_hwpgpeweas4F00bdBL8B2JtM942sFR5XpSTxkZOOjsdm7K9jRmqYpydf_6z9wI7BwwqfE44c94op0NiNCBmVZw5DHaiJRYQEOyMcqGDM8isD5FB0VpPJjJzTCpL7s_f0h6zYTWqI9_UFfv8hP5N-kW8yYg3qs5pkymqKx0rH_u6Q8lRDzcnf88CZW6uitQqWiYTBBSVlZmoxTAJN27-dU-SYE6djgYfZL6TjlO-hGXVFpo2tio0Phn19Q1nt4Eglio2lnbTGph_rPaxU6SjQIEjLvlE-BHxdK94mKwzs81j44a0wr1lH9RLGk-G9tHzY-bXhj_Sw3piUHrh5STDf8bUtbgjYkG6xdl5GK1F32ILg7PJQiKXQh3PYauTFoDJEc20EGQC7nrK1B14VsZsAFaVouuHbcHyB7TNbxqlIqLm-Uw5b-zgBJ40f9CHE3TynHuy6UHN4b34GHiBks_v77xSzeFCuBjumF8YwKgT6oUIYm_m1QxrR0rF1FMeA_Q_wu0DqpLnEYcMp3p79EiQQFfEgHjasUj_b3NML9tMG2Zy4m6ftcvAdISdq_EzClLTetJ22uRvA2y20eH8luIuAlGUGmM19om48TbKMWuGKgRswn5vA0dSgaLuouzFX3EEcIfI0Bthcg-ovK09zyVOF1mRvW4WdOHoi7k0622oYtYWIX0u6zdp2p-MkWdoMiD71ebbYvcZXlOAqsc2nfPfOouw-PmJLHkHMhcl4ded13TgoqaNniQZm2WqxnScy-D0jUi39iWxbNCE_OTVzY4ohGv_3KbQJNAxU3WIhk5-QueFTYSfu-4wyssr5RcNqGqrBHA7nj_ILYYKX9R1dPQyxBUrlDTldhmMlRMCJ9HIl6HFT353DH4kATwZLoDUH3Q3hoIKgl7oVaGUJYY_in1LeVh1HWyw-yycR-aV_dE5zLySeplVi0US3teeWV5QnBylO5Y1lGGbJ__Irqr76wMXXNWngELuWfLU&isca=1|here>?
+[2025-03-26T22:39:45.914Z] <@U0105PTF3E2>: we are talkinga bout 44039 (B0BBWG5C2W ) right? Based on <https://grafana.fulfil-api.com/d/beg4y6ekj79q8b/partner-order-insights?orgId=1&var-DataSource=DOKYKGqV2&var-PartnerOrderId=112-6369692-3247423&var-FulfilOrderId=218926&var-fulfil_api_job=fulfil-prod%2Ffulfil-api&var-fulfil_api_batch_job=fulfil-prod%2Ffulfil-api-batch&from=now-6h&to=now|this> they ordered qty 2.
+[2025-03-26T22:32:58.669Z] <@U0105PTF3E2>: the earliest start pack time was 2025-03-26 12:31:00.880 . thats when we tried to add to cart and sent to the factory
+[2025-03-26T21:53:12.071Z] <@U0105PTF3E2>: • Release notes\n• ticket triage\n• Amazon QA questions support
+[2025-03-26T21:40:15.385Z] <@U0105PTF3E2>: can we (you and i) chat for just a bit about stuff that you do that will need to be obsorbed?
+[2025-03-26T21:40:00.490Z] <@U0105PTF3E2>: after the dev sync
+[2025-03-26T21:39:53.430Z] <@U0105PTF3E2>: i have a meeting w/ matt to talk about what we are going to do
+[2025-03-26T21:38:34.091Z] <@U0105PTF3E2>: did matt or anyone say how/what we are going to communicate w/ amazon?
+[2025-03-26T21:35:42.792Z] <@U0105PTF3E2>: nah, for this one it looks like for this order, amazon ordered 9 items and we thought there was 9 available
+[2025-03-26T19:48:14.432Z] <@U0105PTF3E2>: i have to hop off. sorry all
+[2025-03-26T19:03:02.243Z] <@U0105PTF3E2>: <https://docs.google.com/document/d/1ePgihHijVr-h8Smn1xAHiWPjVMhXbiL1dO0agWpqjzs/edit?tab=t.0>
+[2025-03-26T18:25:41.901Z] <@U0105PTF3E2>: works for me. but im remote on vpn
+[2025-03-26T18:25:04.850Z] <@U0105PTF3E2>: hmm,
+[2025-03-26T18:22:15.606Z] <@U0105PTF3E2>: You know how devastated i am buddy, but im happy for you.
+[2025-03-26T17:43:18.966Z] <@U0105PTF3E2>: ty
+[2025-03-26T17:37:11.677Z] <@U0105PTF3E2>: because <https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingress-prometheus-nextgen?orgId=1&refresh=1m&var-controller_class=All&var-namespace=All&var-ingress=frapi&var-pod=All&from=now-1h&to=now&var-datasource=P7891B9228D7E2494|this> dashboard doesn't seem to work for me
+[2025-03-26T17:36:54.989Z] <@U0105PTF3E2>: hey <@U02A7R0NLRX|Lev Lvovsky>, how can I see plm frapi metrics?
+[2025-03-26T17:36:17.214Z] <@U0105PTF3E2>: oh wait... that is for pio
+[2025-03-26T17:36:11.287Z] <@U0105PTF3E2>: 
+[2025-03-26T17:35:56.944Z] <@U0105PTF3E2>: <https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingress-prometheus-nextgen?orgId=1&refresh=1m&var-controller_class=All&var-namespace=All&var-ingress=frapi&var-pod=All&from=now-1h&to=now&var-datasource=prometheus-pioneer|this> dashboard for frapi shows zero 5xx
+[2025-03-26T17:33:06.332Z] <@U0105PTF3E2>: i can't recall a single time it has taken me anywhere useful
+[2025-03-26T17:32:56.663Z] <@U0105PTF3E2>: does this query link ever work?
+[2025-03-26T17:05:18.657Z] <@U0105PTF3E2>: sweet. ty
+[2025-03-26T16:56:05.100Z] <@U0105PTF3E2>: <@U0711JMAJTX|Keven de Oliveira>, what ended up happening with the vpn investigation? any meaningful findings/fixes made? <@U07H0RKJJPR|Alessandro Vaiz>, are we still encountering the 5xx/slow api requests on terminal and bot release?
+[2025-03-26T16:54:38.434Z] <@U0105PTF3E2>: got a question out here <https://fulfilsolutions.slack.com/archives/C06N29N5G9Y/p1743007826183519>
+[2025-03-26T16:52:25.981Z] <@U0105PTF3E2>: better picture
+[2025-03-26T16:50:26.183Z] <@U0105PTF3E2>: the sim our e2e tests run on has something going on that idk what to do about. <https://dashboard-partnerlatest-integration.np-fulfil-api.com/roverwatch?vendorstore=amazon-virtualplm>
+[2025-03-26T16:49:09.672Z] <@U0105PTF3E2>: i was going to run them again but...
+[2025-03-26T16:47:46.149Z] <@U0105PTF3E2>: 12/16 today
+[2025-03-26T16:32:12.422Z] <@U0105PTF3E2>: they still want that
+[2025-03-26T16:32:01.804Z] <@U0105PTF3E2>: no...
+[2025-03-26T16:28:08.792Z] <@U0105PTF3E2>: anyone know why people are having to reset password on dashboard? could it be related to our cognito changes?
+[2025-03-26T05:16:14.196Z] <@U0105PTF3E2>: fml
+[2025-03-26T05:16:12.122Z] <@U0105PTF3E2>: aaaaaaand.... its <https://fulfilsolutions.slack.com/archives/C02T7GDDUQ6/p1742965889835019|resolved> i guess...
+[2025-03-26T05:15:59.426Z] <@U0105PTF3E2>: 
+[2025-03-26T05:15:35.769Z] <@U0105PTF3E2>: uhh... hmm. just scaled up to 8 pods
+[2025-03-26T05:15:01.872Z] <@U0105PTF3E2>: <https://grafana.fulfil-api.com/d/Hv6HwXqVz/kubernetes-compute-resources-pods?orgId=1&refresh=1m&var-datasource=idKYKM3nk&var-cluster=&var-namespace=fulfil-prod&var-pod=artifact-repository-cleanup-prod-29040480-5rgvc&var-pod=fulfil-api-batch-66667f77dd-dttsn&var-pod=fulfil-api-batch-66667f77dd-p592g&var-pod=fulfil-api-batch-66667f77dd-rhwxf&var-pod=fulfil-api-batch-66667f77dd-sj2lh|4 batch pods> don't look tooo bad...
+[2025-03-26T05:13:12.124Z] <@U0105PTF3E2>: there is 4 batch pods
+[2025-03-26T05:10:31.886Z] <@U0105PTF3E2>: mysql is healthy
+[2025-03-26T05:09:05.387Z] <@U0105PTF3E2>: store is closed, tons of shit is estopped and down,
+[2025-03-25T23:24:38.277Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1742941865511429?thread_ts=1742934025.442609&amp;cid=C05JVN1UMFH>
+[2025-03-25T23:24:37.103Z] <@U0105PTF3E2>: question about how we are going to group them
+[2025-03-25T22:58:46.288Z] <@U0105PTF3E2>: Details on the changes that the factory is making is <https://fulfilsolutions.slack.com/archives/C0663STKJN6/p1742854897438869|here>
+[2025-03-25T21:44:12.828Z] <@U0105PTF3E2>: we could still have it put the text, and/or we could just make sure that it goes into the <#C02T7GDDUQ6> channel that has eyes on it.
+[2025-03-25T21:43:34.759Z] <@U0105PTF3E2>: oh well. some visibility is better than none. thanks for trying
+[2025-03-25T21:42:52.950Z] <@U0105PTF3E2>: we will 100% have to explain what they mean...
+[2025-03-25T21:32:35.493Z] <@U0105PTF3E2>: k sry
+[2025-03-25T21:18:53.298Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1742937514239729?thread_ts=1742934025.442609&cid=C05JVN1UMFH|https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1742937514239729?thread_ts=1742934025.442609&amp;cid=C05JVN1UMFH>
+[2025-03-25T21:18:34.239Z] <@U0105PTF3E2>: If a single slot changes its state, then an event will have one entry in the array but if a whole pack is estopped, an event (or multiple events depending on size of payload) will have an array with multiple slots
+[2025-03-25T21:11:37.831Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1742937075278899>
+[2025-03-25T21:11:15.278Z] <@U0105PTF3E2>: <S07MB153QDA> (and anyone who cares about orders). we have been hard at work trying to alleviate the issues with shorts. One major change for this effort was released yesterday in our "bypass reservations" feature. The cloud should now be sending ALL of the items that a partner requests to the factory, not just the ones we have reservations for. We worked with factory and data to ensure this doesn't impact order execution or metrics but its a pretty big change. We are still working on adding more visibility to the dashboard in terms of showing substitutions and corrections, but this should at least give us more confidence that the factory has the most information possible to fulfill an order should new inventory come available during pick.
+[2025-03-25T21:05:42.107Z] <@U0105PTF3E2>: i gotta take a shit real quick and grab a bite to eat. ill dm u in a bit
+[2025-03-25T21:05:10.819Z] <@U0105PTF3E2>: been dealing w/ all kinds of fun shit all day
+[2025-03-25T21:05:04.989Z] <@U0105PTF3E2>: np man
+[2025-03-25T20:20:25.442Z] <@U0105PTF3E2>: <@W01AHL4E882> and <@U03B31814Q2>, for the StorageStackSlotStateChangedEvent - What do you think about us creating a new event that basically has an array/collection of slots? it will have pretty much the same data as the existing StorageStackSlotStateChangedEvent but it will have multiple slots at a time. if too many slots change state at once, we would group it into multiple events all around the same time. Of course, before we move forward with the final implementation we will run the exact schema by you, but we just want to understand if you think this approach will work.
+[2025-03-25T19:46:47.938Z] <@U0105PTF3E2>: yeah im around
+[2025-03-25T19:25:19.396Z] <@U0105PTF3E2>: also, are we batching it like zach is for the stockitem? there is a size limit on the gcp pubsub event and we want to make sure we don't exceed that.
+[2025-03-25T19:23:15.294Z] <@U0105PTF3E2>: or is the plan to batch it internally and shit out individual events to the partner?
+[2025-03-25T19:22:46.207Z] <@U0105PTF3E2>: did we run the event/schema by amazon?
+[2025-03-25T19:09:41.960Z] <@U0105PTF3E2>: ah ok. that explains why i couldn't find anything. was looking in the wrong spot. thanks Keven
+[2025-03-25T19:02:46.258Z] <@U0105PTF3E2>: oh, if you refresh, i think its back?
+[2025-03-25T19:02:17.312Z] <@U0105PTF3E2>: so i think the requests just aren't even making it there?
+[2025-03-25T19:02:07.228Z] <@U0105PTF3E2>: the network tab in the browser doesn't have any response info from frapi
+[2025-03-25T19:01:34.049Z] <@U0105PTF3E2>: im still investigating and still confused.\nbased on <https://grafana.fulfil-api.com/d/Hv6HwXqVz/kubernetes-compute-resources-pods?orgId=1&refresh=1m&var-datasource=BdKLFMq7k&var-cluster=&var-namespace=fulfil-prod&var-pod=frapi-759887846b-9pcnw&var-pod=frapi-759887846b-mp962&var-pod2=frapi-v145-ptvzf&var-pod3=frapi-v146-ffttj&from=now-1h&to=now|this>, i THINK frapi is overall healthy
+[2025-03-25T18:56:30.747Z] <@U0105PTF3E2>: idk if thats related. we can create a new thread
+[2025-03-25T18:54:36.413Z] <@U0105PTF3E2>: ah sorry. i didn't see its been a while. i just assumed it was related
+[2025-03-25T18:53:33.158Z] <@U0105PTF3E2>: BQ related?
+[2025-03-25T18:52:44.674Z] <@U0105PTF3E2>: these errors make any sense to you <@U02HZSV4EL8|Liz Howard>?\n```{\n  "@t": "2025-03-25T16:00:01.8884757Z",\n  "@mt": "[500]: Unhandled Exception occurred. Unable to process the request.",\n  "@l": "Error",\n  "@x": "System.NullReferenceException: Object reference not set to an instance of an object.\n   at Fulfil.Libs.Data.Logging.ItemSnapshot..ctor(Item item, DateTime snapshotTime) in /code/src/Fulfil.Libs/Data/Logging/ItemSnapshot.cs:line 161\n   at Fulfil.FactoryRestApi.Controllers.BigQueryController.<>c__DisplayClass1_0.<GetItemsSnapshotByFilters>b__1(Item i) in /code/src/Fulfil.FactoryRestApi/Controllers/BigQueryController.cs:line 57\n   at System.Linq.Enumerable.SelectListIterator`2.Fill(ReadOnlySpan`1 source, Span`1 destination, Func`2 func)\n   at System.Linq.Enumerable.SelectListIterator`2.ToList()\n   at Fulfil.FactoryRestApi.Controllers.BigQueryController.GetItemsSnapshotByFilters(String typedFilters, Boolean returnJson) in /code/src/Fulfil.FactoryRestApi/Controllers/BigQueryController.cs:line 57\n   at lambda_method5884(Closure, Object, Object[])\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\n--- End of stack trace from previous location ---\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()\n--- End of stack trace from previous location ---\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\n   at Prometheus.HttpMetrics.HttpRequestDurationMiddleware.Invoke(HttpContext context)\n   at Prometheus.HttpMetrics.HttpRequestCountMiddleware.Invoke(HttpContext context)\n   at Prometheus.HttpMetrics.HttpInProgressMiddleware.Invoke(HttpContext context)\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)\n   at OtelExceptionHandler.InvokeAsync(HttpContext httpContext) in /code/src/Fulfil.FactoryRestApi/Middleware/OtelExceptionHandler.cs:line 25\n   at Fulfil.FactoryRestApi.Middleware.TraceIdMiddleware.InvokeAsync(HttpContext context) in /code/src/Fulfil.FactoryRestApi/Middleware/TraceIdMiddleware.cs:line 27\n   at AutoWrapper.Base.WrapperBase.InvokeAsyncBase(HttpContext context, AutoWrapperMembers awm)",\n  "SourceContext": "AutoWrapper.AutoWrapperMiddleware",\n  "RequestId": "0HNBB0BQM0JG5:00000001",\n  "RequestPath": "/bigquery/items-snapshot",\n  "ConnectionId": "0HNBB0BQM0JG5"\n}```
+[2025-03-25T18:51:07.070Z] <@U0105PTF3E2>: maybe <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22btl%22%3A%7B%22datasource%22%3A%22DOKYKGqV2%22%2C%22queries%22%3A%5B%7B%22refId%22%3A%22A%22%2C%22expr%22%3A%22%7Bapp_kubernetes_io_name%3D%5C%22frapi%5C%22%7D+%7C%3D+%60%5B500%5D%60%22%2C%22queryType%22%3A%22range%22%2C%22datasource%22%3A%7B%22type%22%3A%22loki%22%2C%22uid%22%3A%22DOKYKGqV2%22%7D%2C%22editorMode%22%3A%22builder%22%7D%5D%2C%22range%22%3A%7B%22from%22%3A%22now-3h%22%2C%22to%22%3A%22now%22%7D%7D%7D&orgId=1|these> are the correct logs
+[2025-03-25T18:50:14.180Z] <@U0105PTF3E2>: im confused. <https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingress-prometheus-nextgen?orgId=1&refresh=1m&var-controller_class=All&var-namespace=All&var-ingress=frapi&var-pod=All&from=now-1h&to=now&var-datasource=prometheus-pioneer|pio frapi> looks healthy?
+[2025-03-25T18:49:42.000Z] <@U0105PTF3E2>: what did we change?
+[2025-03-25T18:46:52.505Z] <@U0105PTF3E2>: all frapi requests failing
+[2025-03-25T18:45:14.231Z] <@U0105PTF3E2>: that roverwatch?
+[2025-03-25T18:01:39.127Z] <@U0105PTF3E2>: i have another meeting
+[2025-03-25T17:26:21.438Z] <@U0105PTF3E2>: Bjorn and Nigel have been complaining about sims in <#C0291DY4SAU> a bunch recently. Especially when trying to run HOG which runs on batch...
+[2025-03-25T17:22:00.345Z] <@U0105PTF3E2>: Check the associated thread and see if the discussion there has fixed the issue.
+[2025-03-25T17:18:40.444Z] <@U0105PTF3E2>: hmm... it looks like a bunch of these event enrichment failures are for dispense events in pioneer that don't have an order. i am pretty sure the dispenseevent mysql table requires an order id, but the factory definitely does do some dispense testing that isn't related to any order.
+[2025-03-25T17:08:54.886Z] <@U0105PTF3E2>: im running the tests against partnerlatest rn
+[2025-03-25T17:08:41.818Z] <@U0105PTF3E2>: didn't see your message
+[2025-03-25T16:30:46.959Z] <@U0105PTF3E2>: <@U07H0RKJJPR|Alessandro Vaiz>, this is a good example of the extra clarity we need on orders in dashboard
+[2025-03-25T16:29:59.379Z] <@U0105PTF3E2>: <@U08046TFEJC|Steve Steinmetz>, to answer your question, they ordered 12 and then did a correction.
+[2025-03-25T16:29:29.735Z] <@U0105PTF3E2>: thanks guys
+[2025-03-25T16:29:27.154Z] <@U0105PTF3E2>: anyway... ill figure this out
+[2025-03-25T16:29:16.668Z] <@U0105PTF3E2>: why doesn't this work then meta_url =~ `/partner/v1/orders`
+[2025-03-25T16:28:24.962Z] <@U0105PTF3E2>: this worked a swear...
+[2025-03-25T16:28:19.958Z] <@U0105PTF3E2>: oooh
+[2025-03-25T16:28:00.400Z] <@U0105PTF3E2>: why doesn't <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22sc0%22%3A%7B%22datasource%22%3A%22DOKYKGqV2%22%2C%22queries%22%3A%5B%7B%22datasource%22%3A%7B%22type%22%3A%22loki%22%2C%22uid%22%3A%22DOKYKGqV2%22%7D%2C%22editorMode%22%3A%22code%22%2C%22expr%22%3A%22%7Bjob%3D%5C%22fulfil-prod%2Ffulfil-api%5C%22%7D+%7C%7E+%60%28111-1341789-2625819%7C218368%29%60+%7C%3D+%60external_order_id%60+%7C+json+%7C+meta_method+%3D+%60PUT%60+%7C+meta_url+%3D+%60%2Fpartner%2Fv1%2Forders%60%22%2C%22hide%22%3Afalse%2C%22queryType%22%3A%22range%22%2C%22refId%22%3A%22B%22%7D%5D%2C%22range%22%3A%7B%22from%22%3A%221742799600000%22%2C%22to%22%3A%221742885999000%22%7D%7D%7D&orgId=1|this >find it?
+[2025-03-25T16:19:38.173Z] <@U0105PTF3E2>: who wrote this piece of shit
+[2025-03-25T16:19:27.692Z] <@U0105PTF3E2>: ah wtf... i have a section for that in my grafana dashboard... and nothing showed up
+[2025-03-25T16:18:30.074Z] <@U0105PTF3E2>: ah, ok. i thought we merged it earlier
+[2025-03-25T02:44:27.160Z] <@U0105PTF3E2>: And ping on call
+[2025-03-25T02:43:54.389Z] <@U0105PTF3E2>: Its gonna be on prod?
+[2025-03-25T02:41:45.151Z] <@U0105PTF3E2>: Oh cool
+[2025-03-25T01:22:37.340Z] <@U0105PTF3E2>: <https://grafana.fulfil-api.com/d/beg4y6ekj79q8b/partner-order-insights?orgId=1&var-DataSource=DOKYKGqV2&var-PartnerOrderId=111-1341789-2625819&var-FulfilOrderId=218368&var-fulfil_api_job=fulfil-prod%2Ffulfil-api&var-fulfil_api_batch_job=fulfil-prod%2Ffulfil-api-batch&from=1742799600000&to=1742885999000|here> is the dashboard I used to investigate. maybe <@U06NWFAAXFE|Christian Soto> or <@U06M6D24NH4|Andre Luis Moreira> can investigate in the morning why we sent 12 to the factory and see if this is a bug with the new "bypass reservation" stuff?
+[2025-03-25T01:20:54.639Z] <@U0105PTF3E2>: amazon ordered 11 things originally\n```[\n        {\n          "product_code": "B00104LSBU",\n          "quantity": 2,\n          "substitutions": []\n        },\n        {\n          "product_code": "B0CXZBCTFC",\n          "quantity": 1,\n          "substitutions": []\n        },\n        {\n          "product_code": "B08PMD7FC1",\n          "quantity": 2,\n          "substitutions": []\n        },\n        {\n          "product_code": "B01B2OVUAG",\n          "quantity": 1,\n          "substitutions": []\n        },\n        {\n          "product_code": "B074H67KDV",\n          "quantity": 4,\n          "substitutions": []\n        },\n        {\n          "product_code": "B074H67LRP",\n          "quantity": 1,\n          "substitutions": []\n        }\n      ]```\nbut we sent 12 to the factory...\n```[\n      {\n        "grade_id": 0,\n        "product_id": 25237\n      },\n      {\n        "grade_id": 0,\n        "product_id": 25237\n      },\n      {\n        "grade_id": 0,\n        "product_id": 41006\n      },\n      {\n        "grade_id": 0,\n        "product_id": 41006\n      },\n      {\n        "grade_id": 0,\n        "product_id": 25248\n      },\n      {\n        "grade_id": 0,\n        "product_id": 25248\n      },\n      {\n        "grade_id": 0,\n        "product_id": 12562\n      },\n      {\n        "grade_id": 0,\n        "product_id": 22053\n      },\n      {\n        "grade_id": 0,\n        "product_id": 22053\n      },\n      {\n        "grade_id": 0,\n        "product_id": 22053\n      },\n      {\n        "grade_id": 0,\n        "product_id": 22053\n      },\n      {\n        "grade_id": 0,\n        "product_id": 27335\n      }\n    ]```\nand then amazon requested a correction for\n```{\n          "product_code": "B074H67KDV",\n          "quantity": 1\n        }```\nso... im not sure why we sent 12 to the factory but the correction explains the 1 extra...
+[2025-03-25T01:12:09.589Z] <@U0105PTF3E2>: :eyes:
+[2025-03-25T00:45:31.446Z] <@U0105PTF3E2>: sorry i wasn't there
+[2025-03-25T00:45:29.227Z] <@U0105PTF3E2>: how did the amazon meeting go?
+[2025-03-25T00:17:21.689Z] <@U0105PTF3E2>: ```(venv) michaellobato@Michaels-MacBook-Pro-2 scripts % ./inventory-sync-tool.py --vendorstore amazon-plm --status=3\n2025-03-24 17:11:54,332 - inventory-sync-tool - INFO - Finding out-of-sync items w/ STATUS: 3 at Vendorstore amazon-plm\n2025-03-24 17:11:56,182 - inventory-sync-tool - INFO - No Items missing from Cloud DB\n2025-03-24 17:11:56,182 - inventory-sync-tool - INFO - Missing from Factory DB\n2025-03-24 17:11:56,182 - inventory-sync-tool - INFO -   {'67df7119e124bdddf56d1318'}\n(venv) michaellobato@Michaels-MacBook-Pro-2 scripts % ```
+[2025-03-24T23:13:51.914Z] <@U0105PTF3E2>: i hate everything now but mongo sync v1 especially
+[2025-03-24T23:05:51.404Z] <@U0105PTF3E2>: mongo sync v1 shitty code
+[2025-03-24T23:05:40.710Z] <@U0105PTF3E2>: looks like we are honing in on the issue
+[2025-03-24T23:05:28.183Z] <@U0105PTF3E2>: which means pio is affecting plm
+[2025-03-24T23:05:10.649Z] <@U0105PTF3E2>: and its taking bascially all of batch down
+[2025-03-24T23:05:01.078Z] <@U0105PTF3E2>: basically, some errors are happening in mongo sync b/c of some data coming from pio
+[2025-03-24T23:04:46.441Z] <@U0105PTF3E2>: we are debugging this mongo sync
+[2025-03-24T23:04:35.921Z] <@U0105PTF3E2>: idk
+[2025-03-24T23:04:34.620Z] <@U0105PTF3E2>: :grimacing:
+[2025-03-24T22:59:48.999Z] <@U0105PTF3E2>: there is a bunch of code around this about 6mo old <https://github.com/Fulfil0518/Fulfil-api/pull/3955/files>
+[2025-03-24T22:42:13.972Z] <@U0105PTF3E2>: this isn't one? <https://grafana.fulfil-api.com/goto/WxqKCITNR?orgId=1>
+[2025-03-24T22:04:38.401Z] <@U0105PTF3E2>: does anyone know whats going on or should we hop in a huddle?
+[2025-03-24T22:03:51.905Z] <@U0105PTF3E2>: wtf is going on
+[2025-03-24T22:03:49.663Z] <@U0105PTF3E2>: oh man
+[2025-03-24T21:54:10.147Z] <@U0105PTF3E2>: where should the ticket live for this? who should be responsible for owning these discussions and work?
+[2025-03-24T21:49:06.580Z] <@U0105PTF3E2>: tim was like "he isn't going to just join and leave in 1mo or something is he?"
+[2025-03-24T21:48:45.682Z] <@U0105PTF3E2>: oh damn lol
+[2025-03-24T21:48:14.646Z] <@U0105PTF3E2>: for <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1742851548382679|this>, im pretty sure this is a bug... I remember doing/reviewing a PR and a conversation came up after it was merged. eric H was like "uhh, there is probably an edge case w/ this" and we never got around to addressing it
+[2025-03-24T21:47:03.666Z] <@U0105PTF3E2>: "if he had waited 1 hour longer we wouldn't b/c we were about to send a offer to the candidate"
+[2025-03-24T21:46:45.725Z] <@U0105PTF3E2>: matt said today that they are probably going to have kevin back
+[2025-03-24T21:33:09.028Z] <@U0105PTF3E2>: it does seem like the best option on the table right now is batching many slot change events into less
+[2025-03-24T21:32:10.056Z] <@U0105PTF3E2>: <@U02HZSV4EL8|Liz Howard>, <@U04UD3CHNSJ|Vincent> <@U04KJK8N1HP|David Ing>, <@U04H49Y99V3|Jessica Guo> I can't remember where the hell that other conversation was sorry. It sounds like amazon wants the slot event for metrics on "storage availability". It seems like we use the slot data in a similar if not same way as they want to. it does seem like the best option will be to address the issues with the existing StorageStackSlotStateChangedEvent.
+[2025-03-24T20:28:20.167Z] <@U0105PTF3E2>: ty
+[2025-03-24T20:27:16.539Z] <@U0105PTF3E2>: im confused but also have an interview in 3 min
+[2025-03-24T20:14:26.085Z] <@U0105PTF3E2>: plm inventory
+[2025-03-24T20:04:43.375Z] <@U0105PTF3E2>: classic...
+[2025-03-24T18:44:57.784Z] <@U0105PTF3E2>: so a new sim spinning up had mongo sync crush mysql and everything failes?
+[2025-03-24T18:42:25.292Z] <@U0105PTF3E2>: 2025-03-24 08:46:27.257 end: 5/15 ok :sob:
+[2025-03-24T18:26:10.796Z] <@U0105PTF3E2>: but aside from stuff like that... im with thomas.
+[2025-03-24T18:24:42.346Z] <@U0105PTF3E2>: we could use a very directed light to light up the lane they need to be adding to
+[2025-03-24T18:24:15.812Z] <@U0105PTF3E2>: I don't see how we make things any more clear to users without either sacrificing speed or making hardware changes
+[2025-03-24T18:03:11.146Z] <@U0105PTF3E2>: oof...
+[2025-03-24T17:35:18.166Z] <@U0105PTF3E2>: like 2-3 at most...
+[2025-03-24T17:35:12.509Z] <@U0105PTF3E2>: we haven't been on k8s for 4 years...
+[2025-03-24T17:35:05.283Z] <@U0105PTF3E2>: again w/ the literally...
+[2025-03-24T17:34:28.667Z] <@U0105PTF3E2>: fml
+[2025-03-24T17:34:23.824Z] <@U0105PTF3E2>: Eric H: "literally never"
+[2025-03-24T17:19:20.189Z] <@U0105PTF3E2>: they (amazon associates) don't give a fuck... literally no game will make them be better
+[2025-03-24T17:17:32.676Z] <@U0105PTF3E2>: literally anything we propose for factory kristina is just like "no... cant be done"
+[2025-03-24T17:16:57.083Z] <@U0105PTF3E2>: i love how this HAS to be a dashboard fix
+[2025-03-24T17:16:47.421Z] <@U0105PTF3E2>: lmfao
+[2025-03-24T16:20:50.976Z] <@U0105PTF3E2>: I created a ticket for this. we can probably fix it soon
+[2025-03-24T16:20:34.546Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08K5KMQEPL>
+[2025-03-21T21:12:01.455Z] <@U0105PTF3E2>: Just wanted to let u know i made the ticket and put it p1
+[2025-03-21T21:11:41.978Z] <@U0105PTF3E2>: Find out why
+[2025-03-21T19:47:53.682Z] <@U0105PTF3E2>: did we experience any other event shenanigans like mongo sync v2 out of sync? im tyring to think of ways to determine if its somehow systemic (all events can be dropped) or some error related to this event
+[2025-03-21T19:33:55.901Z] <@U0105PTF3E2>: as mentioned <https://fulfilsolutions.slack.com/archives/C0835ADBNU9/p1742576170382799?thread_ts=1742407631.962099&cid=C0835ADBNU9|here>, this is something we are actively trying to fix. It has been part of our long standing 5xx investigation and is due to api > factory communication issues. We think this is VPN related but are working hard to resolve it. sorry guys
+[2025-03-21T19:27:00.532Z] <@U0105PTF3E2>: i think we are dropping events... eg. we did not send amazon all of the order-status-updated events for that order...
+[2025-03-21T19:26:17.390Z] <@U0105PTF3E2>: this is the ticket i mentioned at standup <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08KF82LF7A>
+[2025-03-21T19:16:54.985Z] <@U0105PTF3E2>: For those interested, cloud started a conversation about scalability concerns. I feel like this is a big and difficult topic to reason about so I wanted to scope the conversation to cloud only for now. I created this <https://docs.google.com/document/d/1ePgihHijVr-h8Smn1xAHiWPjVMhXbiL1dO0agWpqjzs/edit?tab=t.0#heading=h.tbyc1yaxb04b|doc> for brainstorming and discussing. We had a meeting today to discuss but only got through a fraction of the topics. we are going to continue to meet and discuss next week.
+[2025-03-21T18:03:12.798Z] <@U0105PTF3E2>: <https://docs.google.com/document/d/1ePgihHijVr-h8Smn1xAHiWPjVMhXbiL1dO0agWpqjzs/edit?tab=t.0>
+[2025-03-21T17:44:49.294Z] <@U0105PTF3E2>: fyi, i am out in the afternoon because we are traveling for my daughter's state gymnastics competition
+[2025-03-21T17:36:31.143Z] <@U0105PTF3E2>: well, it happened on the 14th. not sure if that is after the aforementioned changes
+[2025-03-21T17:15:35.090Z] <@U0105PTF3E2>: <!here> we have a meeting to talk about scalability concerns scheduled for 45min from now. please add to this <https://docs.google.com/document/d/1ePgihHijVr-h8Smn1xAHiWPjVMhXbiL1dO0agWpqjzs/edit?tab=t.0#heading=h.tbyc1yaxb04b|doc> before we get into it
+[2025-03-21T17:09:39.627Z] <@U0105PTF3E2>: did you guys end up testing last night? sorry i didn't see this until just now. If not, can we schedule a test for next week? End of our monday, beginning of scott's tuesday.
+[2025-03-21T17:02:29.447Z] <@U0105PTF3E2>: our operations team has a process they run that might make this happen more often and I would like some data to inform them whether or not they should do it. Anyone able to give me feedback on this?
+[2025-03-21T16:56:10.382Z] <@U0105PTF3E2>: Thanks <@U023CNTCS7M>. This is related to a slew of timeout/5xx/slowness issues we are currently investigating. There are MANY tickets related to this so its really difficult to track but, here is one example of one of <https://issues.labcollab.net/browse/GRAF-930|them>. here is another "catchall" type <https://issues.labcollab.net/browse/GRAF-831|one> that is mostly related. We have made significant improvements across many of our APIs but these two terminal ones are specifically being targeted right now.
+[2025-03-21T16:46:14.038Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C0835ADBNU9/p1742520793523149?thread_ts=1742407631.962099&amp;cid=C0835ADBNU9>
+[2025-03-21T16:34:20.356Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C0835ADBNU9/p1742520793523149?thread_ts=1742407631.962099&cid=C0835ADBNU9|latency issue> related to alessandro's findings? I reached out to backend and they are hoping to help soon. definitely related to <https://fulfilsolutions.slack.com/archives/C02QFTWK8T1/p1742493376042579|this>
+[2025-03-21T16:19:01.986Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C06DHLMPFFV/p1742503940376799|missing events>
+[2025-03-21T00:50:12.574Z] <@U0105PTF3E2>: so we didn't send it to amazon?
+[2025-03-21T00:35:52.713Z] <@U0105PTF3E2>: yeah
+[2025-03-21T00:35:00.784Z] <@U0105PTF3E2>: so then its worse than i thought and we didn't send amazon the events?
+[2025-03-21T00:19:14.413Z] <@U0105PTF3E2>: and, the standardized_request structure is very.... flexible. it is just a json object in the mysql db so we COULD change it at any time. i wouldn't rely on it. its fine to use it for now though
+[2025-03-21T00:18:12.239Z] <@U0105PTF3E2>: well... technically the externalorderdetails is not going to change, but the information will be exposed in the new_order_placed pubsub and you won't have to go fishing through the externalorderdetails
+[2025-03-21T00:17:24.945Z] <@U0105PTF3E2>: but remember, this is going to be changing with the bypass reservation stuff we are going to be releasing next week
+[2025-03-21T00:11:46.335Z] <@U0105PTF3E2>: externalorderdetails.standardized_request.products is the list of products that a partner sends to us. this should indeed have everything that the partner requested. the product i think can have this shape\n```{  \n  substitutions: string[];\n  productCode: string;\n  quantity: number;\n  priceCharged: number; // not used by amazon\n  taxCharged: number;// not used by amazon\n}```\nso, this could be pretty different from the cart or the fulfil order representation because of substitutions and corrections
+[2025-03-21T00:04:19.930Z] <@U0105PTF3E2>: yeah, i can explain
+[2025-03-20T23:20:26.881Z] <@U0105PTF3E2>: no, i think our deployment is dogshit lol
+[2025-03-20T23:13:03.155Z] <@U0105PTF3E2>: maybe its worse than that? i wonder if some are getting double processed based on how many events show up in <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%220yp%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22,%22expr%22:%22%7Bjob%3D~%5C%22fulfil-prod%2Ffulfil-api%7Cfulfil-prod%2Ffulfil-api-batch%5C%22%7D%20%7C~%20%60%28113-6311990-0397017%7C215870%29%60%20%7C~%20%60order-status-updated%60%22,%22queryType%22:%22range%22,%22refId%22:%22A%22%7D%5D,%22range%22:%7B%22from%22:%221741945671049%22,%22to%22:%221741960399011%22%7D%7D%7D&orgId=1|this filter>?
+[2025-03-20T23:11:51.382Z] <@U0105PTF3E2>: i think we have a problem. not sure how big it is. based on my investigation <https://fulfilsolutions.slack.com/archives/C06DHLMPFFV/p1742512175839509?thread_ts=1742503940.376799&cid=C06DHLMPFFV|here>, i think cloud api is processing events. I thought the intent was to have the specific "batch" version of the api doing all of the partner event processing but im pretty convinced that fulfil-api is doing some...
+[2025-03-20T23:09:35.839Z] <@U0105PTF3E2>: sure enough... <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%220yp%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22,%22expr%22:%22%7Bjob%3D%5C%22fulfil-prod%2Ffulfil-api%5C%22%7D%20%7C~%20%60%28113-6311990-0397017%7C215870%29%60%20%7C~%20%60order-status-updated%60%22,%22queryType%22:%22range%22,%22refId%22:%22A%22%7D%5D,%22range%22:%7B%22from%22:%221741941329577%22,%22to%22:%221741961402072%22%7D%7D%7D&orgId=1|this filter >for api (not batch) finds my "missing" events...
+[2025-03-20T23:07:49.454Z] <@U0105PTF3E2>: I wonder if this means that the api is getting/processing events instead of batch...
+[2025-03-20T23:07:12.991Z] <@U0105PTF3E2>: oh shit... but <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%220yp%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22,%22expr%22:%22%7Bjob%3D%5C%22fulfil-prod%2Ffulfil-api-batch%5C%22%7D%20%7C~%20%60%28113-6311990-0397017%7C215870%29%60%20%7C~%20%60order-status-updated%60%22,%22queryType%22:%22range%22,%22refId%22:%22A%22%7D%5D,%22range%22:%7B%22from%22:%221741941329577%22,%22to%22:%221741961402072%22%7D%7D%7D&orgId=1|this one> doesn't...
+[2025-03-20T23:06:01.678Z] <@U0105PTF3E2>: hmm, <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%220yp%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22,%22expr%22:%22%7Bjob%3D~%5C%22fulfil-prod%2Ffulfil-api%7Cfulfil-prod%2Ffulfil-api-batch%5C%22%7D%20%7C~%20%60%28113-6311990-0397017%7C215870%29%60%20%7C~%20%60order-status-updated%60%22,%22queryType%22:%22range%22,%22refId%22:%22A%22%7D%5D,%22range%22:%7B%22from%22:%221741935600000%22,%22to%22:%221742021999000%22%7D%7D%7D&orgId=1|this> finds evens though
+[2025-03-20T22:59:28.653Z] <@U0105PTF3E2>: my panel above is just dogshit
+[2025-03-20T22:59:20.804Z] <@U0105PTF3E2>: oh... so wtf
+[2025-03-20T21:47:12.651Z] <@U0105PTF3E2>: oh nice
+[2025-03-20T21:31:29.621Z] <@U0105PTF3E2>: <@U03B31814Q2> and <@W01AHL4E882>, do you have time next week to hop on a call and talk through some of this with us? I am still a bit confused.
+[2025-03-20T21:18:07.286Z] <@U0105PTF3E2>: ```export type ExternalStorageStackSlotStateChangedEvent = ExternalBase &amp; {\n  event_type: ExternalEventType.STORAGE_STACK_SLOT_STATE_CHANGED;\n  state_change_reason: string;\n  storage_stack_id: string;\n  storage_stack_slot_index: string;\n  storage_stack_slot_state: 'available' | 'not_available' | 'unknown';\n  temperature_zone: TemperatureEnvironment;\n};```
+[2025-03-20T21:17:49.392Z] <@U0105PTF3E2>: ```export type StorageStackSlotStateChangedEvent = {\n    createdAt:                string;\n    eventType:                'StorageStackSlotStateChangedEvent';\n    facility_identifier:      string;\n    facilityStackId:          string;\n    state_change_reason:      string;\n    storage_stack_id:         string;\n    storage_stack_slot_index: string;\n    storage_stack_slot_state: StorageStackSlotState;\n    temperature_zone:         InitialEnvironment;\n}```
+[2025-03-20T20:55:36.230Z] <@U0105PTF3E2>: im pretty sure the time range is ok. i had extended and looked a many surrounding days but also the dashboard page has the order history dropdown showing some times
+[2025-03-20T20:53:48.193Z] <@U0105PTF3E2>: 113-6311990-0397017 is giving me trouble...
+[2025-03-20T20:53:33.199Z] <@U0105PTF3E2>: the last 3 orders (114-6405330-3113043, 114-1626635-9107402, 114-4251412-5211402) all have records of short events going out
+[2025-03-20T20:52:20.376Z] <@U0105PTF3E2>: im sure im doing something stupid here. anyone know why i can't find some data.\n<https://dashboard.fulfil.store/orders/order-details/215870|order 215870> is picked up. but based on the <https://grafana.fulfil-api.com/d/beg4y6ekj79q8b/partner-order-insights?orgId=1&var-DataSource=DOKYKGqV2&var-PartnerOrderId=113-6311990-0397017&var-FulfilOrderId=215870&var-fulfil_api_job=fulfil-prod%2Ffulfil-api&var-fulfil_api_batch_job=fulfil-prod%2Ffulfil-api-batch&from=1741903200000&to=1742021999000|order dashboard> and some more <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22pp8%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bnamespace%3D%5C%22fulfil-prod%5C%22,%20job%3D%5C%22fulfil-prod%2Ffulfil-api-batch%5C%22%7D%20%7C%3D%20%60order-status-updated%60%20%7C%3D%20%60113-6311990-0397017%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%221741946390000%22,%22to%22:%221741967999000%22%7D%7D%7D&orgId=1|targeted searching>, i can only see events sent to amazon for placed...
+[2025-03-20T20:38:57.569Z] <@U0105PTF3E2>: dashboard page shows it as picked up <https://dashboard.fulfil.store/orders/order-details/215870>
+[2025-03-20T20:38:33.268Z] <@U0105PTF3E2>: uhh... did we not emit events for this order...? <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22pp8%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bnamespace%3D%5C%22fulfil-prod%5C%22%7D%20%7C%3D%20%60order-status-updated%60%20%7C%3D%20%60113-6311990-0397017%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%221741935600000%22,%22to%22:%221742108399000%22%7D%7D%7D&orgId=1|https://grafana.fulfil-api.com/explore?schemaVersion=1&amp;panes=%7B%22pp8%22:%7B%22datasour[…]35600000%22,%22to%22:%221742108399000%22%7D%7D%7D&amp;orgId=1>
+[2025-03-20T20:27:44.807Z] <@U0105PTF3E2>: what are we looking for here?
+[2025-03-20T20:27:21.264Z] <@U0105PTF3E2>: im not sure what we need...
+[2025-03-20T20:27:15.306Z] <@U0105PTF3E2>: this short thing
+[2025-03-20T18:20:44.500Z] <@U0105PTF3E2>: cool. we both have comments on this. we will likely not make any code changes as a result of this ticket (since we all agree that the http codes are appropriate) but ty for creating it.
+[2025-03-20T18:08:37.083Z] <@U0105PTF3E2>: welp... 100% chance that some day in the future they bitch about this and we will take time to investigate and determine they fucked themselves and they WILL whine about it, but at least we got them to shut up for now.
+[2025-03-20T17:18:01.605Z] <@U0105PTF3E2>: did we ever find a cause of this?
+[2025-03-20T17:16:51.081Z] <@U0105PTF3E2>: did we ever end up testing again? <@W017GG59GCW> are you still the one to hit up for testing cogneto stuff?
+[2025-03-20T16:19:23.866Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1742484215616209>
+[2025-03-20T03:51:59.592Z] <@U0105PTF3E2>: ill look later if i can. we are doing kid bed time
+[2025-03-20T03:51:41.175Z] <@U0105PTF3E2>: i got paged about this. but by the time i got around to investigating, it was resolved
+[2025-03-20T03:05:35.302Z] <@U0105PTF3E2>: idk man... i know nothing... just merge i guess
+[2025-03-20T03:05:04.765Z] <@U0105PTF3E2>: i think i was thinking of this <https://github.com/Fulfil0518/Fulfil-api/pull/4466/files>
+[2025-03-20T03:04:40.999Z] <@U0105PTF3E2>: i... really don't like stock items... this shit is confusing as fuck
+[2025-03-20T03:04:22.258Z] <@U0105PTF3E2>: i guess that was sell_within_number_of_days
+[2025-03-20T02:56:07.384Z] <@U0105PTF3E2>: And now we are setting it to zero?
+[2025-03-20T02:54:49.325Z] <@U0105PTF3E2>: Wait... Wasnt this an issue with the catalog sync? They passed a zero for pad time and it caused us to set the exp to the induction date?
+[2025-03-20T00:17:35.523Z] <@U0105PTF3E2>: i was implying you were interviewing elsewhere, not that you were interviewing a candidate for working here
+[2025-03-20T00:16:39.967Z] <@U0105PTF3E2>: tell them you can't take the job and cancel
+[2025-03-20T00:15:21.377Z] <@U0105PTF3E2>: scheduled
+[2025-03-20T00:12:38.163Z] <@U0105PTF3E2>: or ask me to create a ticket and i can get someone on it
+[2025-03-20T00:12:21.206Z] <@U0105PTF3E2>: once we figure out a path forward, feel free to ping me on a PR <@U015EQS4HT4|Zach Boone>
+[2025-03-20T00:10:57.942Z] <@U0105PTF3E2>: honestly, i think im a bit naive on what we have available and what they want
+[2025-03-20T00:10:18.698Z] <@U0105PTF3E2>: lol. maybe we should chat sometime to come up w/ a gameplan?
+[2025-03-19T23:25:41.043Z] <@U0105PTF3E2>: i checked the event logs for the past week and its relatively even
+[2025-03-19T23:25:25.203Z] <@U0105PTF3E2>: maybe our get/bots endpoint is on the fritz?
+[2025-03-19T23:17:54.433Z] <@U0105PTF3E2>: a cursory glance at the log volume for terminal-bot-arrival seems like we have and it looks relatively consistent
+[2025-03-19T23:11:59.622Z] <@U0105PTF3E2>: this fucking purge thing... THEY asked for this shit didn't they?... they are the one that said we should mix expiration dates and cases n shit didnt they?
+[2025-03-19T23:10:57.916Z] <@U0105PTF3E2>: and i just couldn't fucking sleep... my brain was racing with stupid fucking work shit
+[2025-03-19T23:10:01.443Z] <@U0105PTF3E2>: last night, i actually got to bed at a decent time
+[2025-03-19T23:09:48.650Z] <@U0105PTF3E2>: im so very tired
+[2025-03-19T22:53:54.004Z] <@U0105PTF3E2>: :point_up:
+[2025-03-19T22:28:11.724Z] <@U0105PTF3E2>: I actually asked <@UNFQUGUS3|Tony> about this today. I believe we should be sending the item delta events every time an item is not available. if a stack or slot or anything causes an item to not be accessible, you should be getting events for that
+[2025-03-19T22:22:51.743Z] <@U0105PTF3E2>: i disagree with Vlad... the way he is saying it, it feels like he is saying that we can only use 409 for one error... but thats why we have a code... the HTTP response code is separate from the error code... we should be able to return the same HTTP response code for different errors if it makes sense...\nC.C. <@U04C3DEM4LF|Raynald - he-him - EDT> since you were talking about it on the call just now with them
+[2025-03-19T21:54:35.145Z] <@U0105PTF3E2>: maybe ill stop bugging you guys and just let you talk to him. i feel like im just confusing things
+[2025-03-19T21:54:13.631Z] <@U0105PTF3E2>: idfk..
+[2025-03-19T21:54:01.329Z] <@U0105PTF3E2>: we have MachineStateChangedEvent but the closest we have is MarsPack i think?
+[2025-03-19T21:51:41.998Z] <@U0105PTF3E2>: looks like he said "stack" would work instead?
+[2025-03-19T21:44:07.216Z] <@U0105PTF3E2>: instead i just depressed myself even more
+[2025-03-19T21:43:53.951Z] <@U0105PTF3E2>: i thought i could hop in and knock this out for us
+[2025-03-19T21:42:05.815Z] <@U0105PTF3E2>: i will actively be adding tech debt
+[2025-03-19T21:41:57.527Z] <@U0105PTF3E2>: any change i make now will not work for the future
+[2025-03-19T21:40:58.997Z] <@U0105PTF3E2>: i dunno what to do man...
+[2025-03-19T21:37:12.582Z] <@U0105PTF3E2>: :gun:
+[2025-03-19T21:37:09.112Z] <@U0105PTF3E2>: oh no... it takes a bot_id. we are going to have multiple bags per bot soon
+[2025-03-19T21:34:38.862Z] <@U0105PTF3E2>: nvm... not even going to meniton it
+[2025-03-19T21:34:14.977Z] <@U0105PTF3E2>: wtf man...
+[2025-03-19T21:31:21.880Z] <@U0105PTF3E2>: its going to be a bit gross
+[2025-03-19T21:31:09.560Z] <@U0105PTF3E2>: i was trying to "quickly" add in the order but... idk...
+[2025-03-19T21:30:54.896Z] <@U0105PTF3E2>: eric really just shit this MF out... this is the reason why i say amazon was good for us...
+[2025-03-19T21:30:40.800Z] <@U0105PTF3E2>: dude.. this pack confirmation api...
+[2025-03-19T21:06:48.794Z] <@U0105PTF3E2>: new record on how many times i can have the same conversation lmao. next time ill dm each of you individually, then a group, etc.
+[2025-03-19T21:06:11.637Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1742418356491089|posted it>
+[2025-03-19T21:05:56.491Z] <@U0105PTF3E2>: <@U03B31814Q2> and <@W01AHL4E882>, I know we've discussed StorageStackSlotStateChangedEvent, and I understand you're eager to get this data back. As I mentioned in a DM, the large number of slot state changes creates a heavy load on the factory system, so this event was disabled to maintain system stability.\nBefore diving into possible solutions, I'd like to understand the need for these events. How does Amazon currently use or plan to use this data, and what metrics or insights are you hoping to gain? We’re exploring whether an existing event or a new one might provide the information you need.\nC.C. <@U04UD3CHNSJ|Vincent> <@U02HZSV4EL8|Liz Howard>
+[2025-03-19T21:02:48.886Z] <@U0105PTF3E2>: if we know what they actually want, then maybe we can give them a less cumbersome event?
+[2025-03-19T21:02:32.978Z] <@U0105PTF3E2>: im sure there are things we CAN do to get them these events but, is that what we want? thats basically the gist of this
+[2025-03-19T21:01:51.420Z] <@U0105PTF3E2>: <@U04UD3CHNSJ|Vincent> <@U02HZSV4EL8|Liz Howard> - I am trying to respond to amazon about this StorageStackSlotStateChangedEvent event. They are questioning why it was disabled and how quickly we can get it back. here is what i was thinking about posting in <#C05JVN1UMFH>\n\n<@U03B31814Q2> and <@W01AHL4E882>, I know we've discussed StorageStackSlotStateChangedEvent, and I understand you're eager to get this data back. As I mentioned in a DM, the large number of slot state changes creates a heavy load on the factory system, so this event was disabled to maintain system stability.\nBefore diving into possible solutions, I'd like to understand the need for these events. How does Amazon currently use or plan to use this data, and what metrics or insights are you hoping to gain? We’re exploring whether an existing event or a new one might provide the information you need.\nC.C. <@U04UD3CHNSJ|Vincent> <@U02HZSV4EL8|Liz Howard>\n\nthoughts?
+[2025-03-19T20:58:58.299Z] <@U0105PTF3E2>: is this official?
+[2025-03-19T20:54:37.605Z] <@U0105PTF3E2>: created a guide to cloud on call <https://fulfilsolutions.slack.com/canvas/GLA8NHQDV?focus_section_id=temp:C:Abd86b2aac0d68c4027af17bff2f|here>. please review and provide feedback if you have any.
+[2025-03-19T20:26:35.399Z] <@U0105PTF3E2>: don't think i have a papertrail accnt. this is for FC logs right?
+[2025-03-19T19:57:08.139Z] <@U0105PTF3E2>: im just saying that there has been countless times like <https://issues.labcollab.net/browse/GRAF-796|this> (having a hard time finding examples so ill bring it up if i see it again) where amazon or even our own devs look at the inventory report, see a quantity and status:active and try to order it and our order goes straight to picked up or gets shorted. i had been given reasons why it wasn't 1to1 so i assumed it was just difficult to understand/nuanced. if thats not accurate ill surface it next time it happens.
+[2025-03-19T19:42:34.629Z] <@U0105PTF3E2>: i remember one time very specifically when i was on site at plm. amazon placed an order for something, they showed me the inventory report said there was like 14 active ones. we checked in rover watch and there was indeed 14 in the inventory locator and the explanation was something like the stack or pack or something was estopped or faulted. so definitely a while ago but, in i swear this has happened recently too
+[2025-03-19T19:41:05.748Z] <@U0105PTF3E2>: so maybe the inventory report isn't as up to date as the delta events or maybe they convey different information or maybe my info is out of date. but i know it at least used to happen a lot
+[2025-03-19T19:40:05.309Z] <@U0105PTF3E2>: amazon has complained a ton of times about the inventory report showing item counts for active things and them not dispensing/being shorted. often times the reason was because the item was somehow unreachable
+[2025-03-19T19:38:30.784Z] <@U0105PTF3E2>: isn't there a scenario where the item cannot be dispensed but the item itself isn't deactivated? something like a stack faults or something?
+[2025-03-19T19:37:48.711Z] <@U0105PTF3E2>: > we should always be sending events on any delta\nmeaning any time an item is deactivated?
+[2025-03-19T19:34:53.025Z] <@U0105PTF3E2>: like i said... its nuanced lol
+[2025-03-19T19:34:24.467Z] <@U0105PTF3E2>: i know there was something that happened, like a stack went down or something that didn't end up deactivating the items
+[2025-03-19T19:27:40.830Z] <@U0105PTF3E2>: idk if they are planning on keeping a 1to1 inventory snapshot, but also i dont know exactly when we emit the events. it depends on how the system behaves. eg. if an item is not dispensable but is not deactivated (i think an example is if the pack is estopped or somehow deactivated) then i don't think we send delta events. i think there is a lot of nuances like this to these events
+[2025-03-19T18:51:37.736Z] <@U0105PTF3E2>: We have a pattern for setting up the event subscription before we do things so we are guaranteed to get the event
+[2025-03-19T18:50:48.196Z] <@U0105PTF3E2>: So the event happened before we timed out?
+[2025-03-19T18:32:54.205Z] <@U0105PTF3E2>: i don't think so, no
+[2025-03-19T18:29:35.854Z] <@U0105PTF3E2>: but andre said that there was no ready event for the original request
+[2025-03-19T18:18:12.880Z] <@U0105PTF3E2>: did you put all the product codes in there for efficiency?
+[2025-03-19T18:15:23.104Z] <@U0105PTF3E2>: fyi, i deleted the partner order insights dashboard i created and will just use the one Zach is using for Dashboard <https://grafana.fulfil-api.com/d/beg4y6ekj79q8b/partner-order-insights?orgId=1|here>
+[2025-03-19T18:11:58.793Z] <@U0105PTF3E2>: catalog report not being generated at all is way worse than just a timeout :sob:
+[2025-03-19T18:11:29.528Z] <@U0105PTF3E2>: oof...
+[2025-03-19T18:10:36.566Z] <@U0105PTF3E2>: why on earth did this make me feel better...
+[2025-03-19T18:09:21.075Z] <@U0105PTF3E2>: did you post in <#C085HPK2S74> zach? idk if anyone pays attention there but that is our process
+[2025-03-19T18:08:11.154Z] <@U0105PTF3E2>: the plan is to send the factory everything that the partner ordered, not just the ones cloud thinks is "in stock". We are also going to add some additional data informing which items we think are in stock. this should allow for the factory to pack everything it can, but also allow data to know what we think we should have been actually able to fulfill
+[2025-03-19T18:06:48.622Z] <@U0105PTF3E2>: We have been calling this feature "bypass reservations" and it should land this week
+[2025-03-19T16:43:44.654Z] <@U0105PTF3E2>: StorageStackSlotStateChangedEvent
+[2025-03-19T16:43:01.396Z] <@U0105PTF3E2>: question <https://github.com/Fulfil0518/Fulfil.NET/pull/11224#issuecomment-2737348413>
+[2025-03-19T16:37:37.269Z] <@U0105PTF3E2>: idk man. i feel like vlad could either be asking innocent questions or fishing around for a different answer than other people are taking to him. in either case, if we present different numbers, then amazon will use the smaller of the two whenever they are discussing this with us and try to hold us to something. I would just tell him that 1. you don't have time to be digging up all these answers for him since you are trying to learn factory stuff (to get him off your back and stop him coming directly to you and interrupting your work) and 2. that matt is the one charged with putting together any project plan/estimates (so we present a unified answer and also prevent you wasting more time talking to him)
+[2025-03-19T16:23:09.224Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/fulfil-dashboard/pull/1613/files> - i had a few minutes between meetings yesterday and was able to get a super simple change for an ask from ops to put the external order id on the cloud order table
+[2025-03-19T04:37:31.111Z] <@U0105PTF3E2>: I have an idea but curious if you have a preferred way to proceed on this...
+[2025-03-19T04:35:57.299Z] <@U0105PTF3E2>: :angry:  this feels like such a waste of time and now he is just reaching out directly to you vs going through the established process... <@UCBMSR9MY>  is communicating with them about this i think and/or higher up.
+[2025-03-19T02:07:14.072Z] <@U0105PTF3E2>: I COULD have been more productive but meh
+[2025-03-19T02:07:00.800Z] <@U0105PTF3E2>: Ya, i dunno if it was worth messing with but i was having a bit of fun.
+[2025-03-19T01:33:58.621Z] <@U0105PTF3E2>: Ya lol
+[2025-03-19T01:06:06.070Z] <@U0105PTF3E2>: i didn't even tell it to do a bunch of stuff... it just takes off
+[2025-03-19T01:05:38.658Z] <@U0105PTF3E2>: its been saying "let me fix the typescript errors" and then just constantly generating code forever now lmao
+[2025-03-19T01:05:19.267Z] <@U0105PTF3E2>: its getting too deep
+[2025-03-19T01:05:16.162Z] <@U0105PTF3E2>: you are right...
+[2025-03-19T01:05:13.805Z] <@U0105PTF3E2>: holy fuck... the thing is off the rails lmao
+[2025-03-19T01:03:00.666Z] <@U0105PTF3E2>: oh yay, it said "were are having trouble" and gave me a retry button
+[2025-03-19T01:02:33.403Z] <@U0105PTF3E2>: but its in the middle of doing a bunch of shit lol
+[2025-03-19T01:01:53.870Z] <@U0105PTF3E2>: stupid robot isn't fast enough
+[2025-03-19T01:01:45.257Z] <@U0105PTF3E2>: oh man... i broke it... its stuck "generating"...
+[2025-03-19T01:00:44.061Z] <@U0105PTF3E2>: i can totally see why you are soo into it... being able to just have all the product shit in your head come to life without having to wait for dumb developers to do it... pretty damn amazing
+[2025-03-19T00:59:43.564Z] <@U0105PTF3E2>: like, making some fucking horrible design decisions, but... i can just oversee it SHITTING out code and be like "bro... did i start the interview? why the fuck isn't this db normalized" and it just SHITS out more code lol
+[2025-03-19T00:59:02.944Z] <@U0105PTF3E2>: its pretty close to being great. i mean... its still dumb as shit
+[2025-03-19T00:58:48.563Z] <@U0105PTF3E2>: so im having cursor/cloud build a lil dumb app to make prs against
+[2025-03-19T00:58:06.513Z] <@U0105PTF3E2>: and i have had this idea for 100 years and never done anything about it where you create PRs for an app and have interviewees go through the PR
+[2025-03-19T00:57:40.019Z] <@U0105PTF3E2>: i been wanting to fuck with something since you showed your stuff off
+[2025-03-19T00:57:29.495Z] <@U0105PTF3E2>: damn man... i actually cant wait till these LLMs get better
+[2025-03-18T23:44:34.339Z] <@U0105PTF3E2>: :man-shrugging:
+[2025-03-18T23:41:17.002Z] <@U0105PTF3E2>: i see it's gone now. what was the issue?
+[2025-03-18T23:34:00.687Z] <@U0105PTF3E2>: amazon needs someone to log into the last two terminals as those are the designated purge ones
+[2025-03-18T23:33:48.897Z] <@U0105PTF3E2>: all of the terminals were disabled (as indicated by the grey box around the blue node). so the bots cant go there. the 2 enabled right now are for orders ("pickup") so the purge bots cannot go there
+[2025-03-18T23:32:02.242Z] <@U0105PTF3E2>: ah, you COULD dig through the factory logs but idk what to look for. based on that purple line though, and the fact that the bot has a bag for that order, i would say its clear enough. no need to spend more time on it if you don't want
+[2025-03-18T23:30:42.867Z] <@U0105PTF3E2>: so yeah, looks like this is at least part of the issue
+[2025-03-18T23:30:35.706Z] <@U0105PTF3E2>: sorry, that order id does match the purge order franky mentioned
+[2025-03-18T23:30:01.898Z] <@U0105PTF3E2>: you can also see the order id on the bot, so we could go look at that order and see if its purge
+[2025-03-18T23:29:41.409Z] <@U0105PTF3E2>: confirm what? the bot does have a bag, you can confirm that by double clicking on the bot
+[2025-03-18T23:26:55.967Z] <@U0105PTF3E2>: <@U074XSSLU0G|Frankie>, can you have them log into a station for purge so that bot can come?
+[2025-03-18T23:26:39.956Z] <@U0105PTF3E2>: ah nice find. looks like the purge job didn't complete by the time the terminals were disabled
+[2025-03-18T21:42:51.384Z] <@U0105PTF3E2>: it will probably cover 90%+ of the cases wont it <@U03P6LT82Q4|John Biscay>?
+[2025-03-18T21:42:29.773Z] <@U0105PTF3E2>: manual pick + force repack has been the way we have solved most of this in the past at the pioneer location
+[2025-03-18T21:41:52.398Z] <@U0105PTF3E2>: yeah... other partners currently handle this at the pickup location but unfortunately this functionality was built after we made our tablet pickup app.
+[2025-03-18T20:46:57.179Z] <@U0105PTF3E2>: <@U04H49Y99V3|Jessica Guo> and <@U04KJK8N1HP|David Ing> had some questions about this so, before we move forward, please make sure we talk to them
+[2025-03-18T20:46:01.144Z] <@U0105PTF3E2>: I know the FO would do the test order and i think there is ramifications for handling it that way.
+[2025-03-18T20:34:38.341Z] <@U0105PTF3E2>: probably won't be used anywhere else so if we already have a test and don't need a factory, then def :+1: for deleting it
+[2025-03-18T20:34:06.755Z] <@U0105PTF3E2>: ah
+[2025-03-18T20:31:19.181Z] <@U0105PTF3E2>: This would require us to change our guards on test orders against partner stores though which is scary to me. Also, it means that DD will get events for orders they don't know about which could be very odd for their system
+[2025-03-18T20:29:20.250Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/Fulfil-api/pull/4498#discussion_r2001943966|one question> but not a huge deal
+[2025-03-18T20:25:23.447Z] <@U0105PTF3E2>: we also have a "force repack" option that is available to Fulfil operators. This is not an option for other partners because they can't handle an order transitioning out of the picked_up status, but if you don't have that requirement, then this could be an option
+[2025-03-18T20:22:25.530Z] <@U0105PTF3E2>: we do have a orders/:id/correction api that you can use to request items. i don't think we tested it on the vls system but it might just work. Aside from that, for the vls system we used to do "ops shops" that <@U03P6LT82Q4|John Biscay> is familiar with. i THINK there is a way to manually get the items out of the vls. but other than those ways, i don't know if we have any other options.
+[2025-03-18T18:43:18.675Z] <@U0105PTF3E2>: thanks. i just linked to both to give them even more reasons
+[2025-03-18T18:31:41.333Z] <@U0105PTF3E2>: if you agree, go ahead and do it
+[2025-03-18T18:31:28.822Z] <@U0105PTF3E2>: I think we should put this ticket in "done". I commented on the tickets and put them in QA ready
+[2025-03-18T18:25:24.939Z] <@U0105PTF3E2>: I marked the jira ticket as "qa ready". im going to done this ticket
+[2025-03-18T18:24:05.384Z] <@U0105PTF3E2>: <@U07H0RKJJPR|Alessandro Vaiz>, I commented on the jira ticket <https://issues.labcollab.net/browse/GRAF-938?focusedCommentId=40166118&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-40166118|here>. please add some counts of 503's like we talked about.
+[2025-03-18T17:25:53.533Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C089E7BJA9F/p1742245108391679?thread_ts=1740181657.308589&amp;cid=C089E7BJA9F>
+[2025-03-18T17:16:22.224Z] <@U0105PTF3E2>: No we dont
+[2025-03-18T17:07:58.416Z] <@U0105PTF3E2>: if we do break up the PR, we need to make sure that each piece makes sense individually. like, if one breaks something and we need to roll it back, the whole feature/all induction should be fine without that individual piece
+[2025-03-18T16:30:04.519Z] <@U0105PTF3E2>: <https://grafana.fulfil-api.com/d/befntdi9wrmrke/partner-order-insights-production?orgId=1>
+[2025-03-18T16:27:24.835Z] <@U0105PTF3E2>: so it will be unique
+[2025-03-18T16:27:10.806Z] <@U0105PTF3E2>: sequence_id is monotonically increasing across all events
+[2025-03-18T16:18:21.573Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1742229422833059>
+[2025-03-18T01:09:03.317Z] <@U0105PTF3E2>: The filter stuff is already done right? We should add a separate pr/ticket to get this first round out asap
+[2025-03-18T01:07:43.560Z] <@U0105PTF3E2>: A bit worried we didn't have tests that failed (at least intermittently)
+[2025-03-17T23:31:59.303Z] <@U0105PTF3E2>: vincent is a hero. figured out the bug
+[2025-03-17T23:16:05.210Z] <@U0105PTF3E2>: based on<https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22utu%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bjob%3D%5C%22fulfil-prod%2Ffulfil-api-batch%5C%22%7D%20%7C%3D%20%60order-product-shorted%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%221742208962743%22,%22to%22:%221742243693656%22%7D,%22panelsState%22:%7B%22logs%22:%7B%22logs%22:%7B%22visualisationType%22:%22logs%22%7D%7D%7D%7D%7D&orgId=1| this> query, we sometimes send the right code, and sometimes don't...
+[2025-03-17T23:05:15.411Z] <@U0105PTF3E2>: here i guess
+[2025-03-17T23:05:04.143Z] <@U0105PTF3E2>: yes plz
+[2025-03-17T23:04:25.777Z] <@U0105PTF3E2>: <@W017GG59GCW> said we can just set up testing directly with him for these <@U01DV0H4LQK|Eric Hernandez>
+[2025-03-17T23:02:33.868Z] <@U0105PTF3E2>: are you currently investigating? im going to look now that my meeting is over.
+[2025-03-17T22:59:26.683Z] <@U0105PTF3E2>: ah fuck... this is bad... they are already on our ass about the cloud deployment process and this bug is bad enough to tip the scale in their argument's favor
+[2025-03-17T22:53:07.217Z] <@U0105PTF3E2>: > for you team starting out I think if is better to have the bots from the same order use only 1 bay\nThis still doesn't guarantee you know when an order is done. but if anyone knows how to make reasoning about orders at pickup easier, its John and the ops team
+[2025-03-17T22:50:14.148Z] <@U0105PTF3E2>: seems bad right? am i missreading things here?
+[2025-03-17T22:49:13.699Z] <@U0105PTF3E2>: other than that, feel free to throw me on a meeting any time im free tomorrow
+[2025-03-17T22:48:56.072Z] <@U0105PTF3E2>: i am free 4-430 today
+[2025-03-17T22:45:09.628Z] <@U0105PTF3E2>: we sent amazon 4 short events... so i assume 4 were not accessible
+[2025-03-17T22:43:58.005Z] <@U0105PTF3E2>: like a pink dress shirt?
+[2025-03-17T22:43:43.102Z] <@U0105PTF3E2>: the guy sitting in the conference room?
+[2025-03-17T22:43:06.941Z] <@U0105PTF3E2>: uhh... <@U04EH1U6NAU|Matheus Pellegrini> and <@U015EQS4HT4|Zach Boone>, there has been some changes that went in for the "multiple product codes per product" issue right? is this a recent issue? I just realized 114-5194554-8120269 had short events with the wrong product_code ... <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22gbe%22%3A%7B%22datasource%22%3A%22DOKYKGqV2%22%2C%22queries%22%3A%5B%7B%22datasource%22%3A%7B%22type%22%3A%22loki%22%2C%22uid%22%3A%22DOKYKGqV2%22%7D%2C%22editorMode%22%3A%22code%22%2C%22expr%22%3A%22%7Bnamespace%3D%5C%22fulfil-prod%5C%22%2C+app_kubernetes_io_name%3D%5C%22fulfil-api-batch%5C%22%7D+%7C%7E+%60%28114-5194554-8120269%7C216495%29%60+%7C%3D+%60product_code%60+%7C+json+%7C+event_event_type+%3D+%60order-product-shorted%60%22%2C%22hide%22%3Afalse%2C%22queryType%22%3A%22range%22%2C%22refId%22%3A%22B%22%7D%5D%2C%22range%22%3A%7B%22from%22%3A%221742108400000%22%2C%22to%22%3A%221742281199000%22%7D%7D%7D&orgId=1|https://grafana.fulfil-api.com/explore?schemaVersion=1&amp;panes=%7B%22gbe%22%3A%7B%22dataso[…]0000%22%2C%22to%22%3A%221742281199000%22%7D%7D%7D&amp;orgId=1>
+[2025-03-17T22:38:37.983Z] <@U0105PTF3E2>: > Weird we can't we see ABIS attempts at those missed products\nWhat does this mean? <https://dashboard.fulfil.store/abis/order/216495|Here >is the ABIS page for that order. it looks like there are 20 dispenses. and based on the roverwatch card, we only actually fulfilled 20 of the 24 things. so abis is accurate?
+[2025-03-17T22:34:46.322Z] <@U0105PTF3E2>: its kind of a long explanation for most of these. im happy to hop on a call and explain
+[2025-03-17T22:30:52.414Z] <@U0105PTF3E2>: i hate how im am constantly put in this position
+[2025-03-17T22:30:34.658Z] <@U0105PTF3E2>: i HATE lying to people
+[2025-03-17T22:18:16.082Z] <@U0105PTF3E2>: fucking who among us isn't...
+[2025-03-17T22:17:02.362Z] <@U0105PTF3E2>: i think the only reason im not at peak rage is b/c my laughter at how i can feel your rage and laugh at it
+[2025-03-17T22:15:58.755Z] <@U0105PTF3E2>: im like 1/2 the level you are
+[2025-03-17T22:14:28.658Z] <@U0105PTF3E2>: lmfao
+[2025-03-17T22:07:44.999Z] <@U0105PTF3E2>: they even said their sims have been stable for a while...
+[2025-03-17T21:47:49.120Z] <@U0105PTF3E2>: what exec meeting? like, between amazon execs and ours or just internal?
+[2025-03-17T21:46:34.076Z] <@U0105PTF3E2>: sukit?
+[2025-03-17T21:44:53.889Z] <@U0105PTF3E2>: yep, thats definitely what they did. each one of those corrections matches exactly one of the bot arrivals (and in order)
+[2025-03-17T21:43:47.991Z] <@U0105PTF3E2>: so it looks like they issued a correction for every one of the original bots...
+[2025-03-17T21:41:03.707Z] <@U0105PTF3E2>: bot arrival at 05:10:51.446 with\n```B074J6RKQJ, B074H64BPW```\nbot arrival at05:26:05.986 with\n```B07YHG39KZ, ```\nbot arrival at05:30:49.679 with\n```B074H5TMQ7, B09LB8FDDF, B09LB8W7VZ, B0BQC61BHX, ```\ncorrection at 05:30:04.964for\n```B074J6RKQJ, B074H64BPW```\ncorrection at 05:32:49.775 for\n```B07YHG39KZ ```\nbot arrival at05:33:25.744 with\n```B00DGSTURC, ```\ncorrection at 05:34:53.215 for\n```B074H5TMQ7, B09LB8FDDF, B09LB8W7VZ, B0BQC61BHX, ```\nbot arrival at 05:35:33.308 with\n```B00028Q93C, B075Y1DRQK, B0CPM915FP, B0BQCB7TFS```\ncorrection at 05:36:35.228 for\n```B00DGSTURC```\nbot arrival at 05:38:00.190 with\n```B07YHG39KZ, B074J6RKQJ, B074H64BPW, ```\nbot arrival at 05:44:47.168 with\n```B00DGSTURC, B074H5TMQ7, B09LB8FDDF, B09LB8W7VZ, B0BQC61BHX, ```\ncorrection at 06:13:10.762 for\n```B00028Q93C, B075Y1DRQK, B0CPM915FP, B0BQCB7TFS```
+[2025-03-17T21:19:42.544Z] <@U0105PTF3E2>: This is what amazon originally ordered\n```"products": [\n        {\n          "product_code": "B0BQC61BHX",\n          "fulfil_product_id": 35912,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B00028Q93C",\n          "fulfil_product_id": 21735,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B09LB8FDDF",\n          "fulfil_product_id": 28389,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B074H5TMQ7",\n          "fulfil_product_id": 28134,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B0BQCB7TFS",\n          "fulfil_product_id": 35913,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B0CPM915FP",\n          "fulfil_product_id": 35902,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B09LB8W7VZ",\n          "fulfil_product_id": 28392,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B00DGSTURC",\n          "fulfil_product_id": 13158,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B075Y1DRQK",\n          "fulfil_product_id": 28611,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B07YHG39KZ",\n          "fulfil_product_id": 21196,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B074H64BPW",\n          "fulfil_product_id": 22841,\n          "quantity": 1,\n        },\n        {\n          "product_code": "B074J6RKQJ",\n          "fulfil_product_id": 22834,\n          "quantity": 1,\n        }\n      ],```\nand this is what we sent to the factory\n```"normal_items": [\n      {\n        "grade_id": 0,\n        "product_id": 35912\n      },\n      {\n        "grade_id": 0,\n        "product_id": 21735\n      },\n      {\n        "grade_id": 0,\n        "product_id": 28389\n      },\n      {\n        "grade_id": 0,\n        "product_id": 28134\n      },\n      {\n        "grade_id": 0,\n        "product_id": 35913\n      },\n      {\n        "grade_id": 0,\n        "product_id": 35902\n      },\n      {\n        "grade_id": 0,\n        "product_id": 28392\n      },\n      {\n        "grade_id": 0,\n        "product_id": 13158\n      },\n      {\n        "grade_id": 0,\n        "product_id": 28611\n      },\n      {\n        "grade_id": 0,\n        "product_id": 21196\n      },\n      {\n        "grade_id": 0,\n        "product_id": 22841\n      },\n      {\n        "grade_id": 0,\n        "product_id": 22834\n      }\n    ],```\nso we didn't send the wrong data to the factory or anything
+[2025-03-17T20:34:42.097Z] <@U0105PTF3E2>: Infra is working on 962. 963 is substantially more work. no planned start date
+[2025-03-17T20:32:22.387Z] <@U0105PTF3E2>: you are planning on working on this starting today right <@U04C3DEM4LF|Raynald - he-him - EDT>? if so, i will update this and the jira ticket
+[2025-03-17T20:31:17.039Z] <@U0105PTF3E2>: > We can stagger releases by 1 day, but not high priority until the first bad release\ni think we are aligned internally, just not sure how to approach this with amazon. they insist this is a priority. maybe i can find a way to deflect
+[2025-03-17T20:28:46.247Z] <@U0105PTF3E2>: we talked about this during standup. for any future users, it does look like the orders were related. there were multiple entries in the "Original order request" pane and we think this was because cancel and re-order (eg. multiple post requests for the same external_order_id)
+[2025-03-17T20:26:32.877Z] <@U0105PTF3E2>: of course we can discuss
+[2025-03-17T20:12:01.483Z] <@U0105PTF3E2>: I scheduled a meeting to talk about scalability concerns for Friday (some people have conflicts but there isn't a good time that the offshore devs can make that was free on everyone's calendar). I scheduled it later in the week to give everyone time to add issues to the <https://docs.google.com/document/d/1ePgihHijVr-h8Smn1xAHiWPjVMhXbiL1dO0agWpqjzs/edit?tab=t.0#heading=h.3at9u9s4e0vp|doc> throughout the week.
+[2025-03-17T17:01:25.142Z] <@U0105PTF3E2>: DD integration test - outcomes
+[2025-03-17T17:01:07.343Z] <@U0105PTF3E2>: in progress big projects
+[2025-03-17T16:50:45.129Z] <@U0105PTF3E2>: <@U013TF1F70W|tim>, maybe talk async on these?\n• 962 - for all az permanent sims, deploy latest api code as it is done on prod\n    ◦ this seems like we "just" need to get the api to do rolling restarts?\n• 963 - 1 day hold on prod api deployments\n    ◦ vlad and scott are once again pushing for there being some period of time where we "bake" api changes to give them a change to run tests against each release...
+[2025-03-17T16:44:18.784Z] <@U0105PTF3E2>: <@W017GG59GCW>, we chatted last week about "multiple ASIN per product" issue. I chatted with the team and we feel strongly that its something we need to tackle now. We feel the broken state of the logic will only become harder to reason about over time and will lead to more issues. Matheus is already part way into the fix.
+[2025-03-15T23:44:51.959Z] <@U0105PTF3E2>: Sorry i couldn't be there :sob:
+[2025-03-15T19:15:50.186Z] <@U0105PTF3E2>: I would also guess cv is the culprit here
+[2025-03-14T22:24:14.114Z] <@U0105PTF3E2>: Ya seems pretty easy as long as we just pass something new to the same endpoint
+[2025-03-14T20:21:01.878Z] <@U0105PTF3E2>: so <@U04C3DEM4LF|Raynald - he-him - EDT> you confirmed it was indeed on the wrong branch/tag?
+[2025-03-14T20:20:23.895Z] <@U0105PTF3E2>: <@U07J6SYC508|Nigel Bess>, how are you determining the fc is running on the previous branch?
+[2025-03-14T20:19:19.065Z] <@U0105PTF3E2>: > It looks like everything is now working\nwhat do you mean?
+[2025-03-14T20:19:12.854Z] <@U0105PTF3E2>: when I looked at the image and saw the d9f63.. i thought it should match the top "pioneer: 310f7.." But now I realize it matches the tag of the top build...
+[2025-03-14T20:16:44.549Z] <@U0105PTF3E2>: yay, i love when im not totally off base
+[2025-03-14T20:14:37.572Z] <@U0105PTF3E2>: in a meeting but trying to see if i could be helpful (or at least educate myself). Raynald, since you are looking, is this FC in the pio kubernetes? I see this in the deployment\n```image: >-\n            gcr.io/fulfil-web/fc/pioneer:d9f63d35d1ef7398d5b92ef41ce790434221fe88```\nbut that should align with the above screenshot?
+[2025-03-14T17:06:35.455Z] <@U0105PTF3E2>: <@U015EQS4HT4|Zach Boone>, here is the order dashboard i mentioned at the dev sync <https://grafana.fulfil-api.com/d/befntdi9wrmrke/partner-order-insights-production?orgId=1>
+[2025-03-14T17:04:03.050Z] <@U0105PTF3E2>: <https://grafana.fulfil-api.com/d/befntdi9wrmrke/partner-order-insights-production?orgId=1>
+[2025-03-14T15:58:16.731Z] <@U0105PTF3E2>: <@U07H0RKJJPR|Alessandro Vaiz> has done extensive investigations into our 500's (503 in particular) and is continuing
+[2025-03-14T14:46:48.213Z] <@U0105PTF3E2>: There has been a lot of talk lately about what work we consider "new requests" since amazon is getting progressively... frustrated with the pace at which we are executing things. Maybe this is one that we push back on <@U0168TK03V0|Alex (he/him)> <@UCBMSR9MY>?
+[2025-03-14T14:45:23.139Z] <@U0105PTF3E2>: I created a ticket for this <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08HWFPL7EY>
+[2025-03-14T14:33:30.985Z] <@U0105PTF3E2>: We have a script for fixing v2 out of sync? Did you add it to the runbook by chance <@U015EQS4HT4|Zach Boone> ?
+[2025-03-14T14:29:09.863Z] <@U0105PTF3E2>: There is a big chunk of work in progress to "bypass reservations" for partner orders. Josh started it and <@U06NWFAAXFE|Christian Soto>  and <@U06M6D24NH4|Andre Luis Moreira> aare getting it over the finish line
+[2025-03-14T14:24:48.871Z] <@U0105PTF3E2>: 100? :disappointed:
+[2025-03-14T00:43:35.200Z] <@U0105PTF3E2>: im confused on what we do about this... i <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1741912830467379|asked amazon> to see if they had any issues with this order. I guess we can wait and see if they did.. but im pretty sure that even if they didn't, we don't want to risk it...
+[2025-03-14T00:40:30.467Z] <@U0105PTF3E2>: Can anyone tell me if you experienced any issues with order 113-9019932-8090601? I think it may have gone back into packing after being picked up
+[2025-03-14T00:34:13.962Z] <@U0105PTF3E2>: fuck... using my handy dandy new <https://grafana.fulfil-api.com/d/befntdi9wrmrke/partner-order-insights-production?orgId=1&var-DataSource=DOKYKGqV2&var-Environment=fulfil-prod&var-PartnerOrderId=113-9019932-8090601&var-FulfilOrderId=215760&from=now-12h&to=now|order grafana page>... you can def see the order did indeed go from packing > picked up > packing...
+[2025-03-14T00:31:56.126Z] <@U0105PTF3E2>: which means either force repack had no impact here OR they pushed it after it was picked up which... is a race condition
+[2025-03-14T00:31:25.486Z] <@U0105PTF3E2>: hmm... i thought we said that doing force repack does literally nothing for an order that isn't picked up
+[2025-03-14T00:07:03.167Z] <@U0105PTF3E2>: we did a rollback for this?
+[2025-03-14T00:05:31.546Z] <@U0105PTF3E2>: im pretty confident that we have not rolled back a single time
+[2025-03-13T23:13:35.427Z] <@U0105PTF3E2>: > Alex made it sound like this could become an urgent issue because we are onboarding new ASINs that could lead to duplicate ASINs for existing items that might not have a problem today.\nI brought this up with them and made it obvious that this will have to happen if they want to use the other catalog. MBS... something... vs the whole foods catalog or something.
+[2025-03-13T23:11:45.503Z] <@U0105PTF3E2>: just for transparancy, vincent hasn't really done any partner tickets for a bit. he and zach are mostly focused on outage response and the mongo v2 stuff (which amazon has no real visibility into). zach is of course a beast and does all kinds of shit but he has noticably backed off. lev hasn't touched amazon stuff since being on the team, primarily focused on DD right now. raynald helps w/ PRs but is mostly on infra stuff. This trend of people backing off has been in the works for like 1-2 weeks, before the layoffs and then we had the huge week of fires.\nall of the real work being done against amazon tickets is our very fresh and scared offshore team. i am doing my best to reassure them that they have support and are doing great work but, they are really just now starting to warm up to the team and experience
+[2025-03-13T23:04:58.268Z] <@U0105PTF3E2>: i have definitely cited "other partners" as a reason for not wanting to do something in an amazon specific way. I don't recall citing "other partners" as a reason for anything specific but i do think i said something during the meeting w/ vlad about how we spent "all of last week working on fires and another priority partner thing". I haven't mentioned to them that the team working on the integration went from a peak of 10 to like 5 and a majority of the people working on it are new to the repo and partner api. Having to justify the decrease in productivity, while not being able to talk about it openly is very difficult though. and i think that is why they have been asking so much for info on the internal stuff we are working on... when i say "we did zero work on any of your asks last week b/c of fires" and they don't know the team is way smaller and way less experienced, they can only assume we have SHIT TONS of fires... and that scares them... so either way... i think its shitty communication for them and they are probably taking everything we say extra harsh b/c they don't know about the cuts/moves...
+[2025-03-13T22:43:01.272Z] <@U0105PTF3E2>: ya, if you check the tickets linked in the PR section of this ticket, they are not merged. the <https://github.com/Fulfil0518/Fulfil-api/pull/4400|cloud api pr> is one of the main ones. there are a couple of other PRs associated w/ other tickets too
+[2025-03-13T22:41:30.872Z] <@U0105PTF3E2>: Hey <@U015EQS4HT4|Zach Boone> and <@U0168TK03V0|Alex (he/him)>. Yesterday during dev sync Scott asked about the "multiple asin per product" issue. I told him that you did a big analysis and we have a doc/plan for addressing the issue but, it will take some time. I think we had designated <@U04EH1U6NAU|Matheus Pellegrini> to take on this work?\nAnyway... Scott asked if this was fixed by removing those ASINs that they are not planning on using (at least for now) and I told him yes. I told him that the issue is that our system currently doesn't have a good way to determine which ASIN to use in every product code lookup and that removing the ASINs that they might not use will be a temporary bandaid to the problem.\nHe asked that we break down the body of work required to fully fix the issue so they could determine if this is a priority we want to deal with...\nMy question to the 3 of you is: "Should we take Amazon's feedback on priority on this topic under consideration?" basically, do we think that we should just take the time to fix it now, or should we allow them to potentially sideline this work?
+[2025-03-13T22:33:17.407Z] <@U0105PTF3E2>: i have a question out to the infra team to discuss this. will report back probably next week
+[2025-03-13T22:32:40.219Z] <@U0105PTF3E2>: responded on the ticket. please let me know if something doesn't make sense and we can hop on a call
+[2025-03-13T22:28:46.443Z] <@U0105PTF3E2>: they found a bug that needed some FC side changes
+[2025-03-13T22:28:31.357Z] <@U0105PTF3E2>: nah, that was some prep work im pretty sure
+[2025-03-13T20:56:54.768Z] <@U0105PTF3E2>: im losing my mind
+[2025-03-13T20:56:51.609Z] <@U0105PTF3E2>: hey, do you have a sec?
+[2025-03-13T19:42:19.454Z] <@U0105PTF3E2>: <@U0168TK03V0|Alex (he/him)> says yes, its over
+[2025-03-13T19:31:18.454Z] <@U0105PTF3E2>: i have always liked to bounce ideas off of people though so now i bug AI instead of my co-workers (at least initially)
+[2025-03-13T19:30:45.395Z] <@U0105PTF3E2>: i am in the code a lot less now so i use them less. it depends on if i know what im doing on how much i use them
+[2025-03-13T17:45:32.331Z] <@U0105PTF3E2>: <!here> Kroger tour today. lets hold off on merges until after the tour is done JUST in case
+[2025-03-13T17:43:56.819Z] <@U0105PTF3E2>: <@U013TF1F70W|tim>, we should talk about <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1741841448837999|this >soon
+[2025-03-13T17:22:32.916Z] <@U0105PTF3E2>: <https://docs.google.com/document/d/1M7kP0jdtxK15w1FeAFm5UOIriojrtVXF0ko7WLbpm9I/edit?tab=t.0#heading=h.ucpmesgsl3z2>
+[2025-03-13T17:04:39.547Z] <@U0105PTF3E2>: question 1\nwhat do we do if they provide expirable:true but sell_by:null?
+[2025-03-13T16:18:18.905Z] <@U0105PTF3E2>: <https://issues.labcollab.net/browse/GRAF-906>
+[2025-03-13T15:52:22.550Z] <@U0105PTF3E2>: Its not stats we are going to need now that DD is involved right? Lol
+[2025-03-13T15:49:09.268Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1741822163472989|Exp date issue>
+[2025-03-13T15:47:31.294Z] <@U0105PTF3E2>: Does this mean we are going to be missing data in BQ?
+[2025-03-13T04:19:13.276Z] <@U0105PTF3E2>: Wtf does the chron do?
+[2025-03-13T01:24:37.722Z] <@U0105PTF3E2>: k, i moved it. <@U0168TK03V0|Alex (he/him)> try and see if its available sometime
+[2025-03-13T00:02:23.054Z] <@U0105PTF3E2>: oh you can? <@U0168TK03V0|Alex (he/him)> cannot
+[2025-03-12T23:42:39.320Z] <@U0105PTF3E2>: i created an order dashboard, but people can't see it. what do i need to do to make it so everyone can get to my <https://grafana.fulfil-api.com/d/befntdi9wrmrke/partner-order-insights-production?orgId=1|dashboard>?
+[2025-03-12T23:38:59.913Z] <@U0105PTF3E2>: <https://grafana.fulfil-api.com/d/befntdi9wrmrke/partner-order-insights-production?orgId=1>
+[2025-03-12T23:29:15.211Z] <@U0105PTF3E2>: <https://app.slack.com/huddle/TBREQ41DK/C06DHLMPFFV>
+[2025-03-12T23:21:05.045Z] <@U0105PTF3E2>: u got a sec?
+[2025-03-12T22:40:00.347Z] <@U0105PTF3E2>: ah... he pinged here <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1741649938411399>
+[2025-03-12T22:39:25.440Z] <@U0105PTF3E2>: scott said this isn't a big deal but, he was hoping we could look at this\n<https://issues.labcollab.net/browse/GRAF-955>\nthey THINK they know what the issue is (top off?) but they wanted us to check and see just to make sure. do you know how to investigate this?
+[2025-03-12T22:05:19.444Z] <@U0105PTF3E2>: wtf is vlad talking about
+[2025-03-12T19:48:47.556Z] <@U0105PTF3E2>: couple nits
+[2025-03-12T19:09:06.071Z] <@U0105PTF3E2>: TAN is fucked...
+[2025-03-12T19:09:00.129Z] <@U0105PTF3E2>: that was like... the main thing people cited as how we are getting costs down and time to production down...
+[2025-03-12T19:08:31.667Z] <@U0105PTF3E2>: wow... we aren't using parpro anymore?
+[2025-03-12T18:24:26.020Z] <@U0105PTF3E2>: :sleeping:
+[2025-03-12T18:24:13.420Z] <@U0105PTF3E2>: ty
+[2025-03-12T18:24:12.427Z] <@U0105PTF3E2>: omg... its a fucking UNDERSCORE
+[2025-03-12T18:00:48.108Z] <@U0105PTF3E2>: do you know how to filter it to only "POST"?
+[2025-03-12T17:43:29.834Z] <@U0105PTF3E2>: ugh... i used the dropdown...
+[2025-03-12T17:39:26.891Z] <@U0105PTF3E2>: why the fuck does <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22pq9%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bnamespace%3D%5C%22fulfil-prod%5C%22,%20job%3D%5C%22fulfil-prod%2Ffulfil-api%5C%22%7D%20%7C%3D%20%60112-7077532-4329002%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%22now-24h%22,%22to%22:%22now%22%7D%7D%7D&orgId=1|this> grafana search work with "job" but <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22pq9%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bapp_kubernetes_ai_name%3D%5C%22fulfil-api%5C%22,%20namespace%3D%5C%22fulfil-prod%5C%22%7D%20%7C%3D%20%60112-7077532-4329002%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%22now-24h%22,%22to%22:%22now%22%7D%7D%7D&orgId=1|this> using <http://app.kubernetes.io/name|app.kubernetes.io/name> doesn't work? solved... user error
+[2025-03-12T16:45:51.536Z] <@U0105PTF3E2>: is the tour only showing mars? we aren't planning on doing any vls stuff right?
+[2025-03-12T16:40:50.351Z] <@U0105PTF3E2>: im not familiar with "the 0e33 error" or much of what is mentioned here. how can <S07L32NK4LD> help?
+[2025-03-12T16:40:07.396Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C06FA6H1US2/p1741794879520859>
+[2025-03-12T16:38:06.175Z] <@U0105PTF3E2>: i think he was talking to <@U07J6SYC508|Nigel Bess> about taking that work over though
+[2025-03-12T16:37:48.106Z] <@U0105PTF3E2>: <@U04EH1U6NAU|Matheus Pellegrini> has a partial PR up for "pagination" on the abis page. We could expand that pr (or probably better yet, make a separate PR once that task is done).
+[2025-03-12T16:36:55.542Z] <@U0105PTF3E2>: <@U02A7R0NLRX|Lev Lvovsky> has a PR up for making real time abis have a vendorstore selector and respect it, but it wasn't the same thing for ABIS so we aren't doing it
+[2025-03-12T00:34:03.562Z] <@U0105PTF3E2>: we could also switch the vs but thats probably more trouble than just doing a whitelist
+[2025-03-12T00:33:37.721Z] <@U0105PTF3E2>: honestly, this is by design... if we really need to place test orders we could 1. place them manually for ops through the partner API for them or 2. we should probably change the PR to be a "testOrderWhiteList" and temporarily add DD to it.
+[2025-03-12T00:31:51.328Z] <@U0105PTF3E2>: so the whole system is changed over to the DD vendorstore?
+[2025-03-11T23:58:07.565Z] <@U0105PTF3E2>: this would open us up to operators accidentally placing test orders against the DD store in prod. which I assume is very problematic for them like amazon
+[2025-03-11T23:54:24.689Z] <@U0105PTF3E2>: i don't think we want this. if DD wants to place an order, they should do so through the partner api
+[2025-03-11T23:54:10.218Z] <@U0105PTF3E2>: wait... why do we want this?
+[2025-03-11T23:53:12.413Z] <@U0105PTF3E2>: Here is an an example of something we might not have to do... <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08CEMX47M5> amazon wrote a bug, we think its not a bug but they don't like the behavior. this stuff happens quite frequently
+[2025-03-11T23:44:40.233Z] <@U0105PTF3E2>: fwiw matt, i went through all of the in progress, "P1" tickets (based on <https://issues.labcollab.net/browse/GRAF-831?jql=project%20in%20(GRAF)%20AND%20labels%20in%20(Priority1)%20AND%20status%20not%20in%20(Resolved%2C%20closed%2C%20%22QA%20Ready%22)%20|this list>) and they are all in the correct state
+[2025-03-11T23:40:18.707Z] <@U0105PTF3E2>: What ever came of the discussion you guys had? the <https://issues.labcollab.net/browse/GRAF-897|jira> ticket is still "in progress" and we should do something with it. if there is a "different" issue, we should ask amazon to close 897 and create a new ticket for the new stuff
+[2025-03-11T23:10:10.787Z] <@U0105PTF3E2>: but it has also been difficult to dance around the reduced team size
+[2025-03-11T23:09:21.530Z] <@U0105PTF3E2>: it was partially on us. some tickets sat "in progress" for many weeks when no one was actually currently investigating it
+[2025-03-11T23:08:51.017Z] <@U0105PTF3E2>: The way it was communicated to us or the way it came about is, they wanted insight into what we were working on so they could better understand 1. how much bandwidth we have and 2. how much effort was actually being put into each ticket. I mentioned I didn't want to report on any internal and unrelated things and we compromised and said that my team would do a better job about communicating the status of the actual in progress work.
+[2025-03-11T22:35:34.813Z] <@U0105PTF3E2>: sorry. I guess im just sensitive as they have been asking cloud team to share details about the tasks we are working on outside of amazon's purview and its frustrating.
+[2025-03-11T22:33:22.640Z] <@U0105PTF3E2>: why is the release notes not enough? we share things that are relevant to them.
+[2025-03-11T22:00:55.163Z] <@U0105PTF3E2>: my understanding of the first <https://github.com/Fulfil0518/Fulfil-api/pull/4470|PR> zach linked is its supposed to prevent the duplicate issue. tl;dr of the issue is, we had a async (bull) job processing the order multiple times, leading to incorrect cart sizes AND duplicate mysql pubsub messages being sent to the factory. so we should not only hopefully prevent the duplicate events, but we should also not be messing up the items in the orders. this should lead to even less shorts
+[2025-03-11T21:51:06.014Z] <@U0105PTF3E2>: the api went down because of massively increased inventory state change when all/lots of the inventory changed state at once. we have mitigated the issue for now with a bit of throttling (inventory may be out of sync for a little bit longer when these large state changes occur) and the long term fix (mongo sync v2) is in progress
+[2025-03-11T21:49:04.211Z] <@U0105PTF3E2>: not sure what we should communicate on this one...
+[2025-03-11T21:48:39.572Z] <@U0105PTF3E2>: not sure
+[2025-03-11T21:48:38.186Z] <@U0105PTF3E2>: we didn't really do an official post mortem. at least not one where we fully filled out the post mortem doc and i don't think we did one with amazon either
+[2025-03-11T21:40:07.213Z] <@U0105PTF3E2>: not just the ones we think are available
+[2025-03-11T21:39:56.270Z] <@U0105PTF3E2>: fyi to all, we have some other work in flight on the order side that will change what data is going to be sent. its been in the works for a while. the "bypass reservation" feature where cloud just sends all of the items to the factory
+[2025-03-11T21:27:06.987Z] <@U0105PTF3E2>: esp since we are going to go live in like 20 days... which i didn't realize
+[2025-03-11T21:26:52.174Z] <@U0105PTF3E2>: well, ima go down. the trip to/from sfo ended up being like $570 vs the 1k+ to sjc
+[2025-03-11T21:24:48.888Z] <@U0105PTF3E2>: there is also 2 PRs to my knowledge
+[2025-03-11T21:23:30.591Z] <@U0105PTF3E2>: we have some changes in PR right now to mitigate this but its not released yet. so sorry. this was a pretty tough one on our side...
+[2025-03-11T21:10:08.569Z] <@U0105PTF3E2>: did u book anything?
+[2025-03-11T21:09:58.989Z] <@U0105PTF3E2>: maybe we should go...
+[2025-03-11T21:09:46.798Z] <@U0105PTF3E2>: hmm, my wife was like "why aren't you going? there is cheap flights..."\ni had only looked at sjc, not sfo. there is some decent flights into sfo
+[2025-03-11T20:19:39.460Z] <@U0105PTF3E2>: im really worried about this notification causing a HUGE amount of noise
+[2025-03-11T20:10:52.009Z] <@U0105PTF3E2>: if you dont know, i can take a look when i review the PR
+[2025-03-11T20:10:37.890Z] <@U0105PTF3E2>: I can take a look but, do you know if the main issue remains? We are currently getting these "<https://fulfilsolutions.slack.com/archives/C03C2TTARS7/p1741631632947499|didn't expect to get here>" alerts\n```\nFDB\nAPP  11:33 AM\nOrder ID: 215291: <https://dashboard.fulfil.store/orders/order-details/215291>\nDidn't expect to get here sails-req-res.getAuthUsername```\nin <#C03C2TTARS7> and i think it might be for a real reason (albeit a minor one). will these now become actual errors that surface in <#C084YLD9Q5N> or something?
+[2025-03-11T18:32:35.831Z] <@U0105PTF3E2>: eric is trying to get someone to test cognito this week and is struggling <https://fulfilsolutions.slack.com/archives/C0835ADBNU9/p1741629571617009>
+[2025-03-11T18:25:49.036Z] <@U0105PTF3E2>: ah i see. should we close this task and just leave that one?
+[2025-03-11T18:20:27.523Z] <@U0105PTF3E2>: <https://issues.labcollab.net/browse/GRAF-942|This> the correct ticket?
+[2025-03-11T17:45:27.689Z] <@U0105PTF3E2>: DD is saying we might not want/need this for go live V0. <@U02A7R0NLRX|Lev Lvovsky> created a PoC for a QR code on the kiosk app that we can expand on when we get details from DD.
+[2025-03-11T16:22:50.120Z] <@U0105PTF3E2>: <@U02A7R0NLRX|Lev Lvovsky>, are you working on this ticket? I see a PR from you but no assignee
+[2025-03-10T23:08:21.159Z] <@U0105PTF3E2>: i agree man
+[2025-03-10T22:41:07.489Z] <@U0105PTF3E2>: it can also help force us to keep the tickets status's up to date
+[2025-03-10T22:40:02.325Z] <@U0105PTF3E2>: i think you and i need to be acutely aware of everything everyone is working on at all times and i need to pull developers out of rabbit holes and force pairing on certain things
+[2025-03-10T22:39:25.709Z] <@U0105PTF3E2>: since the team is smaller now, and since the contractors and lev don't really talk during "post", i think we need to change standup and go back to more oversight and discussion.
+[2025-03-10T22:33:09.220Z] <@U0105PTF3E2>: lakshmi was gone for a while wasn't she?
+[2025-03-10T22:29:30.466Z] <@U0105PTF3E2>: > remove myself as a code owner\nbut then people can't merge after you review it :sob:
+[2025-03-10T22:22:14.362Z] <@U0105PTF3E2>: well... sure seems like they are demanding that
+[2025-03-10T22:21:01.448Z] <@U0105PTF3E2>: and we aren't through those
+[2025-03-10T22:20:57.944Z] <@U0105PTF3E2>: Rohan says "we can't only work on fires" but last week, we literally did ONLY work on fires
+[2025-03-10T22:20:35.880Z] <@U0105PTF3E2>: where is the line?
+[2025-03-10T22:20:31.313Z] <@U0105PTF3E2>: so... are we going to report everything we work on to them?
+[2025-03-10T22:20:21.752Z] <@U0105PTF3E2>: and it mostly didn't affect them
+[2025-03-10T22:20:15.448Z] <@U0105PTF3E2>: b/c they were really bad looking... like the api going down
+[2025-03-10T22:20:05.261Z] <@U0105PTF3E2>: we specifically didn't report these fires to them
+[2025-03-10T22:16:26.308Z] <@U0105PTF3E2>: this didn't used to overlap.. i think amazon changed the date of this. it used to be tuesday
+[2025-03-10T22:14:47.488Z] <@U0105PTF3E2>: yeah...
+[2025-03-10T22:14:44.896Z] <@U0105PTF3E2>: ...
+[2025-03-10T22:06:26.863Z] <@U0105PTF3E2>: we are still talking about his huh?
+[2025-03-10T22:03:12.623Z] <@U0105PTF3E2>: yeah, it takes about a week to get through a deep dive w/ amazon. that is not heads down development time 8 hrs a day
+[2025-03-10T21:43:30.868Z] <@U0105PTF3E2>: NICE find <@U07H0RKJJPR|Alessandro Vaiz>!
+[2025-03-10T21:41:02.732Z] <@U0105PTF3E2>: 1 dev? i think a lot can be parallelized with 2-3 devs. too many would have diminishing returns.
+[2025-03-10T21:13:12.428Z] <@U0105PTF3E2>: didn't that used to happen on tuesdays?
+[2025-03-10T21:13:05.302Z] <@U0105PTF3E2>: wtf happened? the leads meeting overlaps w/ the weekly tracking sync bullshit
+[2025-03-10T20:49:14.254Z] <@U0105PTF3E2>: added comments
+[2025-03-10T20:09:17.344Z] <@U0105PTF3E2>: i went through the doc and added a few comments. I took a stab at the estimate and im sure some people will say im crazy but... im always on the more conservative side. btw, i think my estimates are reality, not inflated (i did not double them).
+[2025-03-10T18:50:26.770Z] <@U0105PTF3E2>: just going to let lev deal w/ them
+[2025-03-10T18:49:48.939Z] <@U0105PTF3E2>: yeah i guess im not going to go on friday
+[2025-03-10T17:12:16.767Z] <@U0105PTF3E2>: sorry, i probably won't be able to make it due to the short notice but lev is going to go down. ill be available remotely if needed
+[2025-03-10T17:04:25.754Z] <@U0105PTF3E2>: 
+[2025-03-10T17:01:55.044Z] <@U0105PTF3E2>: here is one of them <https://dashboard.fulfil.store/inventory/item/67c265fd4a6307bc9d097cfc?facility=plm>
+[2025-03-10T17:01:36.147Z] <@U0105PTF3E2>: they are trying to purge 25709
+[2025-03-10T16:25:09.878Z] <@U0105PTF3E2>: on call rotation changes
+[2025-03-09T19:20:24.489Z] <@U0105PTF3E2>: How long was it out of sync before we ran the sync tool? Now that everything is a bit slower, do we have a good gauge for telling if we need to run the tool?
+[2025-03-08T02:44:53.451Z] <@U0105PTF3E2>: YAY! im the best!
+[2025-03-08T02:44:28.308Z] <@U0105PTF3E2>: how much do we think mysql should be able to scale at it's current settings and stuff before this realistically becomes a problem? meaning, something else has to be the issue right? so i guess the runbook is to look at the load and errors and try to find the source...
+[2025-03-08T02:42:50.131Z] <@U0105PTF3E2>: not like we can just kill the unhealthy thing in this case lol
+[2025-03-07T23:30:53.054Z] <@U0105PTF3E2>: I don't see a tracker or the label on it so just wanted to let you know ima make a ticket for it
+[2025-03-07T23:30:18.253Z] <@U0105PTF3E2>: i had a reminder to investigate a discussion vlad and i had but i found a ticket for it <https://issues.labcollab.net/projects/GRAF/issues/GRAF-950?filter=allopenissues>
+[2025-03-07T22:47:05.717Z] <@U0105PTF3E2>: hey, i got pager duty to enable this. can you guys try again sometime?
+[2025-03-07T22:34:10.697Z] <@U0105PTF3E2>: matt is asking for a list of pros/cons and the wag estimate from us. did we have a shared doc or anything written up for that?
+[2025-03-07T21:36:07.605Z] <@U0105PTF3E2>: DD developers are <https://fulfilsolutions.slack.com/archives/C08908Y2NLT/p1740611918679949|asking >if they can come in next Friday for an e2e test. I know <@U03P6LT82Q4|John Biscay> is out but trying to get some confirmation this will be ok before we officially book everything
+[2025-03-07T19:58:53.455Z] <@U0105PTF3E2>: but someone had said its not possible
+[2025-03-07T19:58:47.169Z] <@U0105PTF3E2>: b/c i think it would be sufficient to be able to select different facilities/vendorstores on those same environments
+[2025-03-07T19:58:11.495Z] <@U0105PTF3E2>: i thought we couldn't run multiple FC on the same sim?
+[2025-03-07T19:07:57.793Z] <@U0105PTF3E2>: i investigated the stuff available and i think it would just be easiest to work it out on a call or in person next week. The solution sort of depends on what the plan is for the physical process will be
+[2025-03-07T17:58:43.546Z] <@U0105PTF3E2>: hopefully this works for you also <@U02A7R0NLRX|Lev Lvovsky>, <@U03P6LT82Q4|John Biscay> and <@U0168TK03V0|Alex (he/him)>
+[2025-03-07T17:56:23.679Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C08908Y2NLT/p1741369759293209?thread_ts=1741202827.545149&cid=C08908Y2NLT|DD "location" issue>
+[2025-03-07T17:32:33.069Z] <@U0105PTF3E2>: i just found out from <@U01BWMX6745|Sam> that we have something going on on 3/13 so it looks like Friday would be our only option.  does that work for you?
+[2025-03-07T17:09:14.008Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C04M651T14J/p1740620369593309|duplicate order> sent to factory (in sim)
+[2025-03-07T17:08:18.648Z] <@U0105PTF3E2>: Amazon discussions wed/thurs\n<https://github.com/Fulfil0518/Fulfil-api/pull/4470/files|stale jobs>
+[2025-03-07T16:35:38.970Z] <@U0105PTF3E2>: My slack had an update, but applying it did not fix the issue. I am on mac and I found this "Restart and clear cache" option that fixed it.
+[2025-03-07T15:45:27.936Z] <@U0105PTF3E2>: did something change in slack? I have been getting pinged for messages like <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1741361020779449|this> but all I see is "Private user group"...
+[2025-03-07T15:40:03.768Z] <@U0105PTF3E2>: wtf...
+[2025-03-07T15:38:22.062Z] <@U0105PTF3E2>: > order came from 2-14\noh wow... yeah that is not what i was thinking. i assumed it was newer orders.\ncloud knows about order 211389...
+[2025-03-07T15:35:51.500Z] <@U0105PTF3E2>: unrelated but, im getting pinged on these messages and I see this "private message group"... what are these groups and why can't I see them?
+[2025-03-07T02:03:51.343Z] <@U0105PTF3E2>: If the issue is that the factory knows about orders that the cloud does not, i can only think of the issue being the snapshots were taken at different times or maybe purge orders were created and the cloud didn't know about it? The cloud originates most orders so its a very unusual state. Maybe an older snapshot doesnt have this issue
+[2025-03-07T01:42:33.320Z] <@U0105PTF3E2>: Can we just use older snapshots?
+[2025-03-07T01:03:04.074Z] <@U0105PTF3E2>: We sure the snapshots werent taken at different times?
+[2025-03-07T01:02:15.046Z] <@U0105PTF3E2>: Oh wow wtf...
+[2025-03-07T01:00:20.953Z] <@U0105PTF3E2>: Sorry, there is a lot to process in this thread. What is the current issue?
+[2025-03-07T00:56:38.228Z] <@U0105PTF3E2>: <@U0168TK03V0|Alex (he/him)>  and <@U015EQS4HT4|Zach Boone>, lets debrief tomorrow before we respond to <https://fulfilsolutions.slack.com/archives/C08FRQ99YEB/p1741308405666099|this> yeah? Should probably also talk to matt first
+[2025-03-06T23:44:09.998Z] <@U0105PTF3E2>: Just a slow sync?
+[2025-03-06T22:06:07.648Z] <@U0105PTF3E2>: Did anyone ever tear down az-temp? Vlad confirmed they arent using it
+[2025-03-06T22:04:32.901Z] <@U0105PTF3E2>: Vlad is asking for another 3 for tan
+[2025-03-06T20:39:46.961Z] <@U0105PTF3E2>: :thank-you:
+[2025-03-06T20:38:50.702Z] <@U0105PTF3E2>: Thanks for reporting. I still think these might be related to the factory uploader that <@U05TSSSP70U|Jess vdV>’s team handles.
+[2025-03-06T20:31:35.865Z] <@U0105PTF3E2>: was there any contract negotiation/requirements for TAN around permanent simulations? Vlad just mentioned they are going to want new sim's for TAN because they are going to want ways to test against the different hardware (eg. totes)
+[2025-03-06T18:59:44.137Z] <@U0105PTF3E2>: i think its this <https://github.com/Fulfil0518/Fulfil-api/pull/4400/files#diff-f1ff5e2cc66ce7a54b76f53b14145c5ccb0d18f07393aeaed04e6bc10a061066R231>
+[2025-03-06T17:20:03.247Z] <@U0105PTF3E2>: im definitely open to getting together in person on site next week. Do you all have enough integration done to execute on the spirit of my original message or are you thinking of this as more of a kickoff kind of thing? We definitely need to coordinate with <@U02A7R0NLRX|Lev Lvovsky> and someone from ops like <@U03P6LT82Q4|John Biscay>. It would be good to include <@U0168TK03V0|Alex (he/him)> too
+[2025-03-06T15:49:42.987Z] <@U0105PTF3E2>: If so, where at?
+[2025-03-06T15:49:33.562Z] <@U0105PTF3E2>: We still meeting this morning?
+[2025-03-06T01:24:24.219Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C08908Y2NLT/p1741219090473569?thread_ts=1741202827.545149&cid=C08908Y2NLT|Seems like> we are on the same page with them. They are only targeting inventory delta events initially and that was the main one <@U02A7R0NLRX|Lev Lvovsky> vetted
+[2025-03-06T00:04:13.447Z] <@U0105PTF3E2>: 
+[2025-03-06T00:03:47.166Z] <@U0105PTF3E2>: just making a space for us to drop notes and whatnot
+[2025-03-05T23:58:10.473Z] <@U0105PTF3E2>: are there any events in our api documentation that you guys are even planning on utilizing (in v0? in v1?) or want to utilize? There are a few that i think we sort of "need" based on the current architecture (ex. Catalog events like anything that says "ReportReady", but these might be able to be circumvented by polling the api...), some that i think are very useful (ex. InventoryDeltaEvents) but im curious what we all think
+[2025-03-05T23:44:38.920Z] <@U0105PTF3E2>: hmm, <@U02A7R0NLRX|Lev Lvovsky>, it might be a good idea then to document which partner events we know are working for 3.1, which are not (once all the fires are out of course...)
+[2025-03-05T23:05:39.770Z] <@U0105PTF3E2>: We can't rely on only zach to do these long term... so once we discuss <https://fulfilsolutions.slack.com/archives/GLA8NHQDV/p1741215888785339|this>, we should have at least one person start tagging along on these induction reviews
+[2025-03-05T23:04:48.785Z] <@U0105PTF3E2>: we need some non zach cloud person to start really getting up to speed on induction. Is there anyone that is already familiar with induction or that is excited to take on being a subject matter expert in one of our most important features?
+[2025-03-05T22:58:53.117Z] <@U0105PTF3E2>: most likely, we would get our current events working for 3.1 before creating any new ones.
+[2025-03-05T22:58:09.893Z] <@U0105PTF3E2>: don't think so. the integration (at least for the most immediate v0 case) is very minimal. i think they are barely going to use any events that we already have...
+[2025-03-05T22:44:51.639Z] <@U0105PTF3E2>: wish we had carried through with our transaction reworks we started throughout the API a while ago. they are such a pain though
+[2025-03-05T22:41:09.049Z] <@U0105PTF3E2>: damn, sorry i wasn't there to field that one. Yeah, I think reporting\n1. that we had some outage that caused the drop\n2. inform them the post mortem is scheduled to convey the root cause to them \n3. ensure them we are taking steps to mitigate the issue.\n\n it sounds like you did that, so thank you.
+[2025-03-05T22:32:49.324Z] <@U0105PTF3E2>: i dug around in the options that are available to me and i can't see a way to enable this. maybe my account is limited or maybe im incompetent... 50/50
+[2025-03-05T22:11:06.703Z] <@U0105PTF3E2>: brazil is def supported <https://support.pagerduty.com/main/docs/supported-countries>
+[2025-03-05T22:08:33.887Z] <@U0105PTF3E2>: it says "not enabled for this account" so maybe we have to do something specific
+[2025-03-05T22:08:11.780Z] <@U0105PTF3E2>: :thinking_face:
+[2025-03-05T22:05:07.823Z] <@U0105PTF3E2>: We are in person talking with <@W018CNBJHEC> and aren't going to dev sync. not sure if others are going to go.
+[2025-03-05T20:25:47.669Z] <@U0105PTF3E2>: > Yeah, that's basically why I proposed we maintain the mapping between product to cart instead of shelf\nyeah exactly... i THINK this is possible. im investigating
+[2025-03-05T20:20:17.639Z] <@U0105PTF3E2>: we might have a solution for this though and i think it could be really easy...
+[2025-03-05T20:19:54.637Z] <@U0105PTF3E2>: yeah, so that page, A1 and A2 are different "shelves" and those are what the receive api will accept for location_id (<@U02A7R0NLRX|Lev Lvovsky>can correct me if im off here). and, if you receive "cases" of bananas to A1, you won't be able to put bananas on A1 with different expiration dates. maintaining each of these a1,a2... location ids will be kind of a pain for you.
+[2025-03-05T20:13:51.152Z] <@U0105PTF3E2>: just to ensure we are talking about the same thing, can you please give me the URL you used to get that screenshot?
+[2025-03-05T19:58:51.149Z] <@U0105PTF3E2>: > Banana => B cart, B cart => a1,a2,a3....\nso i think those a1,a2.... will be what need to map to our locations... but <@U02A7R0NLRX|Lev Lvovsky>,maybe we can look into how we map case conveyor locations to auto  shelves...
+[2025-03-05T19:51:14.311Z] <@U0105PTF3E2>: > Does "go to manual" means the product won't be induct to the automation system at all and remains in the stockroom?\nThis is my understanding
+[2025-03-05T19:43:56.369Z] <@U0105PTF3E2>: > Could we make a rule that all new products go to manual by default?\nYour UI could definitely do w/e you want when you "receive" a product you don't have a mapping for. and we could not worry about getting you the mapping for newly onboarded products. so its definitely possible
+[2025-03-05T19:32:44.281Z] <@U0105PTF3E2>: > For receiving I believe we aligned on using DM receiving but piping in a static list\nThe main problem with this is the continued onboarding of products. Every new product will need a new mapping
+[2025-03-05T19:12:42.005Z] <@U0105PTF3E2>: ah, she is very specific to induction? so they have multiple PM for interacting w/ us?
+[2025-03-05T18:29:24.404Z] <@U0105PTF3E2>: i assume Kayla is product but just wanted to make sure. i vaguely recall some announcement but my brain is mush lately
+[2025-03-05T18:02:10.798Z] <@U0105PTF3E2>: <@UCBMSR9MY> do you know if this is a setting or anything?
+[2025-03-05T18:00:50.637Z] <@U0105PTF3E2>: ah, <@U04EH1U6NAU|Matheus Pellegrini> has a POC we discussed <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1740432294598039|here>, but tbh, this is low priority until the fires are put out
+[2025-03-05T17:03:38.785Z] <@U0105PTF3E2>: I'm like 15 minutes out. Sorry
+[2025-03-05T05:21:12.612Z] <@U0105PTF3E2>: Got ppl on it
+[2025-03-05T03:59:32.388Z] <@U0105PTF3E2>: Is this related to the double pubsub shit?
+[2025-03-05T02:40:34.193Z] <@U0105PTF3E2>: i mean... idk what the cost diff is for bumping only prod, but it does seem nice to have prod on the beefiest. alternatively... if we turn this knob right now, we don't have it later (presuming we are bumping to the max)... so when shit hits the fan at the big boy cpu... we are rly pressed against the wall. another consideration is this takes prod even further away from sims, which... maybe thats ok if sims are shittier we should encounter more issues there and we can just say "won't be a prob on prod b/c its got way more resources"...
+[2025-03-05T02:37:41.440Z] <@U0105PTF3E2>: do we get charged if they are not in use?
+[2025-03-05T02:37:31.548Z] <@U0105PTF3E2>: ah ok
+[2025-03-05T02:37:25.253Z] <@U0105PTF3E2>: just available resources?
+[2025-03-05T02:37:08.008Z] <@U0105PTF3E2>: > Upping prod fulfil-api MySQL instance\nwhat does this mean exactly? the number of instances? surely not right?
+[2025-03-05T02:22:14.030Z] <@U0105PTF3E2>: we can... i don't mind telling them, but it just made me think of what happens the rest of the time
+[2025-03-05T02:21:32.468Z] <@U0105PTF3E2>: :thinking_face:
+[2025-03-05T02:20:04.253Z] <@U0105PTF3E2>: i guess... now that i think about it... they probably don't expect any errors regardless? but they could happen while FC is restarting and whatnot...
+[2025-03-05T02:19:18.222Z] <@U0105PTF3E2>: doesn't the whole factory go down during restarts and whatnot? can we just align it with that?
+[2025-03-05T01:16:59.228Z] <@U0105PTF3E2>: > so i think we would never send FC a new order pubsub with the same order ID then\ncloud sending multiple new_order_placed pubsubs is 100% a bug on our side and shouldn't ever happen
+[2025-03-05T01:16:06.225Z] <@U0105PTF3E2>: fwiw, none of the fires right now are even amazon dictated. its all internal land mines going off in our faces. turns out, scaling is hard...
+[2025-03-05T01:11:03.774Z] <@U0105PTF3E2>: yeah man i am under no illusion that its only us. i just wanted to convey the situation
+[2025-03-05T01:10:26.699Z] <@U0105PTF3E2>: sorry for missing your last message. we definitely want to get these back on, just haven't had time. sorry
+[2025-03-05T01:08:05.010Z] <@U0105PTF3E2>: > but we treat it as a different one under the hood\nyes. the only way a partner can reuse an external_order_id is if they cancel the "current" order. what we do is cancel the fulfil order and eventually associate another order with a new request that comes in
+[2025-03-05T01:05:55.993Z] <@U0105PTF3E2>: on a different note. cloud feels like its drowning... idk why everything decided to go tits up just as we let a bunch of people go (maybe its not and im just feeling the pressure more with less people). maybe  an increase in orders and inventory coincided with our layoffs, but we can't fight fires fast enough. Literally everyone is now working on emergencies/fires.\nmore details:\n• vincent + zach are working on stabalizing our prod outages with fixes to mongo sync v1/v2\n• im pulling lev off of DD (abis vendorstore stuff to help operators drowning in dispense reviews for other facilities) and alesandro off 503/latency issues to work on this multiple order pubsub issue causing shrink\n• Andre is working on getting up to speed while Christian is out on the thing that Christian and josh were working on that would hopefully help with giving the factory info about all of the items for an order (this should also help w/ shrink issues)\n• matheus is working with eric on cognito stuff\n• raynald was working on stuff for the mongo outage and interview prep
+[2025-03-05T00:53:33.816Z] <@U0105PTF3E2>: <@U04UD3CHNSJ|Vincent> has context. you can ping us both but I will be unavailable most of the next couple of days
+[2025-03-05T00:51:37.112Z] <@U0105PTF3E2>: yep, morning is great
+[2025-03-05T00:48:53.354Z] <@U0105PTF3E2>: <@U02A7R0NLRX|Lev Lvovsky> or <@U07H0RKJJPR|Alessandro Vaiz>, i know you guys have some in flight work but, this one is actively biting us in the ass. Would either of you (preferably both) be available to drop what you are doing and investigate this?
+[2025-03-05T00:47:14.027Z] <@U0105PTF3E2>: Here is the <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08FFFH4QUS|ticket> i had created. it was our next up but ill stop some work in progress to get to this asap.
+[2025-03-05T00:44:53.088Z] <@U0105PTF3E2>: yep. thanks. so to summarize, the bug where cloud handles an order bull job multiple concurrent times is still happening and causing issues where factory tries to fulfil too much (because we added too many to cart)?
+[2025-03-05T00:43:25.144Z] <@U0105PTF3E2>: speaking of these events, i had missed his response on this thread and they pinged me <https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1741134613790649?thread_ts=1740608647.895759&cid=C05JVN1UMFH|again just now>. literally everything is burning down around us and i have no one even remotely free to work on this. can i tell them that we have too many high priority bugs to deal with this RN?
+[2025-03-05T00:25:52.527Z] <@U0105PTF3E2>: other than the dispense id filter, most of those are order level filters, which might be confusing. the dates have to do with create date maybe? i forget that part
+[2025-03-05T00:25:02.868Z] <@U0105PTF3E2>: from the first SS, it looks like the only filters are facility and "only potential errors" and from the visible table, the facility on the far right is only plm, and the 4th column from the left, the "Has Potential Error" column, does indeed only contain yes
+[2025-03-05T00:23:13.242Z] <@U0105PTF3E2>: i see the screenshots but can't discern what the issue is
+[2025-03-05T00:22:32.270Z] <@U0105PTF3E2>: what about it is broken/unreliable?
+[2025-03-05T00:19:40.298Z] <@U0105PTF3E2>: its not just noise though, its the load on the system that caused us to remove it i think
+[2025-03-05T00:03:35.109Z] <@U0105PTF3E2>: the <#C0663STKJN6> has most of the context. including <https://fulfilsolutions.slack.com/archives/C0663STKJN6/p1740005658625699?thread_ts=1739490231.170539&cid=C0663STKJN6|this >about the induct one
+[2025-03-05T00:01:31.940Z] <@U0105PTF3E2>: i thought <@U04UD3CHNSJ|Vincent> and <@U02HZSV4EL8|Liz Howard> did all of those events?
+[2025-03-05T00:01:07.461Z] <@U0105PTF3E2>: but... like the inducttion one... i thought some of those got rolled into diff machine state events or something
+[2025-03-05T00:00:32.307Z] <@U0105PTF3E2>: StorageSystemExceptionEvent and everything below is in the confluence doc
+[2025-03-04T23:59:15.905Z] <@U0105PTF3E2>: i think inductionconveyorstatechange is just a machine state change or something
+[2025-03-04T23:58:17.931Z] <@U0105PTF3E2>: they did complain, <https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1740608647895759|here> and then everything caught on fucking fire so we haven't dealt with it
+[2025-03-04T23:57:40.382Z] <@U0105PTF3E2>: I think vincent had "turned off" this one StorageStackSlotStateChangedEvent because it was hella noisy and it was easier to disable and see if they complained than actually fix the issue
+[2025-03-04T23:56:14.991Z] <@U0105PTF3E2>: outside of partner/business events
+[2025-03-04T23:56:05.847Z] <@U0105PTF3E2>: <https://wiki.labcollab.net/confluence/pages/viewpage.action?spaceKey=GRAFF&title=Performance+Events+Schema|this> was the only discussions that i was aware of regarding metric events
+[2025-03-04T23:50:26.436Z] <@U0105PTF3E2>: Myself, <@U0168TK03V0|Alex (he/him)> and <@U015EQS4HT4|Zach Boone> will be meeting with Vlad tomorrow (its scheduled for all day). I don't want to speak for them (but i will i guess lol) - We will likely be absent from most meetings but at least I will be available on slack.
+[2025-03-04T23:36:30.292Z] <@U0105PTF3E2>: beat me to it
+[2025-03-04T22:05:30.497Z] <@U0105PTF3E2>: if we need it in 6mo, we can prioritize changing it and come up w/ a good design for it
+[2025-03-04T22:04:52.166Z] <@U0105PTF3E2>: the VS selector is already a component we can just slap on the page with a clear pattern. i think we just go with that since the work is probably mostly done
+[2025-03-04T22:04:13.774Z] <@U0105PTF3E2>: i suggest whatever is easiest right now. who knows if we ever end up needing anything else
+[2025-03-04T21:46:04.001Z] <@U0105PTF3E2>: we could make it so the vendorstore is optional but then people will complain about accidentally forgetting to set it and seeing more than they need to
+[2025-03-04T21:44:12.685Z] <@U0105PTF3E2>: i was thinking what Frankie said. operators are charged with this for now and its difficult for them to keep up with only one facility
+[2025-03-04T21:34:12.924Z] <@U0105PTF3E2>: no work has been done to specifically address this issue right? I see that there is a section in the <https://docs.google.com/document/d/1xf58UYFRB_jBx8L0wzRpUfvHcKkJ45iuKlnG5wfmhjw/edit?tab=t.0|doc> for BotArrivedAtBayEvent.
+[2025-03-04T20:47:29.586Z] <@U0105PTF3E2>: Kevin M's accounts aren't deactivated? I know Raynald has some interviews for a backfill today so i assume that means he is definitely resigned and gone. but Samantha is telling me she was told we weren't deactivating his stuff b/c he is staying? It feels like there some serious miscommunication happening somewhere
+[2025-03-04T20:19:02.842Z] <@U0105PTF3E2>: discarded means it was removed from the system via some method other than "packed" (eg. being dispensed for an order). I looked through the factory code a bit and this includes but is not limited to items removed during review (eg. induction said there is something in the lane but after RTA review, we determine there is no item in the lane).
+[2025-03-04T20:04:51.762Z] <@U0105PTF3E2>: > I think amazon might have the ability to either cancel and send a new order,\nthey do, however, they typically use this for when an order changes after it has been sent to the factory (i think a customer can't change it but amazon's support team can under special circumstances) or if they need to reschedule an order.\n> they can also request more/"missing" items at the bot terminal if the bot is already there\nThey have an API for requesting items for an order. my understanding is their UI allows them to request these "corrections" if the associate has damaged the item (or see that it is damaged), They also might use the correction api if they think we shorted an item (eg. say an apple arrived in a bot and it did not). the tl;dr is, the correction api is very flexible and allows for them to request the items at any point (even after the order is done packing), but I believe they don't use it in their UX much
+[2025-03-04T19:54:28.356Z] <@U0105PTF3E2>: yeah, it looks like it was merged on the 21st, so it should go live on wed
+[2025-03-04T19:53:08.040Z] <@U0105PTF3E2>: since it was merged "2 weeks ago"
+[2025-03-04T19:52:56.000Z] <@U0105PTF3E2>: based on the PR thomas linked below, it should go live with tomorrow's release
+[2025-03-04T19:51:33.541Z] <@U0105PTF3E2>: and this "improvement" "should" help. thankfully they acknowledged it won't help with the associates who are just doing w/e random thing they want and not paying attention to the instructions
+[2025-03-04T19:50:19.929Z] <@U0105PTF3E2>: b/c we had lots of associates loading improperly last week
+[2025-03-04T19:49:48.551Z] <@U0105PTF3E2>: omg... "leaderhsip" is asking about the state of the "improved loading instructions"
+[2025-03-04T18:49:28.805Z] <@U0105PTF3E2>: <@U0168TK03V0|Alex (he/him)> <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1741082512573709?thread_ts=1741017994.310709&amp;cid=C073HNWR2MB>
+[2025-03-04T18:17:32.920Z] <@U0105PTF3E2>: i have no context other than that. maybe <@U015EQS4HT4|Zach Boone> knows more
+[2025-03-04T18:15:51.578Z] <@U0105PTF3E2>: everything is on fire? <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1741096097444459>
+[2025-03-04T18:02:31.410Z] <@U0105PTF3E2>: it is a object in the api <https://github.com/Fulfil0518/Fulfil-api/blob/4171411c716af0004f0b7d31740624cfa9dff927/contracts/internal_api/pim/metadata/fragility.ts#L19|here>
+[2025-03-04T18:01:10.210Z] <@U0105PTF3E2>: looks like it was added in 2023 <https://github.com/Fulfil0518/ts-fulfil-libs/pull/250>
+[2025-03-04T17:57:42.148Z] <@U0105PTF3E2>: anyone know what inventory report status=discarded is? re <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1740842963331549|this>
+[2025-03-04T17:47:48.457Z] <@U0105PTF3E2>: <https://console.cloud.google.com/storage/browser?project=fulfil-web&prefix=&forceOnBucketsSortingFiltering=true&pageState=(%22StorageBucketsTable%22:(%22f%22:%22%255B%255D%22,%22s%22:%5B(%22i%22:%22name%22,%22s%22:%220%22)%5D,%22r%22:30))|https://console.cloud.google.com/storage/browser?project=fulfil-web&amp;prefix=&amp;forceOnBucket[…]:%5B(%22i%22:%22name%22,%22s%22:%220%22)%5D,%22r%22:30))>
+[2025-03-04T17:17:48.236Z] <@U0105PTF3E2>: hmm, clicking the query takes me to <https://grafana.fulfil-api.com/alerting/list?view=state&search=state:firing%20label:alertname%3DHTTPStatus5XXSpiking|this> where i see this error
+[2025-03-04T16:40:29.239Z] <@U0105PTF3E2>: 5xx all morning
+[2025-03-04T04:51:10.868Z] <@U0105PTF3E2>: James created a pr that im getting over the finish line for giving amazon an api for creating a tray removal request in staging. Is that <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1741061720832829|this>?
+[2025-03-03T23:05:02.652Z] <@U0105PTF3E2>: leads meeting?
+[2025-03-03T22:57:38.289Z] <@U0105PTF3E2>: i shouldn't have been lol
+[2025-03-03T22:57:32.599Z] <@U0105PTF3E2>: im actually surprised they mentioned it so quickly after having a meeting about it but
+[2025-03-03T22:57:10.133Z] <@U0105PTF3E2>: i was wondering if we were going to bring it up
+[2025-03-03T22:36:25.153Z] <@U0105PTF3E2>: maybe <@U04EH1U6NAU|Matheus Pellegrini> can start learning about auth.
+[2025-03-03T22:34:04.389Z] <@U0105PTF3E2>: someone that remains after the cuts AND that is actually planned to remain on the cloud team :sob: . Tomorrow during standup we will designate someone to pair on this stuff
+[2025-03-03T22:33:11.923Z] <@U0105PTF3E2>: ugh, i missed this. we NEED someone else to learn about auth.
+[2025-03-03T22:28:46.148Z] <@U0105PTF3E2>: i can't remember if <@U05TSSSP70U|Jess vdV> was looking into this or knows who is?
+[2025-03-03T22:27:53.562Z] <@U0105PTF3E2>: The videos load now, so this still feels like the data is just making up to the cloud too slowly
+[2025-03-03T21:52:14.665Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1741027256666039?thread_ts=1741017994.310709&cid=C073HNWR2MB|Here> is some additional context
+[2025-03-03T21:48:51.150Z] <@U0105PTF3E2>: created <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08G8JUBA4R|this ticket> and put it as p1 in top of next up
+[2025-03-03T21:43:51.036Z] <@U0105PTF3E2>: it seems like a priority, not sure what else you have going on. ill make a ticket at least
+[2025-03-03T21:43:26.791Z] <@U0105PTF3E2>: i was going to say i can, but then i looked at the wall of meetings coming
+[2025-03-03T21:20:54.223Z] <@U0105PTF3E2>: look at these outages man... its fucking clear our babies first scaling apps have huge cracks in them that are starting to burst. and, when shit hits the fan, only vincent and zach, the sr competent people are stepping up... once they are not focused on this shit... we are toast...
+[2025-03-03T21:19:18.976Z] <@U0105PTF3E2>: yeah, and Raynald was already and is continuing to complain (understandably) about struggling to do this split...
+[2025-03-03T21:10:04.830Z] <@U0105PTF3E2>: > Is it worth reverting as a just in case measure\nimo, not unless we have a good reason or some evidence that its necessary. i did glance at it and it didn't seem too risky but i def didn't deep dive
+[2025-03-03T21:08:31.946Z] <@U0105PTF3E2>: are you investigating now (should we hop in a huddle) or are you suggesting i make a ticket and get someone to investigate?
+[2025-03-03T21:07:07.887Z] <@U0105PTF3E2>: Eric H was surprised he was still on the backend on call rotation
+[2025-03-03T21:06:33.608Z] <@U0105PTF3E2>: cloud api has gone down at least 3 times starting on feb 25. earliest happened this morning.
+[2025-03-03T21:05:38.146Z] <@U0105PTF3E2>: maybe topic for leads meeting, maybe not. at least fyi\n• Cloud api outages\n• On call rotation confusion after layoffs\n• moral is very low
+[2025-03-03T20:58:33.133Z] <@U0105PTF3E2>: are we sure we know what happened with these orders and that it was isolated to 8 orders? if batch goes down, there is a number of ways we can drop orders (and i think no way to recover :grimacing: ). if the jobs are already enqueued, or if they fail to enqueue
+[2025-03-03T20:51:47.291Z] <@U0105PTF3E2>: is ops/amazon aware?
+[2025-03-03T20:51:29.395Z] <@U0105PTF3E2>: ah shit
+[2025-03-03T20:03:10.426Z] <@U0105PTF3E2>: it looks like <@U02A7R0NLRX|Lev Lvovsky> is <https://fulfil.pagerduty.com/schedules#P3WXGS8|supposed> to be primary and zach took over for a few days this week?
+[2025-03-03T20:02:18.344Z] <@U0105PTF3E2>: <@U015EQS4HT4|Zach Boone> is on call primary and secondary right now...
+[2025-03-03T18:12:01.823Z] <@U0105PTF3E2>: didn't do retro on friday
+[2025-03-03T18:00:27.259Z] <@U0105PTF3E2>: <@UNFQUGUS3|Tony> made a change recently i think which gets us way closer but im not exactly sure. I know <@UNFQUGUS3|Tony>, <@U04UD3CHNSJ|Vincent> and <@U015EQS4HT4|Zach Boone> know more
+[2025-03-03T17:54:56.968Z] <@U0105PTF3E2>: <@U015EQS4HT4|Zach Boone>, i addressed most of the feedback in this PR. do you think its ok to merge?
+[2025-03-03T17:39:38.325Z] <@U0105PTF3E2>: If the end result is an adjustment to inventory, then amazon would get an event. but as we know from our recent investigation into mongo sync v2, we don't send events for every inventory change
+[2025-03-03T17:36:07.434Z] <@U0105PTF3E2>: bypass reservations PRs. should we release dashboard changes asap?
+[2025-03-03T17:35:40.672Z] <@U0105PTF3E2>: api down again?
+[2025-03-03T17:26:36.419Z] <@U0105PTF3E2>: <@U07H0RKJJPR|Alessandro Vaiz>, im assigning this to you since it's related to some of the work you have done so far
+[2025-03-01T02:46:23.947Z] <@U0105PTF3E2>: Yeah, but its gotta go back through induction process
+[2025-03-01T01:50:22.718Z] <@U0105PTF3E2>: 1. Depends on when its cancelled. If things haven't been dispensed, no changes. If so, it arrives in bots and they have to deal with it\n2. Me either. I dont know if its Supported by 3.1. will have to ask ops
+[2025-03-01T01:27:10.893Z] <@U0105PTF3E2>: Damn wtf. Im in eugene but i did bring my laptop. Lmk if you guys need any help
+[2025-02-28T21:42:04.185Z] <@U0105PTF3E2>: <@U04UD3CHNSJ|Vincent> how the hell did you mess with the eeny settings? im totally failing to find it and remove people :sob:
+[2025-02-28T20:43:38.511Z] <@U0105PTF3E2>: I tried to put up a poll... I don't see it though
+[2025-02-28T20:36:30.979Z] <@U0105PTF3E2>: <!here> Sorry for the news everyone... I struggled to think of the best thing to do after the all swe meeting. Idk if everyone wants some time to process. If we want a team meeting but i do want to at least have 1on1s to chat.
+[2025-02-28T19:47:05.521Z] <@U0105PTF3E2>: Did you use that?
+[2025-02-28T19:46:58.898Z] <@U0105PTF3E2>: There is an order id filter
+[2025-02-28T18:23:01.664Z] <@U0105PTF3E2>: there is also a software meeting scheduled at our retro time though.. so i don't think we will have retro today but we will see.
+[2025-02-28T18:22:08.946Z] <@U0105PTF3E2>: the post is scheduled for 11am pst on days we have retro, but i had to move retro back b/c of meetings this morning. i cannot make the 11am meeting but want to give you guys a chance to do post
+[2025-02-28T18:00:39.175Z] <@U0105PTF3E2>: i can't make post this morning
+[2025-02-28T17:21:38.288Z] <@U0105PTF3E2>: yesterday we <https://fulfilsolutions.slack.com/archives/C06DHLMPFFV/p1740691103873849?thread_ts=1740691018.030459&cid=C06DHLMPFFV|noticed> that at least one order was sent to the factory twice :grimacing:
+[2025-02-28T02:24:12.079Z] <@U0105PTF3E2>: We havent even gome through all their tickets yet, plus with the reduced headcount and the fucking onslaught of internal issues... We sure as shit wont be hitting the counts they might expect from a message like this
+[2025-02-28T02:22:52.382Z] <@U0105PTF3E2>: Re this <https://fulfilsolutions.slack.com/archives/C08G3Q426JC/p1740699855766059|https://fulfilsolutions.slack.com/archives/C08G3Q426JC/p1740699855766059>,\nHave we really aligned?
+[2025-02-28T01:01:04.575Z] <@U0105PTF3E2>: i am pretty confident that this was the result of a large and sudden shift in inventory, which will only happen when non permanent things affect inventory, such as factory (or parts of) going down or, restarts, etc. so i would agree that its likely that if there is a large event like this, its likely followed by the opposite soon (eg. disabling a bunch of inventory and then enabling it all again when the factory comes back up).\nprobably wouldn't be too hard.
+[2025-02-28T00:46:40.579Z] <@U0105PTF3E2>: I have meetings in the morning and am out tomorrow afternoon so i wont be able to attend but Lev knows more than me so he's got it
+[2025-02-28T00:18:59.429Z] <@U0105PTF3E2>: <https://issues.labcollab.net/secure/Dashboard.jspa?selectPageId=93169|this dashboard> that I used to use has to be broken right? i know there is more than 1 minor bug...
+[2025-02-27T23:28:50.550Z] <@U0105PTF3E2>: ya sure
+[2025-02-27T23:24:47.424Z] <@U0105PTF3E2>: why? whats up?
+[2025-02-27T23:21:26.810Z] <@U0105PTF3E2>: correct
+[2025-02-27T23:20:55.054Z] <@U0105PTF3E2>: only got off the call a couple min ago so i stopped to help my son
+[2025-02-27T23:20:36.425Z] <@U0105PTF3E2>: been investigating that fucking order issue/shorts
+[2025-02-27T23:01:28.748Z] <@U0105PTF3E2>: created this ticket fyi <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08FFFH4QUS>
+[2025-02-27T22:55:48.305Z] <@U0105PTF3E2>: thankfully, it doesn't look like we are doubling every order. it seems to be intermittent and of the listed orders, only happened for order 213068. We had that order processed two times which is why most items are doubled.
+[2025-02-27T22:26:08.608Z] <@U0105PTF3E2>: order 114-2685753-0770608, 212730\nthere is a <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%2229o%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bjob%3D%5C%22fulfil-prod%2Ffulfil-api%5C%22%7D%20%7C%3D%20%60114-2685753-0770608%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%221740211200000%22,%22to%22:%221740383999000%22%7D%7D%7D&orgId=1|post and a put> for this one. so they updated the order at some point. we only sent one bull job and <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%2229o%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bjob%3D%5C%22fulfil-prod%2Ffulfil-api-batch%5C%22%7D%20%7C%3D%20%60212730%60%20%7C%3D%20%60partner-order-placement-queue%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%221740418560000%22,%22to%22:%221740556799000%22%7D%7D%7D&orgId=1|one pubsub> for this one
+[2025-02-27T22:06:54.838Z] <@U0105PTF3E2>: order 112-2742828-6763441, 213169\nnot the same case as the other order. the partner <https://grafana.fulfil-api.com/goto/kCA1oItNg?orgId=1|ordered> 8 things and we had one <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%2229o%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bjob%3D%5C%22fulfil-prod%2Ffulfil-api-batch%5C%22%7D%20%7C%3D%20%60213169%60%20%7C%3D%20%60partner-order-placement-queue%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%221740418560000%22,%22to%22:%221740556799000%22%7D%7D%7D&orgId=1|mysql pubsub> and it matches what amazon actually requested.
+[2025-02-27T21:35:00.125Z] <@U0105PTF3E2>: hey all, orders might be fucked. there has been an increasing number of shortage reports and I started investigating one of the latest ones (details <https://fulfilsolutions.slack.com/archives/C06DHLMPFFV/p1740691103873849?thread_ts=1740691018.030459&cid=C06DHLMPFFV|here>). The only real change I can think of that has happened recently is ripping out <https://github.com/Fulfil0518/Fulfil-api/pull/4428|Uber stuff>. so maybe <@U02P5KWV223|Josh Wentworth> can take a look w/ me? or <@U02HA7KE04A|Miguel Amaro> since he reviewed it
+[2025-02-27T21:22:10.522Z] <@U0105PTF3E2>: <https://dashboard.fulfil.store/orders/order-details/213068|dashboard orders page> thinks the order should have 8 things (aligns with last message we sent)
+[2025-02-27T21:19:19.043Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C066Y590U6P/p1740691003741559?thread_ts=1740551347.524639&cid=C066Y590U6P|mysql pubsub to factory>
+[2025-02-27T21:18:56.349Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C066Y590U6P/p1740690547062639?thread_ts=1740551347.524639&cid=C066Y590U6P|order details from amazon>
+[2025-02-27T21:18:23.873Z] <@U0105PTF3E2>: there was a question about multiple orders on <https://fulfilsolutions.slack.com/archives/C066Y590U6P/p1740551347524639|this thread>\nI started adding my findings but that thread is a bit unruly so im moving my documentation here.
+[2025-02-27T21:16:43.741Z] <@U0105PTF3E2>: the first pubsub to factory has this listed as the items\n```"normal_items": [\n        {\n            "product_id": 27205,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27205,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27484,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27522,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27522,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27484,\n            "grade_id": 0\n        },\n        {\n            "product_id": 22186,\n            "grade_id": 0\n        }\n    ],```\nand the second has this\n```"normal_items": [\n        {\n            "product_id": 27205,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27205,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27484,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27522,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27522,\n            "grade_id": 0\n        },\n        {\n            "product_id": 27484,\n            "grade_id": 0\n        },\n        {\n            "product_id": 22186,\n            "grade_id": 0\n        },\n        {\n            "product_id": 22186,\n            "grade_id": 0\n        }\n    ],```\nwhich are not the same as what amazon asked for, and both of those are not the same...
+[2025-02-27T21:09:07.062Z] <@U0105PTF3E2>: what i have found so far. Original order <https://grafana.fulfil-api.com/goto/rDrwFIpHR?orgId=1|request> from amazon (order 113-8684076-3787429 fulfil 213068) matches the order details we have saved which is\n```"products": [{\n            "quantity": 1,\n            "productId": 27205,\n            "productCode": "B074H7J353",\n        },{\n            "quantity": 1,\n            "productId": 27484,\n            "productCode": "B07MD6N2CL",\n        },{\n            "quantity": 2,\n            "productId": 27522,\n            "productCode": "B00JYG1IRA",\n        },{\n            "quantity": 1,\n            "productId": 22186,\n            "productCode": "B00108EPCU",\n        }\n    ]```\nI don't see any request to edit the order, so amazon never changed anything about the order.\nbased on <https://grafana.fulfil-api.com/goto/3LMzcSpNg?orgId=1|this> i think that we queued up a duplicate bull job to create the order with the factory, which would explain the duplicate mysql pubsub event... so on the surface, it seems there is a bug in the API
+[2025-02-27T20:24:07.942Z] <@U0105PTF3E2>: that's very odd...
+[2025-02-27T20:23:41.762Z] <@U0105PTF3E2>: oooh, i see two new_order_placed mysql pubsub messages for order 213068...
+[2025-02-27T20:20:57.717Z] <@U0105PTF3E2>: when I look in the db, i only see one order for 213068. can you tell me what is reporting "two versions of this order"?
+[2025-02-27T20:20:14.859Z] <@U0105PTF3E2>: the prod mysql db can only have one order for a given id. its a PK that cannot be duplicated
+[2025-02-27T20:16:50.394Z] <@U0105PTF3E2>: makup dashmart meeting? yeah i have it. i hadn't looked, just saw the message and reacted
+[2025-02-27T20:16:01.666Z] <@U0105PTF3E2>: np at all
+[2025-02-27T19:58:46.914Z] <@U0105PTF3E2>: i can, but im not great at IAM and haven't taken the time to learn. maybe <@U01DV0H4LQK|Eric Hernandez> or <@U013TF1F70W|tim> can do it quicker
+[2025-02-27T19:56:04.569Z] <@U0105PTF3E2>: did we create a ticket for this? im concerned about this based on the recent catalog issues.
+[2025-02-27T19:54:26.405Z] <@U0105PTF3E2>: > and nothing is changing\nis an important distinction. do we allow overriding/updating? it could be an error, it could be intended...
+[2025-02-27T19:44:39.759Z] <@U0105PTF3E2>: ah :thumbsup:
+[2025-02-27T19:41:36.769Z] <@U0105PTF3E2>: we had almost 100% cpu utilization yesterday at ~8pm?
+[2025-02-27T19:07:20.974Z] <@U0105PTF3E2>: factory made a change to disable offboarded items, so this is no longer needed
+[2025-02-27T18:33:37.476Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1740624018904999?thread_ts=1740531476.299999&amp;cid=C05KA6SQP8B>
+[2025-02-27T17:42:07.850Z] <@U0105PTF3E2>: :rolling_on_the_floor_laughing:
+[2025-02-27T17:41:57.219Z] <@U0105PTF3E2>: <@U0168TK03V0|Alex (he/him)>, is it as good as opify though? <https://x.com/growing_daniel/status/1894417860853993861>
+[2025-02-27T17:39:24.826Z] <@U0105PTF3E2>: thanks for busting out those fixes yesterday. take it easy today for sure.
+[2025-02-27T17:34:40.743Z] <@U0105PTF3E2>: :point_up: this is what i was thinking but i know very little about the current upload tool
+[2025-02-27T17:27:44.367Z] <@U0105PTF3E2>: go over open tickets
+[2025-02-27T17:26:09.298Z] <@U0105PTF3E2>: slow/broken catalog upload
+[2025-02-27T17:25:45.203Z] <@U0105PTF3E2>: how did the sql outage investigation go yesterday?
+[2025-02-27T16:51:26.399Z] <@U0105PTF3E2>: Not much on the "post" agenda so we should have time
+[2025-02-27T16:50:15.596Z] <@U0105PTF3E2>: I think we need to go through the open tickets today and push people to close out as much as possible before tomorrow...
+[2025-02-27T02:40:53.547Z] <@U0105PTF3E2>: oh my b. yeah i don't have access to that doc either
+[2025-02-27T02:38:15.417Z] <@U0105PTF3E2>: > just requested access\nwhere?
+[2025-02-27T01:14:03.780Z] <@U0105PTF3E2>: I think amazon would complain if we consistently missed that deadline so some buffer is advised
+[2025-02-27T01:11:09.767Z] <@U0105PTF3E2>: did we restart the services in those environments so it gets the latest code?
+[2025-02-27T01:09:03.267Z] <@U0105PTF3E2>: There may have been some miscommunication here. I think this event was either so noisy or so large that it was causing errors on in our system and was temporarily disabled. We have an action item to address this but might need to work with you to determine what if any data can be trimmed or how we can alleviate some of the issues we are seeing. There have been quite a few high priority things distracting us from this effort though. I apologize for the lost data and the confusion.\n\nCan you please share some insight into how critical this metric is so I can work to prioritize it against our other work?
+[2025-02-27T00:59:44.863Z] <@U0105PTF3E2>: i forget where it comes from exactly. anything from "keycloak"?
+[2025-02-27T00:57:35.921Z] <@U0105PTF3E2>: yeah, thats why i very specifically word it like "potentially problematic". My understanding of their implementation is as follows\n• they don't know when fulfil thinks an order is "complete" until they get the order-status-updated event that tells them it transitioned to picked_up\n• once they get that, they evaluate the order on their side. They might present the user with opportunities for corrections or w/e. in this case, its ok for the fulfil order to transition out of picked_up, because they understand their order has not transitioned.\n• once they determine the order is complete (it can be completely fulfilled, they might know there is no way to get the rest of the items, it might be too close to the deadline, etc.) they will transition their order to complete/picked up (idk what they call it). At this point, if the order changes, their system will error and alarm. \n• we have no way of knowing if they have decided the order is complete or not so its not safe for us to transition the order w/o their consent
+[2025-02-27T00:50:57.874Z] <@U0105PTF3E2>: ill handle it for now
+[2025-02-27T00:50:42.939Z] <@U0105PTF3E2>: lol
+[2025-02-27T00:49:56.099Z] <@U0105PTF3E2>: we obv don't require human intervention to send it though
+[2025-02-27T00:49:31.424Z] <@U0105PTF3E2>: re:\n> the work Chris has been doing to hold orders\nMy understanding of how it works on the factory side is that if an order has shorts it waits until the agreed upon "last minute" (which is deadline minus 30 min) before giving up on the order and sending it to the order_ready status. so, we sort of do
+[2025-02-27T00:42:21.986Z] <@U0105PTF3E2>: but... i asked vincent <https://fulfilsolutions.slack.com/archives/GLA8NHQDV/p1740616659581439|here>
+[2025-02-27T00:42:11.005Z] <@U0105PTF3E2>: ya sry. i thought this might have been something different. it felt like another instance of some new person at amazon asking for past context and i was trying to squash it
+[2025-02-27T00:41:28.835Z] <@U0105PTF3E2>: amazing
+[2025-02-27T00:41:25.128Z] <@U0105PTF3E2>: holy shit...
+[2025-02-27T00:40:37.636Z] <@U0105PTF3E2>: I could have completely misunderstood but, according to a conversation with <@U01JP8PTNBS|Chris C>, hitting the force repack button before the order is picked up actually does nothing.
+[2025-02-27T00:37:39.581Z] <@U0105PTF3E2>: re <https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1740608647895759|this> - looks like someone <https://fulfilsolutions.slack.com/archives/C0663STKJN6/p1729879461357749|complained> <@U04UD3CHNSJ|Vincent>?
+[2025-02-27T00:24:55.598Z] <@U0105PTF3E2>: oh i found this... <https://fulfilsolutions.slack.com/archives/C0663STKJN6/p1729879461357749>
+[2025-02-27T00:17:58.584Z] <@U0105PTF3E2>: <@U0168TK03V0|Alex (he/him)>, <https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1740608647895759|this> ping here directed at <@U04UD3CHNSJ|Vincent> seems a little weird. do we have any documentation or reference to these discussions?
+[2025-02-27T00:17:44.053Z] <@U0105PTF3E2>: eh, i was going to put this in <#GLA8NHQDV> but idk
+[2025-02-27T00:13:21.639Z] <@U0105PTF3E2>: Follow up to our discussions about force repack <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1740615167442329>
+[2025-02-27T00:12:47.442Z] <@U0105PTF3E2>: i talked to amazon today at our dev sync meeting. They confirmed that an order coming out of picked up state can potentially be very problematic for them. based on a discussion today about how force repack is only useful when an order is in the picked up state (since it forces the factory to re-evaluate the order by putting it back in the packing state), my recommendation is that we no longer use force repack at all in PLM. I did ask them what alternatives we have to getting the customer the things they ordered if a failure happens and they basically said that they expect our system to be as resilient as possible BEFORE the order is "picked up". They have zero capacity for and interest in addressing issues once our system says it is done with the order. This was just their dev team, so, if we absolutely cannot accept this, the discussion will likely need to be escalated.\nThe good news is,\n• we have some <https://github.com/Fulfil0518/Fulfil-api/pull/4400|in flight work> right now to inform the factory of the whole order rather than what the cloud thinks is in stock. \n• The cloud is also trying to come up with a <https://docs.google.com/document/d/1y4HpyhxPZberJzPKucKhL5fvV5i0JKzyMV0KYX_AjqM/edit?tab=t.0#heading=h.tbyc1yaxb04b|plan> for how to make understanding what was ordered vs what we expect to deliver\nThat, coupled with the work Chris has been doing to hold orders until as late as possible should give us the best opportunity we have ever had to avoid shorts.
+[2025-02-27T00:02:07.560Z] <@U0105PTF3E2>: yeah man. i got that side of things
+[2025-02-26T23:44:00.822Z] <@U0105PTF3E2>: <@U07H0RKJJPR|Alessandro Vaiz>, based on our discussions during the dev sync, i THINK this ticket will be resolved and Vlad is going to create new tickets for future discussions and more specific implementation. It's probably worth commenting on the jira ticket and asking if they got everything they needed out of the dev sync discussion and if we can close this ticket.
+[2025-02-26T23:41:22.522Z] <@U0105PTF3E2>: another question amazon is asking is if we had any alerts go off for this. they ask us all the time to treat their environments like prod. i told them we might have had an alert but its doubtful.
+[2025-02-26T23:38:05.472Z] <@U0105PTF3E2>: does this have the potential to hammer the db like we have been seeing? should we limit the number of concurrent batches?
+[2025-02-26T23:36:19.533Z] <@U0105PTF3E2>: i guess there is literally zero work to do if they only want the post endpoint to take an external_request_id. it would just work. so yeah, if they want it back on the GET, then we have to just store it and then pipe it up to the get
+[2025-02-26T23:29:25.455Z] <@U0105PTF3E2>: because the request is ambiguous, we cant be sure what they are thinking. i thought maybe we returned some id or something but i guess not
+[2025-02-26T23:27:01.243Z] <@U0105PTF3E2>: When they say this on the ticket\n> We would like for the external request id on purge jobs to be returned to us, so that we can map this to information on our side like who created the job\ni just assume they mean in the post. if they want it on the get, we would have to store it
+[2025-02-26T23:22:37.762Z] <@U0105PTF3E2>: > the idempotent mechanism keeps track, it stores it in the cache.\nwhy would we need to store it? the idempotent mechanism keeps track, it stores it in the cache.
+[2025-02-26T23:22:31.168Z] <@U0105PTF3E2>: the idea is that, the idempotent nature of our endpoints utilizes an external_request_id so that we don't try to process the "same request" multiple times. for things like catalog report, we do "store" that data because we use it later
+[2025-02-26T23:21:18.675Z] <@U0105PTF3E2>: based on the jira ticket, we shouldn't need to keep track of the external request id. i guess we could...
+[2025-02-26T23:19:39.143Z] <@U0105PTF3E2>: why do we need to save it to the purge job? where did this request originate from? just a jira ticket?
+[2025-02-26T23:18:38.679Z] <@U0105PTF3E2>: One thing that was quite useful with our last partner was choosing a date pre-go live and doing some on site e2e testing. Having engineers in person able to quickly collaborate and debug helped accelerate our progress and give us more confidence in the integration. Is this something that people would be open to?
+[2025-02-26T21:00:52.383Z] <@U0105PTF3E2>: vincent and zach are continuing the investigation today.
+[2025-02-26T20:56:11.975Z] <@U0105PTF3E2>: i feel like, the way we currently gauge how performant our team is, is by having managers in the trenches with their people and its sort of ephemeral. and that gauge would be what we use to determine if these cuts are necessary, detrimental, etc. since we are ignoring that gauge (leadership not listening to us when we say how negatively this will affect), maybe we need a different way to "prove" how effective we are or how many things we are dropping.
+[2025-02-26T20:31:35.176Z] <@U0105PTF3E2>: do you guys think there is any way we can measure how much stuff we do and how we can prove how much these cuts will affect us?
+[2025-02-26T20:20:38.879Z] <@U0105PTF3E2>: please update vlad on <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1740531476299999|this thread> when you have information. would be good to communicate often with them to give them faith we are investigating and making progress
+[2025-02-26T20:19:27.244Z] <@U0105PTF3E2>: in case there are details you need or discussion to have with them
+[2025-02-26T20:19:16.924Z] <@U0105PTF3E2>: <https://issues.labcollab.net/browse/GRAF-947>
+[2025-02-26T20:19:16.490Z] <@U0105PTF3E2>: fyi, az made a ticket for this
+[2025-02-26T20:17:35.497Z] <@U0105PTF3E2>: code was released. idk exactly when it will be live but it could be now
+[2025-02-26T19:26:55.165Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1740268828063019?thread_ts=1740227994.821899&cid=C05KA6SQP8B|this> explanation from tony is what i was referencin
+[2025-02-26T19:04:46.079Z] <@U0105PTF3E2>: should i release the code?
+[2025-02-26T19:04:40.567Z] <@U0105PTF3E2>: so, do we need this for the tour?
+[2025-02-26T19:03:51.115Z] <@U0105PTF3E2>: yeah thx. fixed it.
+[2025-02-26T18:30:36.571Z] <@U0105PTF3E2>: fwiw, the problem is that i blocked test orders for any vendorstore that is not fulfil, not remembering that luky-pioneer is the main one for pio...
+[2025-02-26T18:29:45.981Z] <@U0105PTF3E2>: should be fixed shortly
+[2025-02-26T18:29:37.039Z] <@U0105PTF3E2>: ill post here when it goes in
+[2025-02-26T18:29:29.158Z] <@U0105PTF3E2>: i have a pr up to fix this
+[2025-02-26T18:24:55.446Z] <@U0105PTF3E2>: i need a review plz <https://fulfilsolutions.slack.com/archives/C053K8A9MUZ/p1740594259973749>
+[2025-02-26T18:24:19.973Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/Fulfil-api/pull/4441> - need this right now
+[2025-02-26T18:17:39.976Z] <@U0105PTF3E2>: shit i think i know what the issue is
+[2025-02-26T18:16:47.712Z] <@U0105PTF3E2>: did we change the pioneer vendorstore?
+[2025-02-26T18:14:30.679Z] <@U0105PTF3E2>: maybe <@UNFQUGUS3|Tony> knows?
+[2025-02-26T18:13:51.384Z] <@U0105PTF3E2>: ah, did we change everything over to be DD vendorstore?
+[2025-02-26T18:12:28.032Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1740531476299999>
+[2025-02-26T18:12:15.471Z] <@U0105PTF3E2>: please cut a ticket just so we can get all of the discussion and details in one place. but i will have someone look at this asap
+[2025-02-26T18:11:07.277Z] <@U0105PTF3E2>: > turn on the Luckynow stockroom again\nidk what this means
+[2025-02-26T18:10:49.380Z] <@U0105PTF3E2>: sorry i missed this
+[2025-02-26T18:09:15.278Z] <@U0105PTF3E2>: fulfil_internal in catalog report
+[2025-02-26T17:24:06.971Z] <@U0105PTF3E2>: <https://issues.labcollab.net/browse/GRAF-924>
+[2025-02-26T17:23:44.340Z] <@U0105PTF3E2>: sql and api going down last night
+[2025-02-26T16:31:33.050Z] <@U0105PTF3E2>: The root issue resolved or the page?
+[2025-02-26T16:10:42.432Z] <@U0105PTF3E2>: Anyone investing?
+[2025-02-26T16:10:31.259Z] <@U0105PTF3E2>: <S076RL4B9P1> i got paged for this
+[2025-02-26T06:39:44.670Z] <@U0105PTF3E2>: i have to hop off. thanks all
+[2025-02-26T06:21:21.353Z] <@U0105PTF3E2>: <@U015EQS4HT4|Zach Boone>, did you happen to put these links in the journal entry?
+[2025-02-26T06:11:52.857Z] <@U0105PTF3E2>: i don't think we are going to mute anything just yet. cloud should be healthy during all of this. we are investigating though. ty all
+[2025-02-26T06:08:03.782Z] <@U0105PTF3E2>: <https://fulfilsolutions.slack.com/archives/C066Y590U6P/p1740538804766809|this>?
+[2025-02-26T05:58:30.662Z] <@U0105PTF3E2>: ok. ty, and sorry
+[2025-02-26T05:56:45.819Z] <@U0105PTF3E2>: ty
+[2025-02-26T05:55:49.222Z] <@U0105PTF3E2>: if so, cool. we can just look into our stuff losing it's mind
+[2025-02-26T05:55:34.031Z] <@U0105PTF3E2>: we got a bunch of alerts on cloud side. is this state of the factory expected rn?
+[2025-02-26T05:54:17.169Z] <@U0105PTF3E2>: or does things just look like this because the store is shutdown and we are doing maintenance and whatnot?
+[2025-02-26T05:51:54.001Z] <@U0105PTF3E2>: where is the thread/huddle/discussion talking about everything blowing up?
+[2025-02-26T05:41:16.438Z] <@U0105PTF3E2>: Bull jobs are what send this to the factory
+[2025-02-26T05:41:05.756Z] <@U0105PTF3E2>: Maybe has something to do with our bull job alert
+[2025-02-26T05:38:27.082Z] <@U0105PTF3E2>: Bulljobs absent??
+[2025-02-26T05:38:03.737Z] <@U0105PTF3E2>: The 1 above this is more worrisome
+[2025-02-26T05:37:14.490Z] <@U0105PTF3E2>: Guys need help?
+[2025-02-26T05:36:49.302Z] <@U0105PTF3E2>: <S036HT7G1S5> <S076RL4B9P1> anyone see these?
+[2025-02-25T23:49:57.058Z] <@U0105PTF3E2>: unless you guys want to make a call. from a high level though, i think doing anything we can to prevent fulfil_internal is important
+[2025-02-25T23:49:20.077Z] <@U0105PTF3E2>: i don't understand the full context atm so ill have to look at this when im back
+[2025-02-25T23:48:50.964Z] <@U0105PTF3E2>: damn... they (very understandably) hate fulfil_internal
+[2025-02-25T23:41:27.247Z] <@U0105PTF3E2>: i have to run my pup to the vet for some routine stuff at 4. ill be out for a bit
+[2025-02-25T23:40:37.133Z] <@U0105PTF3E2>: although, <@U02A7R0NLRX|Lev Lvovsky>, we use the case conveyor ID for the mars system which doesn't change... so maybe if we figure out how that was done, we can just copy it for this...
+[2025-02-25T23:39:32.444Z] <@U0105PTF3E2>: my limited understanding is, there is some limitations on what things can go in each location, but its not fully clear to me. ex. i THINK only cases with the same expiration date can go on the same shelf
+[2025-02-25T23:38:15.254Z] <@U0105PTF3E2>: fyi, these location_ids are sort of "hard coded" shelves in our old mental model. so, each shelf in the physical store had a barcode that was the ID of the digital "location". figuring out how we deal with this (meaning, how will we map your shelves to our locations) in the final integration is something we have yet to resolve
+[2025-02-25T23:27:19.396Z] <@U0105PTF3E2>: b/c i think some of that is lost in this conversation. amazon is considering ALL tickets and matt is only thinking major + (i bet)
+[2025-02-25T23:26:36.619Z] <@U0105PTF3E2>: you went through the majors not ALL tickets, right?
+[2025-02-25T23:26:11.653Z] <@U0105PTF3E2>: lmao
+[2025-02-25T23:25:39.595Z] <@U0105PTF3E2>: ah
+[2025-02-25T23:25:09.719Z] <@U0105PTF3E2>: also, we could consider bringing in the on call person
+[2025-02-25T23:24:52.449Z] <@U0105PTF3E2>: maybe we should set up a daily meeting for triage. im curious how you are able to get through them so fast... i fucking suck i think
+[2025-02-25T22:45:41.099Z] <@U0105PTF3E2>: do we need to meet before the meeting?
+[2025-02-25T22:43:30.881Z] <@U0105PTF3E2>: we def have some gnarly latencies
+[2025-02-25T21:19:13.483Z] <@U0105PTF3E2>: maybe a whole isle went down or came back online. seems like we can't just send all of that in one big event
+[2025-02-25T21:18:41.673Z] <@U0105PTF3E2>: 
+[2025-02-25T21:16:59.600Z] <@U0105PTF3E2>: so based on that trace... i see 3.64k logs in the span of a very short timeframe... <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22x3v%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bnamespace%3D%5C%22fulfil-prod%5C%22,%20app_kubernetes_io_name%3D%5C%22fulfil-api-batch%5C%22%7D%20%7C%3D%20%60c6b95f4d692d6442fc09e0a786f24c27%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%221740123030709%22,%22to%22:%221740126643344%22%7D,%22panelsState%22:%7B%22logs%22:%7B%22columns%22:%7B%220%22:%22Time%22,%221%22:%22Line%22%7D,%22visualisationType%22:%22logs%22,%22labelFieldName%22:%22labels%22%7D%7D%7D%7D&orgId=1|here>, which does seem like too many
+[2025-02-25T21:06:08.421Z] <@U0105PTF3E2>: also, for what it's worth, we are constantly evaluating different shorts internally. There are many people focused on and aware of shorts in general.
+[2025-02-25T21:04:25.789Z] <@U0105PTF3E2>: this doesn't answer the question but, it is important to understand there are a lot of nuances around possible shorts and inventory availability. I don't even fully understand it all yet. Sometimes inventory can be unavailable/unreachable and still appear in the inventory report. By design, amazon doesn't even really utilize our up to date inventory information (inventory-delta events) because you don't want to constantly be removing/adding inventory counts (extremely simplified way to put it i know). i totally agree that understanding item shorts is important. We are making progress to minimizing these and understanding them better. We have some in flight work right now that will help the factory be better equipped to understand an order and wait as long as possible before deciding to short.
+[2025-02-25T20:53:32.481Z] <@U0105PTF3E2>: naively, i see ItemChangedEvent  and i think single item. why are these so large?
+[2025-02-25T20:52:37.932Z] <@U0105PTF3E2>: i have a few threads going internally but im not optimistic about our initial findings.
+[2025-02-25T20:50:40.759Z] <@U0105PTF3E2>: :grimacing:
+[2025-02-25T20:50:02.354Z] <@U0105PTF3E2>: it does feel a bit annoying but not super high priority.
+[2025-02-25T20:17:57.998Z] <@U0105PTF3E2>: well... <https://grafana.fulfil-api.com/goto/fMjFGmtNg?orgId=1|this event> is pretty big. probably not the one but... still...
+[2025-02-25T20:15:31.666Z] <@U0105PTF3E2>: why on earth is it sometimes <http://app.fulfil.ai/name|app.fulfil.ai/name> and sometimes <http://app.kubernetes.io/name|app.kubernetes.io/name>?
+[2025-02-25T20:14:23.983Z] <@U0105PTF3E2>: i guess ill try batch
+[2025-02-25T20:14:16.589Z] <@U0105PTF3E2>: i can't find shit in <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22x3v%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Blocation%3D%5C%22plm%5C%22,%20app_fulfil_ai_name%3D%5C%22factory-control%5C%22%7D%20%7C%3D%20%60ItemChangedEvent%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%221740038400000%22,%22to%22:%221740124799000%22%7D,%22panelsState%22:%7B%22logs%22:%7B%22visualisationType%22:%22logs%22%7D%7D%7D%7D&orgId=1|factory>
+[2025-02-25T20:04:53.198Z] <@U0105PTF3E2>: there is no more loki-plm right?
+[2025-02-25T20:04:30.636Z] <@U0105PTF3E2>: maybe there is a factory log of the event. but im struggling to find where the factory logs are now... how can i search for the ItemChangedEvent factory event?
+[2025-02-25T20:00:23.429Z] <@U0105PTF3E2>: im really struggling to investigate this. I can't find any logs (checked the day they mentioned + and - 2 doys) in either prod or their environments. the closest i can get is some logs of events with a sort of close-ish sequence id <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22x3v%22:%7B%22datasource%22:%22DOKYKGqV2%22,%22queries%22:%5B%7B%22refId%22:%22A%22,%22expr%22:%22%7Bnamespace%3D%5C%22fulfil-prod%5C%22,%20app_kubernetes_io_name%3D%5C%22fulfil-api-batch%5C%22%7D%20%7C%3D%20%60inventory-delta%60%22,%22queryType%22:%22range%22,%22datasource%22:%7B%22type%22:%22loki%22,%22uid%22:%22DOKYKGqV2%22%7D,%22editorMode%22:%22builder%22%7D%5D,%22range%22:%7B%22from%22:%221740123030709%22,%22to%22:%221740126643344%22%7D,%22panelsState%22:%7B%22logs%22:%7B%22columns%22:%7B%220%22:%22Time%22,%221%22:%22Line%22%7D,%22visualisationType%22:%22logs%22,%22labelFieldName%22:%22labels%22%7D%7D%7D%7D&orgId=1|here>... a broad <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22x3v%22%3A%7B%22datasource%22%3A%22DOKYKGqV2%22%2C%22queries%22%3A%5B%7B%22refId%22%3A%22A%22%2C%22expr%22%3A%22%7Bnamespace%3D%5C%22fulfil-prod%5C%22%2C+app_kubernetes_io_name%3D%5C%22fulfil-api-batch%5C%22%7D+%7C%3D+%6012983244%60%22%2C%22queryType%22%3A%22range%22%2C%22datasource%22%3A%7B%22type%22%3A%22loki%22%2C%22uid%22%3A%22DOKYKGqV2%22%7D%2C%22editorMode%22%3A%22builder%22%7D%5D%2C%22range%22%3A%7B%22from%22%3A%221740123030709%22%2C%22to%22%3A%221740126643344%22%7D%2C%22panelsState%22%3A%7B%22logs%22%3A%7B%22columns%22%3A%7B%220%22%3A%22Time%22%2C%221%22%3A%22Line%22%7D%2C%22visualisationType%22%3A%22logs%22%2C%22labelFieldName%22%3A%22labels%22%7D%7D%7D%7D&orgId=1|search> for that sequence id yields no results
+[2025-02-25T19:28:59.168Z] <@U0105PTF3E2>: maybe you can give <@U05TSSSP70U|Jess vdV> some more info
+[2025-02-25T19:28:27.378Z] <@U0105PTF3E2>: there was a discussion happening <https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1740412545891039|here> about the videos not appearing
+[2025-02-25T19:17:42.812Z] <@U0105PTF3E2>: should be all set
+[2025-02-25T18:42:45.241Z] <@U0105PTF3E2>: i know they will throw it back in our face that they have been asking us to triage and its just taking a back seat to other things...
+[2025-02-25T18:41:54.535Z] <@U0105PTF3E2>: is the aztemp environment in use or can we tear it down?
+[2025-02-25T18:38:57.629Z] <@U0105PTF3E2>: so maybe the communication is that we commit to doing a good job at triage
+[2025-02-25T18:38:27.770Z] <@U0105PTF3E2>: i think its what we want to get to but\n• we haven't really done anything to support their environments. they are horribly out of date still and no developer wants to take on the <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec0891G6U7M0|internal ticket> we have of getting them updated on a regular cadence. Most of our work on their sims has been bandaids.\n• admittedly, alex and i have been doing a poor job at triaging ALL of the tickets (they just write so damn many), which has definitely frustrated them. maybe we bite the bullet and push off internal things to prioritize doing this.
+[2025-02-25T18:32:01.685Z] <@U0105PTF3E2>: nah, it still exists
+[2025-02-25T18:31:01.857Z] <@U0105PTF3E2>: we need to kill temp. actually, it might have been killed.. ill check
+[2025-02-25T18:27:01.562Z] <@U0105PTF3E2>: im hopping off
+[2025-02-25T17:49:43.590Z] <@U0105PTF3E2>: unless this is an easy fix, we will have to evaluate the priority of it before spending time working on it
+[2025-02-25T17:47:37.759Z] <@U0105PTF3E2>: maybe it never was updated to have pagination.
+[2025-02-25T17:33:42.209Z] <@U0105PTF3E2>: meeting
+[2025-02-25T17:23:12.259Z] <@U0105PTF3E2>: sure
+[2025-02-25T16:41:18.003Z] <@U0105PTF3E2>: Yeah... Idk about <https://fulfilsolutions.slack.com/archives/C08EV9YB8TE/p1740453698625869|that>
+[2025-02-25T01:56:03.673Z] <@U0105PTF3E2>: for some reason i thought it was just you me and scott
+[2025-02-25T01:55:51.641Z] <@U0105PTF3E2>: oh, matt knows about that meeting
+[2025-02-25T01:49:30.384Z] <@U0105PTF3E2>: dont have access to the doc
+[2025-02-25T00:59:10.586Z] <@U0105PTF3E2>: ugh, i feel like its not a MASSIVE deal so... probably just go with your change for now
+[2025-02-25T00:58:43.912Z] <@U0105PTF3E2>: oh ok. i mean, there could always be a bug, but with so many of these its hard to know what to do... do we throw an error internally and alert ourselves? do we still tell the partner and they can complain about it but at least they know that the case changed..?
+[2025-02-25T00:56:44.091Z] <@U0105PTF3E2>: so, its not really expected that the status_details on the event has nothing in it, yet our event processing code in the partner api definitely doesn't enforce that there is something populated. should we change that code?
+[2025-02-25T00:50:09.437Z] <@U0105PTF3E2>: I think <@U06M6D24NH4|Andre Luis Moreira> approved the PR. lets make sure we are pushing everyone to write cypris tests on new code from now on
+[2025-02-25T00:37:38.019Z] <@U0105PTF3E2>: in a non recorded non documented fashon lol
+[2025-02-25T00:37:18.594Z] <@U0105PTF3E2>: i was def going to tell him
+[2025-02-25T00:35:11.413Z] <@U0105PTF3E2>: should.... we... bring it up w/ matt?
+[2025-02-25T00:35:00.335Z] <@U0105PTF3E2>: he just created it yesterday
+[2025-02-25T00:34:55.412Z] <@U0105PTF3E2>: i just realized that we have a meeting from scott about "resourcing" tomorrow...
+[2025-02-25T00:23:12.001Z] <@U0105PTF3E2>: so its just my team...?
+[2025-02-25T00:00:05.796Z] <@U0105PTF3E2>: i think only a few of us have access to these stores so it doesn't seem too high risk after digging in a little bit
+[2025-02-24T23:59:39.322Z] <@U0105PTF3E2>: it looks like i don't really have any controls. i could go in the developer portal and remove some secret stuff to break the integration but... its probably fine as is
+[2025-02-24T23:53:32.217Z] <@U0105PTF3E2>: oh well i guess
+[2025-02-24T23:53:29.961Z] <@U0105PTF3E2>: oof, it looks like DD got deactivated by them due to high order cancellations... not by us.
+[2025-02-24T23:49:00.685Z] <@U0105PTF3E2>: buut, not sure
+[2025-02-24T23:48:52.156Z] <@U0105PTF3E2>: i assume we won't get any webhooks from them since the stores are disabled
+[2025-02-24T23:48:32.319Z] <@U0105PTF3E2>: maybe i should look into deactivating them completely
+[2025-02-24T23:47:55.590Z] <@U0105PTF3E2>: looks like the same thing for uber
+[2025-02-24T23:47:28.888Z] <@U0105PTF3E2>: ah i see. yeah maybe thats how we did it. DD is "paused" in <https://www.doordash.com/merchant/store-availability?store_id=24506712|manager> dashboard
+[2025-02-24T23:46:41.001Z] <@U0105PTF3E2>: ohh, maybe they are deactivated through the manager though?
+[2025-02-24T23:46:25.087Z] <@U0105PTF3E2>: hmm, <https://www.doordash.com/convenience/store/24506712|DD one> is still up too
+[2025-02-24T23:45:52.824Z] <@U0105PTF3E2>: :thinking_face: ... It looks like the luckynow Uber Eats <https://www.ubereats.com/store/luckynow-300-pioneer-way/ruKN8T2aXy2A-1n8WfSnHw?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjMwMCUyMFBpb25lZXIlMjBXYXklMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjI3ODk4ZTEwZS02NGU3LWYzN2QtY2VlZi03MTJmMGQ3NmIwNDAlMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTM3LjM4NzMyNSUyQyUyMmxvbmdpdHVkZSUyMiUzQS0xMjIuMDY3OTgxJTdE&utm_source=menu-maker|store> is still active? should we lock that down? Maybe <@U01BWMX6745|Sam> knows if we did or have plans to do anything with this?
+[2025-02-24T23:14:23.675Z] <@U0105PTF3E2>: looks like reoccurring event expired. they are recreating
+[2025-02-24T23:13:18.989Z] <@U0105PTF3E2>: Aside from the size limitations on google pubsub messages of 10mb, does anyone know if we have any size restrictions on our events? seems crazy to think our events are very big but az <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1740258274413429|reported> an even too large to process. I had trouble finding it while looking this morning
+[2025-02-24T23:10:47.790Z] <@U0105PTF3E2>: I have been trying to find time to investigate this today and every single meeting ran over time. sorry. do you know about what day+time it happened?
+[2025-02-24T23:06:38.991Z] <@U0105PTF3E2>: i was so prepared for your retort
+[2025-02-24T23:06:13.842Z] <@U0105PTF3E2>: dude.. lmao. scott thankfully jumped in "we been through this dance before"
+[2025-02-24T23:05:50.390Z] <@U0105PTF3E2>: lmao
+[2025-02-24T23:05:40.037Z] <@U0105PTF3E2>: <@W017GG59GCW> <@W018CNBJHEC> I don't see a calendar inv for the dev sync this week. did the meeting stop reoccurring or was I removed?
+[2025-02-24T22:59:41.724Z] <@U0105PTF3E2>: ill ask
+[2025-02-24T22:59:37.656Z] <@U0105PTF3E2>: oh shit... its not on my calendar either
+[2025-02-24T22:52:38.971Z] <@U0105PTF3E2>: looks like <@U07J6SYC508|Nigel Bess> made a few changes. maybe related?
+[2025-02-24T22:51:20.330Z] <@U0105PTF3E2>: They have a lot of questions about capacity report so maybe we discuss this with them at dev sync on wed? they are already proposing discussing <https://fulfilsolutions.slack.com/archives/C05KA6SQP8B/p1740227994821899|this> capacity question on wed. not sure if these are related or not
+[2025-02-24T22:40:27.164Z] <@U0105PTF3E2>: if we haven't been changing dashboard, then maybe some FC/FRAPI code changed that broke it so we can ask around.
+[2025-02-24T22:39:52.267Z] <@U0105PTF3E2>: <@U04EH1U6NAU|Matheus Pellegrini> or anyone else making dashboard/roverwatch changes recently, anyone know of any changes that could have affected this? <https://fulfilsolutions.slack.com/archives/C01AUH35W77/p1740436323317099>
+[2025-02-24T22:39:14.204Z] <@U0105PTF3E2>: sounds like a regression. ill ask around and see if anyone knows of changes that could have affected this

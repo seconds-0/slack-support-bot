@@ -1,0 +1,86 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+```markdown
+# STYLE GUIDE: AI Developer Standards
+
+This guide outlines the coding standards and development practices to follow while building the Slack On-Call Support Bot. Adherence ensures consistency, maintainability, and readability.
+
+## 1. Language & Frameworks
+
+- **Primary Language:** Node.js (use LTS version specified in `Dockerfile`, currently Node 18 or higher recommended)
+- **Core Frameworks:**
+  - `@slack/bolt`: For all Slack interactions (events, API calls).
+  - `langchain` (JavaScript/TypeScript): For RAG pipeline orchestration (loaders, splitters, vector stores, prompts, chains).
+  - `express` (Optional): Can be used with Bolt's ExpressReceiver if more complex routing/middleware is needed, otherwise Bolt's built-in server is sufficient.
+- **Google Cloud SDKs:** Use official `@google-cloud/*` packages (e.g., `@google-cloud/vertexai`, `@google-cloud/secret-manager`, `@google-cloud/aiplatform`, `@google-cloud/storage`). Use `googleapis` for Google Drive API.
+
+## 2. Coding Style & Formatting
+
+- **Style Guide:** Adhere strictly to the Airbnb JavaScript Style Guide.
+- **Linting/Formatting:** Configure and use ESLint and Prettier with appropriate Airbnb configs. Ensure code is linted and formatted before committing.
+  - Command (example): `npx eslint . --fix && npx prettier . --write`
+- **Asynchronous Operations:** Use `async/await` exclusively for handling promises. Avoid `.then()`/`.catch()` chaining where `async/await` provides better readability.
+- **Error Handling:**
+  - Use `try...catch` blocks for operations that might fail (API calls, file access, parsing).
+  - Log errors comprehensively using `console.error` or a dedicated logger (see Logging section). Include context (e.g., function name, relevant IDs).
+  - Do not swallow errors silently. Decide whether to re-throw, return an error state, or send an error message back to the user/system.
+- **Comments:**
+  - Write clear JSDoc comments for functions, classes, and complex logic blocks.
+  - Explain _why_ code exists, not just _what_ it does (if not obvious).
+  - Remove commented-out code before finalizing work.
+
+## 3. Dependency Management
+
+- **Package Manager:** Use `npm`.
+- **Versioning:** Use `package-lock.json` to ensure reproducible builds. Keep dependencies reasonably up-to-date, checking for breaking changes before upgrading major versions.
+- **Installation:** Use `npm install --save <package>` for runtime dependencies and `npm install --save-dev <package>` for development dependencies (like ESLint, Prettier).
+
+## 4. Modularity & Structure
+
+- **Organization:** Follow the file structure outlined in `REQUIREMENTS.md`.
+- **Single Responsibility Principle:** Functions and modules should ideally do one thing well. Keep functions reasonably short.
+- **Avoid Globals:** Minimize use of global variables. Pass state explicitly or use configuration/context objects.
+
+## 5. Configuration & Secrets
+
+- **Environment Variables:** Use environment variables (`process.env`) for all configuration values (API endpoints, channel IDs, model names, etc.).
+- **Secrets Management:**
+  - Never hardcode secrets (API keys, tokens) in the codebase.
+  - Load secrets _exclusively_ from Google Secret Manager in the production Cloud Run environment.
+  - For local development, use a `.env` file (gitignored) loaded via a library like `dotenv`. Create a `.env.example` file tracking needed variables.
+- **Configuration Module:** Use `src/config/index.js` to centralize loading and exporting configuration/secrets.
+
+## 6. Logging
+
+- **Standard Output:** Use `console.log`, `console.info`, `console.warn`, `console.error` for logging. Cloud Run automatically captures stdout/stderr into Cloud Logging.
+- **What to Log:**
+  - Service startup and initialization steps.
+  - Incoming Slack events/interactions (with type and key identifiers like user/channel/thread).
+  - Key decisions made by the bot (e.g., retrieved documents, generated response snippet).
+  - Errors encountered (with stack traces and context).
+  - Key steps in the ingestion process (files found, chunks created, upsert results).
+  - Timings for critical operations (e.g., RAG pipeline execution).
+- **Log Levels:** Use appropriate levels (`info` for general flow, `warn` for potential issues, `error` for failures).
+
+## 7. Testing & Verification
+
+- **Verification:** Each Work Plan includes specific "Verification Steps". Execute these thoroughly to confirm functionality.
+- **Unit Tests (Future Goal):** Aim for unit tests for utility functions and potentially core RAG logic components in future iterations. Use a framework like Jest or Mocha.
+
+## 8. Security
+
+- **Credentials:** Ensure service accounts have least-privilege IAM roles. Handle the Drive SA key securely.
+- **Input Validation:** While primarily internal, basic validation of expected data formats from APIs can prevent errors.
+- **Dependencies:** Be aware of potential vulnerabilities in third-party packages (use `npm audit`).
+
+## 9. Naming Conventions
+
+- **Variables/Functions:** `camelCase`.
+- **Classes:** `PascalCase`.
+- **Constants:** `UPPER_SNAKE_CASE`.
+- **Files:** `kebab-case.js` or `camelCase.js` (be consistent, `kebab-case` often preferred for Node.js filenames). Follow structure in `REQUIREMENTS.md`.
+- **Clarity:** Use descriptive names that indicate purpose.
+```
