@@ -1,0 +1,19 @@
+{
+  "name": "oncall-runbook-ingestion",
+  "version": "1.0.0",
+  "description": "Cloud Function for ingesting runbook documents into Vertex AI Vector Search index",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@google-cloud/aiplatform": "^3.10.0",
+    "@google-cloud/functions-framework": "^3.3.0",
+    "@google-cloud/secret-manager": "^5.0.0",
+    "@langchain/google-vertexai": "^0.1.0",
+    "google-auth-library": "^9.4.0",
+    "googleapis": "^129.0.0",
+    "langchain": "^0.1.0",
+    "pdf-parse": "^1.1.1"
+  }
+} 

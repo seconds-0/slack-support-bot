@@ -1,0 +1,1000 @@
+[2020-03-16T21:43:03.027Z] <@U0105PTF3E2>: :wave: everyone
+[2020-03-23T16:21:40.045Z] <@U0105PTF3E2>: nah i messed up. saw the calendar notification and forgot it was at 930... my old standups were at 9:15
+[2020-03-25T00:04:35.060Z] <@U0105PTF3E2>: anyone who needs work can start to address the issues I have in the "App readiness" category in <http://monday.com|monday.com>\nThe issues at the top tell you what Page (/route) to work on.\nI have added every issue I have found as an Update on the task. The process for picking up a task will be to simply assign it to yourself so that everyone knows you are working on it.
+[2020-03-25T00:06:37.063Z] <@U0105PTF3E2>: PLEASE DO NOT CREATE ONE MASSIVE PR FOR EACH TASK.\nIt may be a bit of overhead but in an effort to help me (and others) get more familiar with the code AND to make your PR go FASTER, please create smaller PRs. One PR per "Update" issue is desireable but if they are VERY small or if they are related you can make it one PR
+[2020-03-25T00:09:21.065Z] <@U0105PTF3E2>: If you have any questions about the issue use the "Reply" button on the update (like this <https://fulfil-group.monday.com/boards/313348313/pulses/496871695/posts/681403665>).\nOnce you finish one of the "Updates" and you have a PR created, Also use the "Reply" and put a link to your PR.
+[2020-03-25T00:10:00.065Z] <@U0105PTF3E2>: I will explain in standup also but this should get people started.
+[2020-03-27T17:26:29.029Z] <@U0105PTF3E2>: team, Matt and I feel that it is ok for developers to merge their work to staging if you have enough approvals. If you think something needs extra approvals, or extra testing please ask people.
+[2020-03-27T17:35:06.030Z] <@U0105PTF3E2>: do you have time for a quick call on this today or monday?
+[2020-03-31T07:40:13.042Z] <@U0105PTF3E2>: I was thinking this during PR's and as soon as I realized today that the app used sass I was going to recommend this.
+[2020-03-31T07:45:23.042Z] <@U0105PTF3E2>: It is my experience that sometimes linting is set up to do the job that prettier does, So they may conflict if not configured properly. I agree that prettier should be the thing that formats the code
+[2020-03-31T15:02:27.045Z] <@U0105PTF3E2>: it should not console error correct?
+[2020-04-02T21:03:56.000Z] <@U0105PTF3E2>: i was hoping we had a gaming channel of some sort
+[2020-04-02T21:04:17.001Z] <@U0105PTF3E2>: doesn't look like much activity in here though :white_frowning_face:
+[2020-04-02T21:04:38.000Z] <@U0105PTF3E2>: github seems to be down. anyone else having issues?
+[2020-04-02T21:04:50.001Z] <@U0105PTF3E2>: <https://www.githubstatus.com/>
+[2020-04-02T21:05:42.002Z] <@U0105PTF3E2>: sigh... all those comments i had stacked up...
+[2020-04-02T21:05:46.002Z] <@U0105PTF3E2>: fed right to the void...
+[2020-04-02T21:06:56.002Z] <@U0105PTF3E2>: cool thanks
+[2020-04-02T21:09:04.003Z] <@U0105PTF3E2>: nvm, github somehow magically retained them... sick
+[2020-04-03T07:04:12.003Z] <@U0105PTF3E2>: <https://www.zdnet.com/article/microsoft-buys-javascript-developer-platform-npm-plans-to-integrate-it-with-github/|https://www.zdnet.com/article/microsoft-buys-javascript-developer-platform-npm-plans-to-integrate-it-with-github/>
+[2020-04-07T16:29:53.061Z] <@U0105PTF3E2>: where did slack move the call button...
+[2020-04-07T18:02:03.066Z] <@U0105PTF3E2>: we talked a while ago about eslint and prettier. I love Eric Elliott and he happened to have a post about it. <https://medium.com/javascript-scene/streamline-code-reviews-with-eslint-prettier-6fb817a6b51d>
+[2020-04-10T16:05:59.071Z] <@U0105PTF3E2>: cool
+[2020-04-13T04:22:00.075Z] <@U0105PTF3E2>: I am out in the morning tomorrow so i won't be around for standup. I suggest Matt run it and if not, do a slack standup threaded here.
+[2020-04-13T05:03:13.076Z] <@U0105PTF3E2>: FYI everyone, If i approve your PR, it is the same as saying LGTM. I just prefer it.
+[2020-04-13T15:04:25.079Z] <@U0105PTF3E2>: ah yes, thanks for reminding me Ankit. Just because I am reviewing PRs doesn't mean you all should stop. If you open a PR it is Your responsibility to get others to review it. We should be doing in depth reviews for each other so take time to do reviews.
+[2020-04-13T17:40:08.089Z] <@U0105PTF3E2>: We need to get the base PR you have merged <@UG3PMBZ50|Sanjay Radadiya> so they can just work off of staging
+[2020-04-13T17:42:41.090Z] <@U0105PTF3E2>: I think I approved the first one. if Others need to look at it before they start working on these tasks then have them look and get it merged asap
+[2020-04-13T17:49:04.090Z] <@U0105PTF3E2>: Will you please review <@UG3PMBZ50|Sanjay Radadiya> PRs before starting on these tasks
+[2020-04-14T03:56:36.023Z] <@U0105PTF3E2>: Ups, Kinko's, maybe even Walmart could do it if u get desperate
+[2020-04-14T17:46:55.095Z] <@U0105PTF3E2>: you know what team... before you start working on the redesign changes, lets do a 1 on 1 call to talk about the wire frames. send me a private message with the best time to do a call with you (tonight and tomorrow work best for me)
+[2020-04-20T15:42:49.001Z] <@U0105PTF3E2>: whoah, was dependabot added to the dashboard recently or has it been there for a while?
+[2020-04-20T15:43:54.002Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/Dashboard/pull/297> we need to test the box drawing tool a lot on this PR (and any other jquery dependencies we have if there are more).
+[2020-04-20T15:46:48.002Z] <@U0105PTF3E2>: i was hoping to talk to matt sometime about using a tool like renovate to help keep out dependencies up to date. so this makes me happy. hopefully we can get it on the other repos
+[2020-04-20T15:47:00.002Z] <@U0105PTF3E2>: we have many security vulnerabilities
+[2020-04-21T16:13:04.010Z] <@U0105PTF3E2>: i like it
+[2020-04-21T16:29:21.010Z] <@U0105PTF3E2>: i think our app routes could use some love too but i haven't looked into it
+[2020-04-23T15:36:16.030Z] <@U0105PTF3E2>: whoa... what kind of lab created sludge is that?
+[2020-04-23T17:01:16.021Z] <@U0105PTF3E2>: i would have to read about it but my instinct says we would want to use ionic
+[2020-04-23T17:03:49.022Z] <@U0105PTF3E2>: it might depend on what we are trying to use the storage for. when does ionic storage get cleared out, how does it get cleared, what happens when it gets full, etc
+[2020-04-23T17:14:03.024Z] <@U0105PTF3E2>: i just think that most of the time its easier to read or cleaner to implement. i don't think i blocked because of it
+[2020-04-23T17:14:22.024Z] <@U0105PTF3E2>: you certainly don't always have to use it
+[2020-04-23T17:14:56.025Z] <@U0105PTF3E2>: oh cool
+[2020-04-24T18:52:31.032Z] <@U0105PTF3E2>: <!here> did we get all of the PRs merged in that we are going to? I see <@UKH8B1JUS|Ankit Bhanderi> has 3 or so open still
+[2020-04-24T19:12:02.033Z] <@U0105PTF3E2>: cool, lets test staging
+[2020-04-24T19:23:48.034Z] <@U0105PTF3E2>: is it deployed? im getting a 502
+[2020-04-24T19:25:55.034Z] <@U0105PTF3E2>: ah, its there now. i get lots of errors related to cordova. did that always happen?
+[2020-04-24T19:28:06.035Z] <@U0105PTF3E2>: did we have the ability to do anything with an item on the favorites list before? now all i can do is remove it. i cannot go to the item page
+[2020-04-24T19:29:08.035Z] <@U0105PTF3E2>: <@UG3PMBZ50|Sanjay Radadiya> I don't see the map on the "success" screen of checkout and getdeliverylocationstatus  is hanging in myorder (it eventually failed)
+[2020-04-24T19:41:18.037Z] <@U0105PTF3E2>: yeah you can add them
+[2020-04-24T19:41:32.037Z] <@U0105PTF3E2>: but you can't do anything with them from the 'saved for later' page
+[2020-04-24T19:41:36.037Z] <@U0105PTF3E2>: you can only remove them
+[2020-04-24T19:41:45.038Z] <@U0105PTF3E2>: was asking if we had any functionality outside of that before
+[2020-04-24T19:41:52.038Z] <@U0105PTF3E2>: don't think so
+[2020-04-24T19:42:09.038Z] <@U0105PTF3E2>: also, order status is completely broken for me
+[2020-04-24T20:33:07.041Z] <@U0105PTF3E2>: looks like starred items navigation was removed accidentally in a8aec23457e42380d1563be0b433fa54f7c9fd47
+[2020-04-27T17:05:19.047Z] <@U0105PTF3E2>: i haven't checked in any of my code yet
+[2020-04-27T17:06:04.047Z] <@U0105PTF3E2>: i will test again. what is broken?
+[2020-04-27T17:17:44.050Z] <@U0105PTF3E2>: ok. i am almost done
+[2020-04-27T17:18:00.050Z] <@U0105PTF3E2>: what do we think about naming our custom components with a fulfil prefix?
+[2020-04-27T17:18:45.051Z] <@U0105PTF3E2>: i don't see any naming conventions on custom components really. i have it named app-accordion right now but if i name it fulfil-accordion it will be obvious that it is our custom component
+[2020-04-27T17:30:05.052Z] <@U0105PTF3E2>: hmm, it seems checkout is broken on my branch now too
+[2020-04-27T17:30:17.052Z] <@U0105PTF3E2>: i merged in staging on friday
+[2020-04-27T17:30:25.052Z] <@U0105PTF3E2>: i will look into fixing it on my branch
+[2020-04-27T21:25:50.053Z] <@U0105PTF3E2>: ok, i merged some stuff into the app staging
+[2020-04-27T21:27:39.053Z] <@U0105PTF3E2>: going to test it and hopefully push to prod
+[2020-04-27T21:27:55.054Z] <@U0105PTF3E2>: if anyone is around, help testing is appreciated (its still deploying though)
+[2020-04-27T21:28:46.054Z] <@U0105PTF3E2>: I only put a band-aid on checkout. we should be able to checkout but the form is still a little wonky
+[2020-04-27T21:40:11.055Z] <@U0105PTF3E2>: <@UG3PMBZ50|Sanjay Radadiya> deliverylocationstatus is still hanging for me on order summary page. i can't get it to work in checkout or in order status
+[2020-04-27T21:40:51.056Z] <@U0105PTF3E2>: nope
+[2020-04-27T21:40:52.056Z] <@U0105PTF3E2>: staging
+[2020-04-27T21:41:44.056Z] <@U0105PTF3E2>: maybe it has something to do with the checkout flow?
+[2020-04-27T21:51:25.057Z] <@U0105PTF3E2>: do we have a postman team/workspace?
+[2020-04-27T21:53:17.059Z] <@U0105PTF3E2>: k
+[2020-04-28T16:12:06.062Z] <@U0105PTF3E2>: did you look into this at all? I tried looking at the history of checkout a little yesterday and couldn't really find where we were calling to postmates
+[2020-04-28T16:12:18.062Z] <@U0105PTF3E2>: does that happen on the server?
+[2020-04-28T16:16:05.062Z] <@U0105PTF3E2>: i see getEstimatedTime in checkout.ts that  gets the quote time
+[2020-04-28T16:17:45.063Z] <@U0105PTF3E2>: so that call needs to happen in order for deliverylocationstatus to work?
+[2020-04-28T16:21:32.064Z] <@U0105PTF3E2>: but that is just the quote i thought
+[2020-04-28T16:22:54.064Z] <@U0105PTF3E2>: deliveryQuoteId?
+[2020-05-01T06:28:44.078Z] <@U0105PTF3E2>: What was the problem?
+[2020-05-01T17:52:50.095Z] <@U0105PTF3E2>: <https://sailsjs.com/documentation/reference/web-sockets/resourceful-pub-sub>
+[2020-05-01T23:58:00.109Z] <@U0105PTF3E2>: *now :grin:
+[2020-05-07T20:41:32.120Z] <@U0105PTF3E2>: I see that it is merged. Did any of the components from src/components get moved over? i don't see them
+[2020-05-07T20:56:09.123Z] <@U0105PTF3E2>: on the Ionic 5 branch, we have a package-lock.json  committed (which i am a fan of) but this will change constantly if we have variable version includes like "@ionic/angular": "^5.0.0", . Also, if we are committing it, it should always be up to date with every change to package.json. currently on the branch it is not. basically, you should be doing npm ci  or npm i --no-save to install dependencies Unless you make a change to package.json
+[2020-05-07T21:24:23.124Z] <@U0105PTF3E2>: do we use @ionic-native/geolocation ? I am trying to fix all of our npm peer dependency warnings and that doesn't seem to be used right now on the Ionic 5 branch anyway\nIm dumb... i see now that we have not brought over any of the pages... when i loaded it initially and saw the spalsh and some semblance of a home page i thought we brought some stuff and it just wasn't quite working. sorry
+[2020-05-07T23:37:07.125Z] <@U0105PTF3E2>: whoever needs the geolocation stuff we will need to add the import back at that time
+[2020-05-08T00:52:30.127Z] <@U0105PTF3E2>: does anyone use docker to build/run locally? a better question may be - does anyone use the web-frontend-development in docker compose, or the dockerfile in environment/development or any of the docker:development  scripts?
+[2020-05-08T01:00:08.129Z] <@U0105PTF3E2>: does anyone use it now i mean
+[2020-05-08T02:21:37.129Z] <@U0105PTF3E2>: no problem. i didn't realize that almost nothing was moved over
+[2020-05-11T20:28:25.136Z] <@U0105PTF3E2>: breaking changes between ionic 3 and 4 <https://github.com/ionic-team/ionic/blob/master/angular/BREAKING.md>
+[2020-05-12T22:40:25.140Z] <@U0105PTF3E2>: if you use\n```  <ion-toolbar class="toolbar-container">\n    <ion-buttons slot="start">\n      <ion-menu-button></ion-menu-button>\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n    <ion-title>Your Basket</ion-title>\n  </ion-toolbar>```\nthen you can use\n```:host {\n  &amp;.can-go-back {\n    ion-menu-button {\n      display: none;\n    }\n  }\n}```\nto hide the menu button when the back button is visible
+[2020-05-13T15:22:02.140Z] <@U0105PTF3E2>: It is put there by ionic when there is a history to navigate back to
+[2020-05-13T15:30:37.141Z] <@U0105PTF3E2>: It was a little odd... If I refreshed on home page then moved to cart it worked but sometimes it was not working. Maybe there is a different way to use the router to make it work well?
+[2020-05-13T16:11:57.141Z] <@U0105PTF3E2>: even if i only use the ion-back-button it doesn't always work... i am trying to add routerDirection="forward"
+[2020-05-13T16:14:41.142Z] <@U0105PTF3E2>: I am getting errors clicking on the tabs
+[2020-05-13T16:15:20.143Z] <@U0105PTF3E2>: 
+[2020-05-13T16:17:42.144Z] <@U0105PTF3E2>: i get an error for every tab
+[2020-05-13T16:17:51.144Z] <@U0105PTF3E2>: it still navigates, but there is also an error
+[2020-05-13T16:29:58.145Z] <@U0105PTF3E2>: so why arent we still using NavController?
+[2020-05-13T16:30:05.145Z] <@U0105PTF3E2>: did they get rid of it in ionic 5?
+[2020-05-13T16:31:01.146Z] <@U0105PTF3E2>: this says you can still use it <https://www.joshmorony.com/using-angular-routing-with-ionic-4/>
+[2020-05-13T16:31:11.146Z] <@U0105PTF3E2>: for ionic 4 anyway
+[2020-05-13T16:32:14.146Z] <@U0105PTF3E2>: ah, in that article he suggests moving to angular router i guess
+[2020-05-13T21:03:46.149Z] <@U0105PTF3E2>: does anyone know where the attribute src-fallback comes from? we use it in our templates a lot but i cannot find any ionic or angular documentation on it. i thought it might be a directive but i don't see any includes for it or custom code
+[2020-05-13T23:21:25.150Z] <@U0105PTF3E2>: i am working on cleaning up stuff like we talked. i just implemented it a different way because i don't see anything about it
+[2020-05-13T23:21:44.151Z] <@U0105PTF3E2>: have 2 image tags and *ngIf them with reverse logic
+[2020-05-14T02:48:05.156Z] <@U0105PTF3E2>: Hmm, it's not working
+[2020-05-14T02:48:19.156Z] <@U0105PTF3E2>: Maybe the API changed?
+[2020-05-14T02:50:07.157Z] <@U0105PTF3E2>: Item page
+[2020-05-14T02:57:28.160Z] <@U0105PTF3E2>: i imported it and its not working
+[2020-05-14T02:57:29.160Z] <@U0105PTF3E2>: hmm
+[2020-05-14T02:58:13.160Z] <@U0105PTF3E2>: oh, you have to add it to the imports ?
+[2020-05-14T03:00:41.162Z] <@U0105PTF3E2>: no we can include it
+[2020-05-14T03:00:48.162Z] <@U0105PTF3E2>: its just not working
+[2020-05-14T03:00:49.163Z] <@U0105PTF3E2>: hmm
+[2020-05-14T03:01:24.163Z] <@U0105PTF3E2>: i import it and then added to imports: array
+[2020-05-14T03:10:18.164Z] <@U0105PTF3E2>: no
+[2020-05-14T03:11:53.165Z] <@U0105PTF3E2>: added the import at the top and added it to the imports
+[2020-05-14T03:12:07.165Z] <@U0105PTF3E2>: item.page needs it so i added it to item.modile.ts
+[2020-05-14T03:20:47.167Z] <@U0105PTF3E2>: its just a static url to <https://storage.cloud.google.com/fulfil-web.appspot.com/product/placeholder.jpg>
+[2020-05-14T03:20:51.167Z] <@U0105PTF3E2>: it works
+[2020-05-14T03:21:34.168Z] <@U0105PTF3E2>: no, i mean the url works
+[2020-05-14T03:21:56.168Z] <@U0105PTF3E2>: this doesn't work\n```<img [src]="item?.images[0]" [alt]="item?.name"\n      src-fallback="<https://storage.cloud.google.com/fulfil-web.appspot.com/product/placeholder.jpg>">```
+[2020-05-14T03:22:11.169Z] <@U0105PTF3E2>: this does\n```    <img *ngIf="item?.images &amp;&amp; item?.images[0]" [src]="item?.images[0]" [alt]="item?.name">\n    <img *ngIf="!(item?.images &amp;&amp; item?.images[0])" src="<https://storage.cloud.google.com/fulfil-web.appspot.com/product/placeholder.jpg>" alt='Empty Image'>```
+[2020-05-14T03:27:41.171Z] <@U0105PTF3E2>: how can i get items with inventory? everything i try and add to cart comes back with noInventoryItem
+[2020-05-14T03:42:19.171Z] <@U0105PTF3E2>: i need to stop for now. if you want, you can look at my branch ionic-5-cart-page
+[2020-05-14T03:44:23.172Z] <@U0105PTF3E2>: you can check out my draft pr too <https://github.com/Fulfil0518/Fulfil-ionic-app/pull/182/files>
+[2020-05-14T03:44:53.172Z] <@U0105PTF3E2>: it still has lots of debugging and gross things but i think it is close
+[2020-05-14T15:33:11.179Z] <@U0105PTF3E2>: Reverted it for prod only?
+[2020-05-18T22:18:00.002Z] <@U0105PTF3E2>: I just force pushed a reset of master to staging. if you had a master branch, it will be invalid. hopefully staging and master are now aligned.
+[2020-05-19T15:28:12.003Z] <@U0105PTF3E2>: in case you didn't notice, matt ran a script to delete all remote branches in the app repository except master and staging
+[2020-05-19T15:28:29.004Z] <@U0105PTF3E2>: lets try and keep it clean by deleting our branches after they are merged
+[2020-05-19T20:45:25.009Z] <@U0105PTF3E2>: I changed semaphore builds for the app (<https://semaphoreci.com/fulfil0518/web-frontend/settings>) to run npm run docker:staging:build instead of just npm install. it won't do anything with the image but building is a small sanity check at least
+[2020-05-20T03:56:09.013Z] <@U0105PTF3E2>: You don't need to deploy to the app store to test on a device right? You can run it in emulator
+[2020-05-21T15:10:56.016Z] <@U0105PTF3E2>: Reminder: Im missing stand up this morning
+[2020-05-22T17:13:15.022Z] <@U0105PTF3E2>: <@UCBMSR9MY> i think this is the monday ticket <@UKH8B1JUS|Ankit Bhanderi> is talking about <https://fulfil-group.monday.com/boards/313348313/views/5305047/pulses/574191306>
+[2020-05-28T16:08:33.038Z] <@U0105PTF3E2>: yeah, "checkout" is the original, "checkout 2" is my rework. the OG checkout had TONS of extra logic around maps and all kinds of stuff
+[2020-05-28T19:37:16.003Z] <@U0105PTF3E2>: doesn't matter to me
+[2020-05-28T19:59:57.004Z] <@U0105PTF3E2>: i dug through stripe documentation and then even talked to their support and they do not have any methods for handling taxes. we need to calculate that before giving them the "amount" we are charging
+[2020-05-28T20:04:48.006Z] <@U0105PTF3E2>: im pretty sure that won't apply to per line items. if we sell an apple and a pack of cigarettes in WA, those have different taxes and stuff. stripe does nothing for that
+[2020-05-28T20:06:17.008Z] <@U0105PTF3E2>: sales tax doesn't apply to everything though.
+[2020-05-28T20:07:42.010Z] <@U0105PTF3E2>: <https://support.stripe.com/questions/charging-sales-tax-gst-or-vat-on-payments>
+[2020-05-28T20:08:01.011Z] <@U0105PTF3E2>: When making charge requests, Stripe does not automatically calculate any tax information for you.
+[2020-05-28T20:08:29.012Z] <@U0105PTF3E2>: i asked if that applys to all of the other payment methods such as payment intents, sessions etc. and they said yes
+[2020-05-28T20:09:08.014Z] <@U0105PTF3E2>: yeah
+[2020-05-28T20:09:40.015Z] <@U0105PTF3E2>: but isn't "taxable" also based on where the customer is located
+[2020-05-28T22:50:44.047Z] <@U0105PTF3E2>: i am unblocked. im reading more on payment intents, the customer and getting a gameplan together on how to proceed exactly
+[2020-05-28T22:51:44.048Z] <@U0105PTF3E2>: idk what the cost to have multiple environments up and running is but it would be nice if we just had a build of each PR deployed so we could test
+[2020-05-28T22:52:33.048Z] <@U0105PTF3E2>: instead of relying on screens or pulling the code down and manually running it, being able to go to a "staging-PR#" version would be nice
+[2020-05-28T22:52:47.048Z] <@U0105PTF3E2>: then when the PR is merged, just delete the instance
+[2020-05-28T22:53:19.049Z] <@U0105PTF3E2>: obviously a bigger lift than a screenshot...
+[2020-05-29T17:14:28.060Z] <@U0105PTF3E2>: ah i remember the scenario that happened recently, and it happened several times in the app when multiple people were making many changes around the same time.\n1. we had branch a based off of staging, then branch b based off of branch a. \n2. A PR was created for both branches.\n3. changes were requested and made on branch a.\n4. branch a was merged\n5. branch b's change set was now "reverting" some of the changes that were made in branch a after branch b had been cut. There was no conflict, but if b had been updated, \n\nThe scenario of multiple branches in flight and several being based off of each other is very common here. I think its hard to imagine a scenario where this doesn't create a conflict but does modify the code in undesired ways so i will keep an eye out and raise the issue if i see it.
+[2020-05-29T17:17:05.060Z] <@U0105PTF3E2>: I think one of the biggest reasons we did it in the past was for integration testing purposes (both manual and automated). You don't necessarily know how two sets of changes will behave until they are tested together. it does add time but being forced to test after updating your branch has occasionally caught a bug/regression.
+[2020-05-29T17:49:11.061Z] <@U0105PTF3E2>: its not exactly a special case though. this happens all the time here. maybe it is because of the longer turnaround time on PRs or the time zone difference but we very often have branches off of branches.
+[2020-06-01T18:25:30.063Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/Fulfil-api/pull/432>\n<https://github.com/Fulfil0518/Fulfil-ionic-app/pull/214>
+[2020-06-01T23:40:21.030Z] <@U0105PTF3E2>: i think there is a bad character in my app one..
+[2020-06-02T20:29:52.073Z] <@U0105PTF3E2>: are you asking about being able to do await foo() on a function defined to take a callback as a param like foo(callback)?
+[2020-06-02T20:30:55.073Z] <@U0105PTF3E2>: i can't think of a way since its not promise based
+[2020-06-02T20:32:08.073Z] <@U0105PTF3E2>: doesn't await work on any promise?
+[2020-06-02T20:32:43.074Z] <@U0105PTF3E2>: so maybe you could wrap the function call in a function that returns a promise that gets resolved in the callback
+[2020-06-02T20:33:03.074Z] <@U0105PTF3E2>: but cant do it with just the OG call to foo that i can think of
+[2020-06-02T20:49:37.074Z] <@U0105PTF3E2>: i think this works as a concept\n```const foo = (f) => setTimeout(f, 2000);\nawait (async () => {\n  const p = new Promise((resolve,reject) => {\n    foo((v) => resolve(v))\n  });\n  \n  return p;\n})();\nconsole.log('waited');```
+[2020-06-02T22:03:12.038Z] <@U0105PTF3E2>: :thumbsup:
+[2020-06-03T16:20:57.081Z] <@U0105PTF3E2>: damn sorry to hear. good luck on getting the test and the results.\n\nso you are saying that the node cache of require is not working? We did have some issues with a require that caused some gross behavior... how could this happen?
+[2020-06-03T16:30:49.082Z] <@U0105PTF3E2>: im pretty sure that require should be initializing a module only once, and caching it.
+[2020-06-03T17:42:14.046Z] <@U0105PTF3E2>: i see this in github.
+[2020-06-03T17:49:25.047Z] <@U0105PTF3E2>: i reviewed stuff yesterday but i can today as well. doesn't matter to me
+[2020-06-03T21:32:37.087Z] <@U0105PTF3E2>: <@U013TF1F70W|tim> i am now hitting the same scenario you mentioned here... Stripe create customer only accepts a callback... did you proceed with a solution? We could write wrappers, write a helper method to wrap them or we could use a library im sure.
+[2020-06-03T21:36:11.087Z] <@U0105PTF3E2>: i think one off wrappers would make it a bit harder to read. i think a better solution is def creating our own helper or finding a good library. my buddy said he used bluebirdjs but i haven't looked into any
+[2020-06-03T22:29:08.066Z] <@U0105PTF3E2>: sure
+[2020-06-04T03:17:38.093Z] <@U0105PTF3E2>: where did you get those price ranges from? what happens when something costs over $100? or is that how much the item is discounted?
+[2020-06-04T03:18:14.093Z] <@U0105PTF3E2>: the $ is on the wrong side of the amount
+[2020-06-04T03:18:28.094Z] <@U0105PTF3E2>: $100 not 100$
+[2020-06-04T03:18:49.094Z] <@U0105PTF3E2>: :thumbsup:
+[2020-06-04T03:24:58.094Z] <@U0105PTF3E2>: when you get a chance <@UCBMSR9MY>, could you weigh in on this comment thread <https://github.com/Fulfil0518/Fulfil-ionic-app/pull/223#discussion_r434914438>
+[2020-06-04T18:37:01.067Z] <@U0105PTF3E2>: im free whenever - so yes
+[2020-06-05T16:44:28.111Z] <@U0105PTF3E2>: ok. type an updated when you can please
+[2020-06-05T19:05:25.072Z] <@U0105PTF3E2>: fine with me
+[2020-06-05T19:19:29.073Z] <@U0105PTF3E2>: <https://prod.liveshare.vsengsaas.visualstudio.com/join?25B0E08D037D4DA263DC2012E37F416CD0AB>
+[2020-06-05T22:53:54.074Z] <@U0105PTF3E2>: i have been continuing on with testing but i just ran into an issue. Sentry is not defined when running tests
+[2020-06-05T22:56:50.074Z] <@U0105PTF3E2>: should I be doing sails.sentry in the controller?
+[2020-06-05T22:59:42.076Z] <@U0105PTF3E2>: can't mock it since its not defined. even if i don't mock it, if code that references Sentry is executed exception is thrown cuz it is of course undefined
+[2020-06-08T21:43:25.084Z] <@U0105PTF3E2>: i can do w/e
+[2020-06-08T21:43:51.084Z] <@U0105PTF3E2>: lol k
+[2020-06-09T16:22:33.131Z] <@U0105PTF3E2>: I changed the alert rule in sentry for the api to be on production only <https://sentry.io/settings/fulfil-solutions/projects/api/alerts/rules/1101540/>. if we want staging as well, we can talk about it but I was tired of getting emails for my local dev.
+[2020-06-09T16:56:18.086Z] <@U0105PTF3E2>: i don't remember whos day it was but i did it yesterday. there was a lot of app ones though so it felt good
+[2020-06-09T18:03:14.088Z] <@U0105PTF3E2>: sure
+[2020-06-09T19:24:12.094Z] <@U0105PTF3E2>: who's responsibility will it be to change those statuses? factory for now?
+[2020-06-09T19:24:40.095Z] <@U0105PTF3E2>: should we talk with anyone on that team about this?
+[2020-06-09T19:24:55.095Z] <@U0105PTF3E2>: i hope this implementation of stripe will work without the plugin but we can revisit if it doesn't play well on mobile
+[2020-06-09T20:02:20.097Z] <@U0105PTF3E2>: i think as soon as im done with all of the stripe stuff im goign to do that
+[2020-06-10T03:23:18.135Z] <@U0105PTF3E2>: I have a problem. My PR <https://github.com/Fulfil0518/Fulfil-api/pull/440> is failing to run tests in ci because of a cannot find module error. I believe the relative path is correct as it works locally. I have tried a few things but cannot get it to pass. any ideas?
+[2020-06-10T03:26:18.141Z] <@U0105PTF3E2>: on a related note. I was looking at the way we run tests in ci and it seems very brittle if i understand it correctly. It looks like we are relying on tagging the last build completed by our ci command npm run docker:staging:build with a tag and then using that to run the npm run docker:staging:test command. Doesn't this mean that if multiple builds happen through semaphore simultaniously, we could be running the wrong thing?
+[2020-06-10T03:27:11.141Z] <@U0105PTF3E2>: even if semaphore only runs one api job at a time, this seems brittle by requiring previous steps in our ci pipeline without a docker compose.
+[2020-06-10T03:33:58.141Z] <@U0105PTF3E2>: i haven't been running the tests through docker. I haven't installed it locally. If i delete node_modules and package-lock, i can run npm run test successfully
+[2020-06-10T03:36:31.143Z] <@U0105PTF3E2>: i guess i will install docker and test tomorrow
+[2020-06-10T16:09:57.146Z] <@U0105PTF3E2>: yeah, i think the image should have a max size, and should have some padding around it. the text on the right can be bigger. it shouldn't say "short description", it should have the database field short_description. The add to cart button should go next to the image on the right side
+[2020-06-11T15:57:36.117Z] <@U0105PTF3E2>: that has been one of the primary downside of unit tests causing my teams to move away from them. this was one of the reasons for the massive movement to bdd tests. in my last front end we removed most of our unit tests in favor of behavior tests. its harder to do integration/behavior tests generally because of the setup and time it takes to run them though
+[2020-06-11T15:57:42.117Z] <@U0105PTF3E2>: but yeah, lets talk for sure
+[2020-06-11T16:28:58.123Z] <@U0105PTF3E2>: primarily because of all of the extra setup/teardown stuff to ensure each test suite was isolated. unit test just mocks things so there is little to no time required outside of running the test. bdd test required setting up all the data required for each suite to run through their scenarios, then clean up after themselves
+[2020-06-11T17:55:31.152Z] <@U0105PTF3E2>: Looks good to me. i think we could do a few things but honestly, we are meeting with design today and i think this would be good until we see what they have to say.
+[2020-06-12T18:53:22.163Z] <@U0105PTF3E2>: yeah the test files in there are auto generated and have not spent any time on them (or even running them...)
+[2020-06-12T18:57:26.163Z] <@U0105PTF3E2>: we should probably remove them and the scripts to run them so there is no confusion... I asked about tests on the app early on and they were not a focus but maybe we should revisit it
+[2020-06-12T19:16:06.165Z] <@U0105PTF3E2>: what test?
+[2020-06-12T19:16:29.165Z] <@U0105PTF3E2>: ah i see your post
+[2020-06-12T19:17:54.165Z] <@U0105PTF3E2>: this fails for me locally as well
+[2020-06-12T19:22:37.166Z] <@U0105PTF3E2>: If i am running it locally, that means it hits stag db right? does this test actually hit a real DB?
+[2020-06-12T19:22:49.166Z] <@U0105PTF3E2>: if that is the case, its probably not because of the migration script right?
+[2020-06-12T19:24:28.166Z] <@U0105PTF3E2>: i replaced that userId with mine from the app
+[2020-06-12T19:24:30.167Z] <@U0105PTF3E2>: and it passes
+[2020-06-12T19:25:11.167Z] <@U0105PTF3E2>: so its either 1. hitting a real db with that userid doesn't exist 2. failing intermittently
+[2020-06-12T19:25:18.168Z] <@U0105PTF3E2>: lol
+[2020-06-12T19:25:24.168Z] <@U0105PTF3E2>: so it is hitting a db?
+[2020-06-12T19:26:42.169Z] <@U0105PTF3E2>: just pick a user id out of the staging db and see if it works?
+[2020-06-12T19:27:37.169Z] <@U0105PTF3E2>: this is why integration tests are hard lol. we aren't doing all of the setup and stuff changes out from under it
+[2020-06-12T19:43:33.170Z] <@U0105PTF3E2>: <@UCBMSR9MY> get it working?
+[2020-06-16T16:31:50.003Z] <@U0105PTF3E2>: i tried responding to this like 4 times but there is so much i want to talk about
+[2020-06-16T16:32:00.003Z] <@U0105PTF3E2>: maybe discuss on a call?
+[2020-06-16T17:35:18.000Z] <@U0105PTF3E2>: for bookkeeping purposes, im on PRs today
+[2020-06-16T17:37:27.005Z] <@U0105PTF3E2>: plz take a look at this PR. its a bit old <https://github.com/Fulfil0518/Fulfil-ionic-app/pull/239>
+[2020-06-16T19:00:06.006Z] <@U0105PTF3E2>: ah crap... i have an ortho appointment tomorrow and I may miss standup.
+[2020-06-17T14:51:50.008Z] <@U0105PTF3E2>: Reminder I'm out this morning and will likely miss stand-up.
+[2020-06-17T14:52:28.008Z] <@U0105PTF3E2>: I'll message u after stand-up and we can chat
+[2020-06-17T14:56:42.008Z] <@U0105PTF3E2>: It's a good article but doesn't really give me answers to the potential performance issue of rendering when props change.
+[2020-06-17T22:20:16.008Z] <@U0105PTF3E2>: sorry for the delay in the PR for adding the payment bypass button to production. I have to fix my lint errors before i can commit my changes to my branch...
+[2020-06-17T22:20:56.009Z] <@U0105PTF3E2>: i think we should talk about moving the commit hook to the protected branch configuration in github so we can commit local
+[2020-06-17T22:46:21.011Z] <@U0105PTF3E2>: idk, i already fixed it all and pushed a branch/created a pr
+[2020-06-17T22:46:25.011Z] <@U0105PTF3E2>: ill try that next time though
+[2020-06-17T22:46:27.011Z] <@U0105PTF3E2>: thanks
+[2020-06-17T22:46:44.011Z] <@U0105PTF3E2>: kind of makes me sad if we are able to bypass it so easily though lol
+[2020-06-17T22:53:12.012Z] <@U0105PTF3E2>: the things we talked about fixing during our meeting:\n<https://github.com/Fulfil0518/Fulfil-ionic-app/pull/242>\n<https://github.com/Fulfil0518/Fulfil-api/pull/451>\n\n<https://github.com/Fulfil0518/Fulfil-api/pull/450>
+[2020-06-17T23:32:03.015Z] <@U0105PTF3E2>: i can help
+[2020-06-17T23:32:48.015Z] <@U0105PTF3E2>: sure
+[2020-06-18T15:51:34.017Z] <@U0105PTF3E2>: haha. yeah that doesn't look good
+[2020-06-18T16:28:38.019Z] <@U0105PTF3E2>: could you make it so that when you click on the search button the search bar is automatically focused?
+[2020-06-18T16:29:26.020Z] <@U0105PTF3E2>: does hitting the enter /return  key while the search bar is focused run the search?
+[2020-06-18T16:30:00.020Z] <@U0105PTF3E2>: <@UCBMSR9MY> are we using zoom for standup today?
+[2020-06-18T16:30:20.021Z] <@U0105PTF3E2>: oh ok. do we debounce it?
+[2020-06-18T16:30:59.022Z] <@U0105PTF3E2>: i tried using the one you linked in the leads channel and it says its in use
+[2020-06-18T16:31:13.023Z] <@U0105PTF3E2>: is the one in the calendar invite a different one?
+[2020-06-18T16:31:15.023Z] <@U0105PTF3E2>: ill try
+[2020-06-18T16:32:10.024Z] <@U0105PTF3E2>: ah that works
+[2020-06-18T16:32:15.024Z] <@U0105PTF3E2>: :thumbsup:
+[2020-06-18T17:04:49.014Z] <@U0105PTF3E2>: same
+[2020-06-18T19:15:02.029Z] <@U0105PTF3E2>: <@UCBMSR9MY> <@U013TF1F70W|tim> - need a follow up review for these\n<https://github.com/Fulfil0518/Fulfil-api/pull/451>\n<https://github.com/Fulfil0518/Fulfil-ionic-app/pull/242>
+[2020-06-18T21:28:39.031Z] <@U0105PTF3E2>: <https://fulfil-group.monday.com/boards/313348313/pulses/612645025> (welcom user button goes to matts profile) - this is not accurate. That page doesn't go to anyone's profile. It is all hard coded and most of the "options" such as "Edit Profile", "connected accounts" etc. are not buttons/links that do anything. This is an instance of where a page was designed and implemented without any real functionality being added.
+[2020-06-18T21:29:57.031Z] <@U0105PTF3E2>: not sure how we want to deal with this for the demo/tuesday discussion.
+[2020-06-18T21:30:27.032Z] <@U0105PTF3E2>: should we remove all of the things that don't actually work? should it be known this is an "example" page that isn't implemented?
+[2020-06-22T16:45:25.001Z] <@U0105PTF3E2>: works for me.
+[2020-06-22T16:45:49.001Z] <@U0105PTF3E2>: on the flip side, do we want to push planning to tomorrow or wed since we are trying to slam this stuff out for demo on tuesday?
+[2020-06-23T16:44:53.004Z] <@U0105PTF3E2>: it should be in the meeting invite too
+[2020-06-23T16:46:29.005Z] <@U0105PTF3E2>: :anguished:
+[2020-06-23T16:48:44.005Z] <@U0105PTF3E2>: <@UUE8US03X|Mark> got it now?
+[2020-06-23T18:38:34.006Z] <@U0105PTF3E2>: I helped cody set up running the api through VS code so he could add breakpoints and debug and I figured I would post here in case anyone else was interested. See the thread for details
+[2020-06-23T18:39:30.006Z] <@U0105PTF3E2>: In VS code, create a .vscode/launch.json
+[2020-06-23T18:39:59.006Z] <@U0105PTF3E2>: here is mine (it is nearly the exact same as the default node one)
+[2020-06-23T18:40:33.006Z] <@U0105PTF3E2>: 
+[2020-06-23T18:41:09.007Z] <@U0105PTF3E2>: now if you click on the Run tab (shift + cmd + D)
+[2020-06-23T18:41:23.007Z] <@U0105PTF3E2>: there is an option in the top left to Run API local
+[2020-06-23T18:41:42.007Z] <@U0105PTF3E2>: once sails starts up, you can add breakpoints and debug through vs code
+[2020-06-23T18:46:09.011Z] <@U0105PTF3E2>: I have also seen a few frustrations with VS code playing well with our linter/prettier setup. FOR THE APP - if you install an ESLint extension, it should give you lint feedback while in the editor, including prettier (since we have prettier integrated into lint). Note: if you also have a prettier plugin, this will conflict so you need to disable/uninstall it (at least for the app workspace).
+[2020-06-23T18:47:04.011Z] <@U0105PTF3E2>: Additionally, if you want to set up VS code so that it automatically runs lint/prettier fixes for you on file save, do the following:
+[2020-06-23T18:48:57.011Z] <@U0105PTF3E2>: open your settings.json (cmd + shift+ P and find "Preferences: Open Settings (JSON)" )
+[2020-06-23T18:50:11.012Z] <@U0105PTF3E2>: add this entry (ensure there isn't one already)\n```"editor.codeActionsOnSave": {\n        "source.fixAll.tslint": true\n    }```
+[2020-06-23T18:50:17.012Z] <@U0105PTF3E2>: save your file
+[2020-06-23T18:50:30.012Z] <@U0105PTF3E2>: you may have to reload vs code
+[2020-06-23T18:52:12.004Z] <@U0105PTF3E2>: how do we find the link to it?
+[2020-06-23T19:21:09.013Z] <@U0105PTF3E2>: has the "zipcode gate" removal been merged yet?
+[2020-06-23T21:07:31.007Z] <@U0105PTF3E2>: interviews are something I have actually never been a primary on conducting unfortunately so i have little experience actually interviewing. i do have a few insanely good devs who might be interested if we are looking to expand the team
+[2020-06-23T21:12:24.008Z] <@U0105PTF3E2>: fwiw, i hate algorithm questions - i much prefer talking about in depth language stuff, design patterns, architecture and culture fit
+[2020-06-23T22:59:49.008Z] <@U0105PTF3E2>: real things like that are much better. I actually liked working on the project for my interview here, it was a big investment for me but gave me the things i liked which were creative freedom, i can work on it in my own time and an opportunity to talk through things afterward.
+[2020-06-23T23:03:20.009Z] <@U0105PTF3E2>: I had one where we pair programmed creating a few react components (i think on hackerrank projects)
+[2020-06-23T23:48:40.014Z] <@U0105PTF3E2>: There is a bunch of logic on the home page around getting zip out of storage is why I ask
+[2020-06-24T15:26:22.018Z] <@U0105PTF3E2>: If There are A lot of changes you need to merge in to update because your branch is relatively out of date or whatever, you may be stuck having to fix a ton of lint issues in multiple files that you didn't change. If you rebase your branch onto staging instead of merging staging into your branch you will only have to deal with the merge conflicts and you won't have to change all the other files
+[2020-06-24T15:26:38.018Z] <@U0105PTF3E2>: Let me know if you need any help with that
+[2020-06-24T18:00:04.027Z] <@U0105PTF3E2>: what repo?
+[2020-06-24T18:00:15.027Z] <@U0105PTF3E2>: there is only a package-lock maintained in the app i think
+[2020-06-24T18:03:25.010Z] <@U0105PTF3E2>: and what application is the meeting going to be held in? I assume our zoom?
+[2020-06-24T18:05:18.028Z] <@U0105PTF3E2>: uhh, looks like the package-lock was deleted on staging
+[2020-06-24T18:07:24.028Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/Fulfil-ionic-app/commit/ee4f4119057d5c201214ba22b50e9d0c940c49db>
+[2020-06-24T18:14:59.028Z] <@U0105PTF3E2>: please review <https://github.com/Fulfil0518/Fulfil-ionic-app/pull/264>
+[2020-06-24T18:17:46.028Z] <@U0105PTF3E2>: thanks
+[2020-06-24T23:37:37.016Z] <@U0105PTF3E2>: are you guys still using toast (the github plugin for slack)? I manage all my stuff through email and cannot find a way to remove myself from toast notifications. If it is helpful we can keep it, otherwise i would like to remove it.
+[2020-06-25T17:16:14.017Z] <@U0105PTF3E2>: i want to, but with all of the push for the demo i would prefer to wait
+[2020-06-25T17:18:32.018Z] <@U0105PTF3E2>: k
+[2020-06-25T17:53:12.019Z] <@U0105PTF3E2>: 
+[2020-06-25T20:42:45.022Z] <@U0105PTF3E2>: mine is up as well finally <https://github.com/Fulfil0518/Fulfil-ionic-app/pull/279>
+[2020-06-25T21:53:53.023Z] <@U0105PTF3E2>: build is broken on staging :anguished:
+[2020-06-25T21:53:55.023Z] <@U0105PTF3E2>: trying to fix it
+[2020-06-25T22:44:22.055Z] <@U0105PTF3E2>: it looks like this is the first time it happened <https://semaphoreci.com/fulfil0518/web-frontend/servers/staging/deploys/171>
+[2020-06-25T22:53:04.056Z] <@U0105PTF3E2>: yes.
+[2020-06-25T22:56:18.057Z] <@U0105PTF3E2>: it looks like the first failure was this build <https://semaphoreci.com/fulfil0518/web-frontend/servers/staging/deploys/171> which was pr 279 commit aa4678d. If I checkout the last one that built before that which is commit 4f6f pr 281 <https://semaphoreci.com/fulfil0518/web-frontend/servers/staging/deploys/170> it fails locally
+[2020-06-25T22:57:26.057Z] <@U0105PTF3E2>: it could be a cache with docker?
+[2020-06-25T23:02:40.057Z] <@U0105PTF3E2>: oh man...
+[2020-06-25T23:04:24.058Z] <@U0105PTF3E2>: i found <https://forums.docker.com/t/how-to-delete-cache/5753|this> on how to clear docker cache. i did the top post and re-ran the build locally and it worked... I am on commit 4f6f
+[2020-06-25T23:04:56.058Z] <@U0105PTF3E2>: im goign to check out the latest staging and try again
+[2020-06-25T23:11:16.058Z] <@U0105PTF3E2>: it worked...
+[2020-06-25T23:11:38.059Z] <@U0105PTF3E2>: locally
+[2020-06-25T23:16:33.059Z] <@U0105PTF3E2>: omfg....
+[2020-06-25T23:16:41.059Z] <@U0105PTF3E2>: i think it was just a node/npm thing....
+[2020-06-25T23:16:50.060Z] <@U0105PTF3E2>: i just tried to deploy again
+[2020-06-25T23:16:52.060Z] <@U0105PTF3E2>: and it worked
+[2020-06-25T23:16:55.060Z] <@U0105PTF3E2>: no changes at all...
+[2020-06-25T23:17:06.060Z] <@U0105PTF3E2>: i think npm was jsut shitting the bed somehow...
+[2020-06-25T23:19:35.061Z] <@U0105PTF3E2>: idk
+[2020-06-25T23:19:42.061Z] <@U0105PTF3E2>: i don't know anything anymore...
+[2020-06-25T23:19:43.061Z] <@U0105PTF3E2>: <https://semaphoreci.com/fulfil0518/web-frontend/servers/staging/deploys/179>
+[2020-06-25T23:19:46.062Z] <@U0105PTF3E2>: that worked though
+[2020-06-25T23:24:15.062Z] <@U0105PTF3E2>: someone somewhere <https://www.youtube.com/watch?v=zAJbOygaJ0o>
+[2020-06-25T23:26:13.063Z] <@U0105PTF3E2>: yep... <http://staging.fulfil.store/version> its the correct version
+[2020-06-25T23:26:20.063Z] <@U0105PTF3E2>: so i guess we test staging now?
+[2020-06-25T23:30:10.064Z] <@U0105PTF3E2>: have there been api changes since yesterday?
+[2020-06-25T23:30:44.065Z] <@U0105PTF3E2>: oh well, its just staging atm
+[2020-06-25T23:31:03.065Z] <@U0105PTF3E2>: so api should be up to date there. prod maybe slightly out of date
+[2020-06-25T23:32:13.067Z] <@U0105PTF3E2>: i am very curious if that happens on prod as much
+[2020-06-25T23:36:32.067Z] <@U0105PTF3E2>: lmao
+[2020-06-26T05:43:31.069Z] <@U0105PTF3E2>: shit.. i see a few things on prod.
+[2020-06-26T05:46:10.069Z] <@U0105PTF3E2>: 
+[2020-06-26T05:47:09.070Z] <@U0105PTF3E2>: also, the overlay on the home page that shows the quantity you have added does not allow you to click through to the item details
+[2020-06-26T05:48:16.071Z] <@U0105PTF3E2>: hmm... this is item 2713
+[2020-06-26T05:48:30.071Z] <@U0105PTF3E2>: and it has a sale price of $3.74
+[2020-06-26T05:48:45.071Z] <@U0105PTF3E2>: oops, i am looking at dev
+[2020-06-26T05:49:00.071Z] <@U0105PTF3E2>: yeah
+[2020-06-26T05:49:04.071Z] <@U0105PTF3E2>: sale price of 0
+[2020-06-26T05:49:47.072Z] <@U0105PTF3E2>: cody did this to make some of the items show up in search, but logic in the display for the cart is checking if price exists i guess (and it is a string that just gets formatted) was my style/html changes that broke it
+[2020-06-26T05:50:10.072Z] <@U0105PTF3E2>: why not just click through on the overlay?
+[2020-06-26T05:50:46.072Z] <@U0105PTF3E2>: im not sure what the better experience is, but i don't like not being able to go to the item details that's for sure
+[2020-06-26T05:50:53.072Z] <@U0105PTF3E2>: :thinking_face:
+[2020-06-26T05:51:15.073Z] <@U0105PTF3E2>: the overlay is on top of the buttons?
+[2020-06-26T05:51:49.073Z] <@U0105PTF3E2>: yeah, so preventDefault on the buttons, and put an on click on the overlay
+[2020-06-26T05:52:08.073Z] <@U0105PTF3E2>: or just don't let the overlay steal the click
+[2020-06-26T05:52:15.074Z] <@U0105PTF3E2>: which is probably better
+[2020-06-26T05:52:24.074Z] <@U0105PTF3E2>: :thumbsup:
+[2020-06-26T05:58:42.075Z] <@U0105PTF3E2>: not a blocker for the demo but we have the problem (like we did on ionic 3) where we cannot navigate directly to a url... ex. try to navigate to <http://localhost:4200/item/2718> you will be directed to home page...
+[2020-06-26T05:59:09.076Z] <@U0105PTF3E2>: this may be due to the new router stuff for search?
+[2020-06-26T06:10:47.076Z] <@U0105PTF3E2>: on prod, staging and local
+[2020-06-26T06:10:56.076Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/Fulfil-ionic-app/pull/284>
+[2020-06-26T06:21:28.077Z] <@U0105PTF3E2>: i pushed the change to staging and just pushed to master
+[2020-06-26T06:44:46.077Z] <@U0105PTF3E2>: hmm, is it working ok on prod?
+[2020-06-26T07:18:18.078Z] <@U0105PTF3E2>: im not sure if gcp is taking down/replacing our deployments correctly ...
+[2020-06-26T07:18:37.078Z] <@U0105PTF3E2>: this happened shortly after semaphore was done deploying
+[2020-06-26T14:27:56.083Z] <@U0105PTF3E2>: I was able to place an order on prod last night and now with the same address
+[2020-06-26T14:29:47.083Z] <@U0105PTF3E2>: When does this happen? I was able to place an order on prod but when it took me to the order summary page (/my-orders/#) I got redirected to the orders page (/my-orders)
+[2020-06-26T14:31:52.084Z] <@U0105PTF3E2>: What time is the demo?
+[2020-06-26T15:30:06.087Z] <@U0105PTF3E2>: i think this is due to position absolute
+[2020-06-26T15:32:48.087Z] <@U0105PTF3E2>: you mean you have a solution for it or do you mean it is position: fixed;?
+[2020-06-26T15:43:11.091Z] <@U0105PTF3E2>: that happens when Inventory.getReserveInventoryByCart() (on the API side) returns empty array
+[2020-06-26T15:43:19.092Z] <@U0105PTF3E2>: which is very frequent
+[2020-06-26T15:51:45.092Z] <@U0105PTF3E2>: which issue?
+[2020-06-26T15:53:11.092Z] <@U0105PTF3E2>: #1 on the spreadsheet?
+[2020-06-26T15:53:58.093Z] <@U0105PTF3E2>: are we going to do a normal standup or should we just swarm on demo prep?
+[2020-06-26T17:06:50.099Z] <@U0105PTF3E2>: i tried first thing this morning with the 4242 card and it seemed to work on my phone
+[2020-06-26T17:59:23.108Z] <@U0105PTF3E2>: We are deploying a change to prod (its already in staging) that removes a bunch of postmates logic from order creation. This should hopefully fix the issues with checkout so when its done deploying we should all test it again
+[2020-06-26T20:31:30.028Z] <@U0105PTF3E2>: master rebuilt but didn't deploy...
+[2020-06-26T20:31:38.028Z] <@U0105PTF3E2>: wtf is happening
+[2020-06-26T20:51:12.028Z] <@U0105PTF3E2>: meeting notes
+[2020-06-26T20:51:19.028Z] <@U0105PTF3E2>: • move out of stock items to the end of search\n• seemingly inacurrate search results (apple appeared when "milk" was searched)\n• pet-peeve of long order id. want easy to understand/read order IDs\n• don't worry about "select your own"\n• worried about speed of the app. "feels sluggish"\n• add feature to select a pre-made order\n• They plan on only having one order placed at a time but we want multiple things happening in the warehouse at that time?
+[2020-06-26T21:04:53.031Z] <@U0105PTF3E2>: yeah and hai mentioned that it feels easily fast enough for VC demo
+[2020-06-26T21:07:55.119Z] <@U0105PTF3E2>: i have a vet appointment for my old doggy soon so i will be mostly unavailable the rest of the day. DM me if you need anything though, i will have my phone
+[2020-06-26T21:08:21.032Z] <@U0105PTF3E2>: master for the API just built again...
+[2020-06-26T21:09:26.032Z] <@U0105PTF3E2>: 
+[2020-06-29T16:55:36.001Z] <@U0105PTF3E2>: im down for whatever
+[2020-06-29T16:56:09.001Z] <@U0105PTF3E2>: the zoom inv in the calendar shows this for me
+[2020-06-30T14:22:41.126Z] <@U0105PTF3E2>: We have to make changes to every page again? This makes me sad.
+[2020-06-30T15:27:42.127Z] <@U0105PTF3E2>: Oh nice
+[2020-06-30T17:26:57.130Z] <@U0105PTF3E2>: oh yeah i didn't even notice that. if we have skeleton though we definitely don't need that
+[2020-06-30T18:47:45.132Z] <@U0105PTF3E2>: i like it on the left.
+[2020-06-30T18:48:21.133Z] <@U0105PTF3E2>: shouldn't it be a toggle? if you are on the favorites page "toggling" just removes it from the page so it seems like it is a "delete". basically, the button should behave the same on every page right?
+[2020-06-30T18:53:36.134Z] <@U0105PTF3E2>: maybe?
+[2020-06-30T19:08:08.135Z] <@U0105PTF3E2>: i have not
+[2020-06-30T19:11:13.138Z] <@U0105PTF3E2>: Sails question <@U013TF1F70W|tim> <@UCBMSR9MY> - <https://stripe.com/docs/payments/handling-payment-events#build-your-own-webhook|Stripe webhook doc> says to use bodyParser.raw({type: 'application/json'}) to get the raw body from the sails request so i can check if stripe was the caller with event = stripe.webhooks.constructEvent(request.body, sig, endpointSecret);. I can't find the straight forward way to do this in sails/our api. thoughts?
+[2020-06-30T19:14:12.139Z] <@U0105PTF3E2>: I can get the event but if i want to check the signature with the stripe.webhooks.constructEvent  i need the raw
+[2020-06-30T19:14:26.139Z] <@U0105PTF3E2>: i CAN just get it, but if i want to do the signing
+[2020-06-30T19:14:31.140Z] <@U0105PTF3E2>: i need the raw
+[2020-06-30T19:14:42.140Z] <@U0105PTF3E2>: i have it working without signing
+[2020-06-30T19:14:57.141Z] <@U0105PTF3E2>: but i fugred it would be good that only stripe be able to call it
+[2020-06-30T19:16:03.142Z] <@U0105PTF3E2>: so if my endpoint is just\n```purchaseWebhook: async (req, res) => {```
+[2020-06-30T19:16:20.142Z] <@U0105PTF3E2>: it would be
+[2020-06-30T19:16:44.142Z] <@U0105PTF3E2>: ```bodyParser.raw({type: 'application/json'}, await (req, res))```
+[2020-06-30T19:16:47.143Z] <@U0105PTF3E2>: ill try
+[2020-06-30T19:39:07.144Z] <@U0105PTF3E2>: bodyParser.raw() returns a middleware function.
+[2020-06-30T19:45:08.144Z] <@U0105PTF3E2>: tried something like this but no dice\n```purchaseWebhook: [\n    bodyParser.raw({type: 'application/json'}),\n    async (req, res) => {}]```
+[2020-06-30T22:42:15.005Z] <@U0105PTF3E2>: i stepped away to get some food earlier but im back now. i can try to help
+[2020-07-01T00:46:49.007Z] <@U0105PTF3E2>: got a draft pr up for the webhook. still lots of todos but getting it up early <https://github.com/Fulfil0518/Fulfil-api/pull/463>
+[2020-07-01T17:38:27.153Z] <@U0105PTF3E2>: i wish we could use --watch but it doesn't seem to work because of the way we have to "initialize" with test/lifecycle.test.js
+[2020-07-01T21:09:42.165Z] <@U0105PTF3E2>: :thinking_face:
+[2020-07-01T21:11:16.167Z] <@U0105PTF3E2>: mark and i are actively talking about the integration. we will def take a look
+[2020-07-01T21:13:55.167Z] <@U0105PTF3E2>: at the bottom of the above link it says "...you can read the <https://stripe.com/docs/orders/tax-integration|Orders API tax integration overview>." and that doc says at the top that is it deprecated
+[2020-07-01T23:31:09.169Z] <@U0105PTF3E2>: Reminder: im out tomorrow so someone else will have to lead standup. im working for a bit longer today so if anyone needs anything from me, let me know
+[2020-07-06T16:07:37.001Z] <@U0105PTF3E2>: Sentry is supposed to be disabled for development
+[2020-07-06T16:35:39.004Z] <@U0105PTF3E2>: post a standup update in a thread here for today if you are having issues this morning
+[2020-07-06T21:20:57.018Z] <@U0105PTF3E2>: did a quick write up of the directory structure for the app <https://docs.google.com/document/d/1Dg7dLuXsalUy9LyHQRt8oZcVmU0ta2mPWPyJdITUabs/edit#>
+[2020-07-07T23:25:12.021Z] <@U0105PTF3E2>: i hope it is for something fun!
+[2020-07-08T01:02:24.000Z] <@U0105PTF3E2>: i think i can
+[2020-07-08T01:06:20.001Z] <@U0105PTF3E2>: you should get an email
+[2020-07-08T03:48:53.022Z] <@U0105PTF3E2>: what about staging? app or api?
+[2020-07-08T04:18:55.024Z] <@U0105PTF3E2>: omg dude... i literally spent like 2 hours today (checkout wouldn't load on my branch because of an exception in ngOnInit) because of this same issue... i was doing import {debounce} from 'lodash/debounce'; when it needs to be import debounce from 'lodash/debounce';
+[2020-07-08T04:19:05.024Z] <@U0105PTF3E2>: i JUST fixed it like minutes ago...
+[2020-07-08T04:19:15.024Z] <@U0105PTF3E2>: im sorry dude...
+[2020-07-08T04:21:29.025Z] <@U0105PTF3E2>: only fair since its my fault lol
+[2020-07-08T04:21:33.025Z] <@U0105PTF3E2>: sorry man
+[2020-07-08T04:21:56.025Z] <@U0105PTF3E2>: i spent so much time today debugging this on my damn branch today
+[2020-07-08T04:23:19.026Z] <@U0105PTF3E2>: no sorry, i just had the issue on my branch
+[2020-07-08T04:23:29.026Z] <@U0105PTF3E2>: i fixed it for my stupid changes
+[2020-07-08T04:23:52.026Z] <@U0105PTF3E2>: which was a debounce import inside delivery-form.component.ts
+[2020-07-08T04:24:17.026Z] <@U0105PTF3E2>: i haven't updated my branch with staging today
+[2020-07-08T04:26:20.027Z] <@U0105PTF3E2>: i did suggest the changes on your PR a while ago i think but i haven't seen the PR since. that is why i said it was likely my fault
+[2020-07-08T04:30:16.028Z] <@U0105PTF3E2>: :thumbsup:
+[2020-07-08T17:40:50.029Z] <@U0105PTF3E2>: outside of <@UCBMSR9MY>, i think the most knowledgable about the dashboard is <@UKH8B1JUS|Ankit Bhanderi> <@UG3PMBZ50|Sanjay Radadiya> and <@UUE8US03X|Mark>
+[2020-07-08T17:45:08.030Z] <@U0105PTF3E2>: not a big deal but i think it has been a while since we did a prod push. lets plan on updating master for all 3 apps at the end of the week
+[2020-07-09T17:41:26.042Z] <@U0105PTF3E2>: please don't change OrderController
+[2020-07-09T17:41:38.042Z] <@U0105PTF3E2>: i have a few changes in there on my branch
+[2020-07-09T17:43:18.043Z] <@U0105PTF3E2>: actually, i didn't change that area of the code at all. it should merge fine
+[2020-07-09T19:50:40.045Z] <@U0105PTF3E2>: ah... ideally no
+[2020-07-09T19:51:07.045Z] <@U0105PTF3E2>: but ideally we would have an actual recommendation engine too
+[2020-07-09T19:52:49.045Z] <@U0105PTF3E2>: yeah, we should
+[2020-07-09T19:53:01.046Z] <@U0105PTF3E2>: do we put time into it at this point though?
+[2020-07-09T19:53:39.046Z] <@U0105PTF3E2>: i think we talked about this during the demo to Arnie and Hai and we decided this is more of a concept than a real feature
+[2020-07-09T19:53:58.046Z] <@U0105PTF3E2>: so for now, we are not prioritizing making that better
+[2020-07-09T20:45:47.049Z] <@U0105PTF3E2>: yeah sorry
+[2020-07-09T20:46:01.050Z] <@U0105PTF3E2>: i approved and it was already merged
+[2020-07-09T20:46:39.050Z] <@U0105PTF3E2>: and yeah, as with the other apps it auto deploys now
+[2020-07-09T22:05:01.052Z] <@U0105PTF3E2>: i was reviewing this earlier before i got destracted by talking to stripe people. have you pulled it down and checked out the pages by chance?
+[2020-07-09T22:18:57.052Z] <@U0105PTF3E2>: checkout my commit <https://github.com/Fulfil0518/Fulfil-ionic-app/pull/303/commits/384569355fce1ad8eecff3c76962c968d26f433d> and if everything looks good go ahead and merge it
+[2020-07-09T22:19:23.053Z] <@U0105PTF3E2>: didn't want to wait for another day cycle and the cart page still looks good to me with the change
+[2020-07-10T16:19:51.058Z] <@U0105PTF3E2>: i assume we DO want to maintain this functionality but i don't know for sure. I think this is a question for <@UCBMSR9MY>
+[2020-07-10T17:26:51.001Z] <@U0105PTF3E2>: so what is the plan with these names? are they going to pick one from this list or was this the exercise just to see what kind of things we liked before coming up with yet another list of names to choose from?
+[2020-07-10T20:49:28.063Z] <@U0105PTF3E2>: How are we feeling about a production release in a little bit? It looks like there are a few APP PRs still open - a few are blocked and some others aren't quite ready to go. How about this one <@U013TF1F70W|tim> - <https://github.com/Fulfil0518/Fulfil-ionic-app/pull/304>? worth getting in before merging?\n\nOn the API side, there are 4 open PRs but none have been approved or are blocked.
+[2020-07-10T21:00:21.065Z] <@U0105PTF3E2>: sure
+[2020-07-10T21:59:38.072Z] <@U0105PTF3E2>: I spent most of today looking into the stripe stuff we discussed this morning and wrote up <https://docs.google.com/document/d/1SVzoZiRDJ3rgV2LmYtTrK97N1r6UdbBtyP7ev-ftm5w/edit#|a doc> with a summary of the 2 integration strategies. Based on a discussion with matt and what i have read I think the "Asynchronous" approach is still the way to go. This is primarily based on the shear number of error cases that can occur with card (and other eventual payment strategies) in addition to the out of the box security and bank integration provided by stripe.js. I also found that stripe has set up quite a few tools to make the webhook integration successful. I will have to add back in the ability to bypass payment if that is what we want though. I'm not 100% convinced this is the best way forward but it is working, its relatively simple and stripe does recommend it due to its "simplicity and security". Check out the doc and lets have a discussion if anyone disagrees.
+[2020-07-10T21:59:53.072Z] <@U0105PTF3E2>: sorry for the wall of text...
+[2020-07-10T22:00:42.072Z] <@U0105PTF3E2>: we waiting on this to go in to do the release?
+[2020-07-10T22:02:30.074Z] <@U0105PTF3E2>: cool. i already wanted to refactor out the common logic between the "checkout" and "order" controllers so ill do this as my next task. the FE can just hit the old endpoint if we bypass payment and they should use most of the logic under the hood
+[2020-07-10T22:02:37.074Z] <@U0105PTF3E2>: when im done with it anyway...
+[2020-07-10T22:03:53.074Z] <@U0105PTF3E2>: <@U015EQS4HT4|Zach Boone> even if you have a fresh cart with minimal things in it? lovely...
+[2020-07-10T22:05:56.076Z] <@U0105PTF3E2>: lets just make sure staging works before we push to master
+[2020-07-10T22:08:40.077Z] <@U0105PTF3E2>: on staging you literally cannot do a "real" payment. you HAVE to use one of the test cards (is my understanding)
+[2020-07-10T22:09:42.078Z] <@U0105PTF3E2>: ill create a ticket since i still have to do it, and we can hash out the details in planning?
+[2020-07-10T22:11:58.078Z] <@U0105PTF3E2>: well, as long as we are using our "test" api key (no matter which one of OUR environments it is in) we have to use the test cards. so if it is unacceptable for the demo people to type in "4242424242424242" then we will need the "bypass" checkbox
+[2020-07-10T22:12:48.079Z] <@U0105PTF3E2>: until we switch over to using the "live" api key with stripe. at that point the easiest way to bypass will be to have the checkbox
+[2020-07-10T22:39:26.080Z] <@U0105PTF3E2>: staging api failed to deploy
+[2020-07-10T22:40:27.080Z] <@U0105PTF3E2>: missing script write:git-info?
+[2020-07-10T22:40:34.080Z] <@U0105PTF3E2>: someone delete a npm script?
+[2020-07-10T22:43:36.080Z] <@U0105PTF3E2>: nope - <@UG3PMBZ50|Sanjay Radadiya> added the command to semaphore before his <https://github.com/Fulfil0518/Fulfil-api/pull/467/files|PR> is merged
+[2020-07-10T22:43:50.080Z] <@U0105PTF3E2>: I am going to delete that command for now so the deployment works
+[2020-07-10T22:45:09.081Z] <@U0105PTF3E2>: this is the deployment steps before I modified it so you can add it back after your PR is merged <@UG3PMBZ50|Sanjay Radadiya>\n```curl -O <https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-254.0.0-linux-x86_64.tar.gz>\ntar zxf google-cloud-sdk-254.0.0-linux-x86_64.tar.gz\nsource google-cloud-sdk/path.bash.inc\nsource google-cloud-sdk/completion.bash.inc\ngcloud --version\ngcloud auth activate-service-account  --key-file /home/runner/auth.json --project fulfil-web\nnpm run write:log\nnpm install gulp gulp-mustache gulp-concat\nnpm run write:git-info\nnpm run docker:staging:build\nnpm run delete:tag:staging\nnpm run docker:staging:push\ngcloud compute instance-groups managed rolling-action replace fulfil-api-staging-docker-instance-group --zone=us-central1-a --quiet```
+[2020-07-10T22:45:50.081Z] <@U0105PTF3E2>: I removed\n```npm install gulp gulp-mustache gulp-concat\nnpm run write:git-info```\nfrom staging and prod
+[2020-07-10T23:03:57.082Z] <@U0105PTF3E2>: something is wrong with out version info for the api...
+[2020-07-10T23:04:25.082Z] <@U0105PTF3E2>: if you go to <http://staging.api.fulfil.store/version> (please tell me this is the wrong url) it has the git info for master...
+[2020-07-10T23:05:49.082Z] <@U0105PTF3E2>: so it looks like the container for staging was deployed to GCR and the server was deployed to GCP (<https://console.cloud.google.com/compute/instanceGroups/details/us-central1-a/fulfil-api-staging-docker-instance-group?project=fulfil-web>) but i don't know if i can confirm...
+[2020-07-10T23:17:46.083Z] <@U0105PTF3E2>: can anyone verify that staging checkout works? I am getting a 401
+[2020-07-10T23:24:20.084Z] <@U0105PTF3E2>: is this checkout sucking again or is this related to the user/key stuff that just went in?
+[2020-07-10T23:25:01.084Z] <@U0105PTF3E2>: order/createorder does use the checkPermissions sails helper
+[2020-07-11T00:49:53.089Z] <@U0105PTF3E2>: i think its blocked at this point
+[2020-07-11T00:50:11.089Z] <@U0105PTF3E2>: seems like we can't do a few things on staging
+[2020-07-11T00:50:41.089Z] <@U0105PTF3E2>: i was trying to look into it but am trying to get my current wip in a decent commit state
+[2020-07-11T00:50:57.090Z] <@U0105PTF3E2>: ill try again tonight or tomorrow
+[2020-07-11T00:57:31.090Z] <@U0105PTF3E2>: hmm, i updated my branch with staging
+[2020-07-11T00:57:56.090Z] <@U0105PTF3E2>: and this line is just returning false for me locally too if (!req.auth.user) {
+[2020-07-11T00:58:02.090Z] <@U0105PTF3E2>: probably the issue on staging
+[2020-07-11T00:58:11.090Z] <@U0105PTF3E2>: im done for the day though. ill check it out sometime
+[2020-07-13T16:19:08.099Z] <@U0105PTF3E2>: everyone be srue to update your monday ticket statuses before planning
+[2020-07-13T16:34:47.100Z] <@U0105PTF3E2>: hmm wth
+[2020-07-13T18:26:57.000Z] <@U0105PTF3E2>: sure
+[2020-07-13T18:27:02.001Z] <@U0105PTF3E2>: on a 1on1 atm
+[2020-07-13T18:27:07.001Z] <@U0105PTF3E2>: then i need to check on my kid
+[2020-07-13T18:27:13.001Z] <@U0105PTF3E2>: lol ill message you
+[2020-07-13T19:35:48.002Z] <@U0105PTF3E2>: debugging an issue we have with staging
+[2020-07-13T20:25:53.102Z] <@U0105PTF3E2>: did something else change in the models or something on the api recently? im doing a pretty simple order = await Order.findOne({cart_id: cartId}); which was working last week i thought but now im getting this\n```{"cause":{"name":"AdapterError","adapterMethodName":"find","modelIdentity":"order","raw":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlMessage":"Unknown column 'token' in 'field list'","sqlState":"42S22","index":0,"sql":"select `createdAt`, `updatedAt`, `id`, `user_id`, `cart_id`, `order_total`, `charge_token`, `payment_type`, `delivery_type`, `delivery_address`, `delivery_city`, `delivery_zipcode`, `delivery_time`, `note`, `delivery_apt`, `delivery_state`, `delivery_name`, `delivery_country`, `status`, `api_key`, `tax_amount`, `token` from `order` where `cart_id` = 155078 limit 2"}},"isOperational":true,"adapterMethodName":"find","modelIdentity":"order","raw":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlMessage":"Unknown column 'token' in 'field list'","sqlState":"42S22","index":0,"sql":"select `createdAt`, `updatedAt`, `id`, `user_id`, `cart_id`, `order_total`, `charge_token`, `payment_type`, `delivery_type`, `delivery_address`, `delivery_city`, `delivery_zipcode`, `delivery_time`, `note`, `delivery_apt`, `delivery_state`, `delivery_name`, `delivery_country`, `status`, `api_key`, `tax_amount`, `token` from `order` where `cart_id` = 155078 limit 2"}}```
+[2020-07-13T20:32:15.103Z] <@U0105PTF3E2>: ill try
+[2020-07-13T20:34:16.105Z] <@U0105PTF3E2>: hmm
+[2020-07-13T20:34:24.105Z] <@U0105PTF3E2>: token is a new field to order model
+[2020-07-13T20:34:33.105Z] <@U0105PTF3E2>: but i don't see that field in the dev database
+[2020-07-13T20:34:35.105Z] <@U0105PTF3E2>: that is probably it
+[2020-07-13T20:36:04.106Z] <@U0105PTF3E2>: <@U013TF1F70W|tim> did you run the migration 2020_06_26_add_token_to_order.sql in dev db?
+[2020-07-13T20:41:50.106Z] <@U0105PTF3E2>: curious, i don't see it in the prod db either
+[2020-07-13T20:45:35.106Z] <@U0105PTF3E2>: im losing it... i pathetically cant find the PR this commit was added to staging under <https://github.com/Fulfil0518/Fulfil-api/commit/6d0c21c87a4d1e2864d0237857cc6da35832ff99>
+[2020-07-13T20:46:58.106Z] <@U0105PTF3E2>: nvm... finally found it <https://github.com/Fulfil0518/Fulfil-api/pull/461>
+[2020-07-13T20:47:19.107Z] <@U0105PTF3E2>: now to see if that has been merged into master
+[2020-07-13T20:47:46.107Z] <@U0105PTF3E2>: im trying to figure out if we need to run that migration in dev and master (i think we do)
+[2020-07-13T20:50:13.108Z] <@U0105PTF3E2>: ok... it has not been merged into master yet
+[2020-07-13T20:50:50.108Z] <@U0105PTF3E2>: i tried to run the migration in dev and got this error\n```Key column 'token' doesn't exist in table```
+[2020-07-13T21:19:14.109Z] <@U0105PTF3E2>: thanks. wth was i doing wrong lol
+[2020-07-13T22:14:59.002Z] <@U0105PTF3E2>: *sigh
+[2020-07-13T22:15:03.003Z] <@U0105PTF3E2>: long day already lol
+[2020-07-13T22:15:24.004Z] <@U0105PTF3E2>: my shit works... ish...
+[2020-07-13T22:15:32.004Z] <@U0105PTF3E2>: #cloud-team
+[2020-07-13T22:15:36.004Z] <@U0105PTF3E2>: is the most important
+[2020-07-13T22:15:48.004Z] <@U0105PTF3E2>: there is one for leads
+[2020-07-13T22:15:56.005Z] <@U0105PTF3E2>: where we discuss higher lvl technical stuff
+[2020-07-13T22:16:00.005Z] <@U0105PTF3E2>: but its rarely used
+[2020-07-13T22:16:28.006Z] <@U0105PTF3E2>: there is a friday one
+[2020-07-13T22:16:57.006Z] <@U0105PTF3E2>: FABII or something
+[2020-07-13T22:17:12.006Z] <@U0105PTF3E2>: its a meeting inv on the calendar
+[2020-07-13T22:17:18.007Z] <@U0105PTF3E2>: i went last week for the first time
+[2020-07-13T22:17:27.007Z] <@U0105PTF3E2>: only 3 other ppl showed up though
+[2020-07-13T22:17:51.007Z] <@U0105PTF3E2>: i think more ppl did it in the past
+[2020-07-13T22:17:57.007Z] <@U0105PTF3E2>: everyone is swamped rn lol
+[2020-07-13T22:18:34.008Z] <@U0105PTF3E2>: just one?
+[2020-07-13T22:18:38.008Z] <@U0105PTF3E2>: ah yeah lol
+[2020-07-13T22:18:42.009Z] <@U0105PTF3E2>: he def is
+[2020-07-13T22:18:59.009Z] <@U0105PTF3E2>: and he has been driving literally everything up to this point
+[2020-07-13T22:19:10.010Z] <@U0105PTF3E2>: so im SURE that will be a point of contention
+[2020-07-13T22:19:14.010Z] <@U0105PTF3E2>: bruh lmfao
+[2020-07-13T22:19:16.010Z] <@U0105PTF3E2>: i know
+[2020-07-13T22:19:25.011Z] <@U0105PTF3E2>: we need some ux pretty bad
+[2020-07-13T22:19:33.011Z] <@U0105PTF3E2>: its def demoable
+[2020-07-13T22:19:45.011Z] <@U0105PTF3E2>: but consumer release...
+[2020-07-13T22:19:50.012Z] <@U0105PTF3E2>: cmon
+[2020-07-13T22:20:05.012Z] <@U0105PTF3E2>: which is pretty nuts because
+[2020-07-13T22:20:10.013Z] <@U0105PTF3E2>: we spend so much fucking time
+[2020-07-13T22:20:13.013Z] <@U0105PTF3E2>: doing ux tweaks...
+[2020-07-13T22:20:22.013Z] <@U0105PTF3E2>: that is pretty much all the contractors do rn
+[2020-07-13T22:20:27.013Z] <@U0105PTF3E2>: like jfc just stop
+[2020-07-13T22:20:49.014Z] <@U0105PTF3E2>: we NEED to focus on DEMO work right now
+[2020-07-13T22:21:14.014Z] <@U0105PTF3E2>: and if all that is fucking legit, then we need to focus on infrastructure
+[2020-07-13T22:21:19.014Z] <@U0105PTF3E2>: or testing or monitoring
+[2020-07-13T22:21:29.015Z] <@U0105PTF3E2>: one thing about matt, everything is super easy
+[2020-07-13T22:21:36.015Z] <@U0105PTF3E2>: or its alredy perfect
+[2020-07-13T22:21:40.015Z] <@U0105PTF3E2>: we have monitoring
+[2020-07-13T22:21:43.016Z] <@U0105PTF3E2>: ...
+[2020-07-13T22:21:45.016Z] <@U0105PTF3E2>: its pretty poo
+[2020-07-13T22:22:02.017Z] <@U0105PTF3E2>: especially compared to qc or what it could be
+[2020-07-13T22:22:09.017Z] <@U0105PTF3E2>: obv i don't expect it to be amazing
+[2020-07-13T22:22:19.017Z] <@U0105PTF3E2>: lol yeah
+[2020-07-13T22:22:38.018Z] <@U0105PTF3E2>: has he told you about our unit tests?
+[2020-07-13T22:22:52.019Z] <@U0105PTF3E2>: want to do a call?
+[2020-07-14T19:01:20.114Z] <@U0105PTF3E2>: so the PR that got merged didn't fix the unit tests?
+[2020-07-14T19:02:18.114Z] <@U0105PTF3E2>: ah ok
+[2020-07-14T20:41:25.020Z] <@U0105PTF3E2>: lol
+[2020-07-14T20:43:30.020Z] <@U0105PTF3E2>: wtf is that style of ticket writing i hate
+[2020-07-14T20:43:31.020Z] <@U0105PTF3E2>: called
+[2020-07-14T20:43:48.021Z] <@U0105PTF3E2>: YES
+[2020-07-14T20:43:53.021Z] <@U0105PTF3E2>: was going to make a joke
+[2020-07-14T20:44:21.022Z] <@U0105PTF3E2>: i wasn't going to suggest it or anything lol
+[2020-07-14T20:44:26.022Z] <@U0105PTF3E2>: just wanted to make an inside joke
+[2020-07-14T20:44:36.023Z] <@U0105PTF3E2>: but failed cuz i couldn't remember the stupid bitch
+[2020-07-14T20:45:59.024Z] <@U0105PTF3E2>: hmm
+[2020-07-14T20:46:23.025Z] <@U0105PTF3E2>: i THINK
+[2020-07-14T20:46:26.025Z] <@U0105PTF3E2>: login is broken
+[2020-07-14T20:46:30.025Z] <@U0105PTF3E2>: registration works
+[2020-07-14T20:48:03.026Z] <@U0105PTF3E2>: don't know if pw reset works or is a thing lol
+[2020-07-14T21:07:49.026Z] <@U0105PTF3E2>: what do you mean?
+[2020-07-14T21:10:29.027Z] <@U0105PTF3E2>: i don't think so
+[2020-07-14T21:27:49.118Z] <@U0105PTF3E2>: has anyone noticed this output when starting up the api recently?\n```Could not read source map for file:///Users/michaellobato/Development/Fulfil/Fulfil-api/node_modules/@google-cloud/bigquery/build/src/index.js: ENOENT: no such file or directory, open '/Users/michaellobato/Development/Fulfil/Fulfil-api/node_modules/@google-cloud/bigquery/build/src/index.js.map'\nCould not read source map for file:///Users/michaellobato/Development/Fulfil/Fulfil-api/node_modules/@google-cloud/bigquery/build/src/bigquery.js: ENOENT: no such file or directory, open '/Users/michaellobato/Development/Fulfil/Fulfil-api/node_modules/@google-cloud/bigquery/build/src/bigquery.js.map'\nCould not read source map for file:///Users/michaellobato/Development/Fulfil/Fulfil-api/node_modules/@google-cloud/common/build/src/index.js: ENOENT: no such file or directory, open '/Users/michaellobato/Development/Fulfil/Fulfil-api/node_modules/@google-cloud/common/build/src/index.js.map'\n...```
+[2020-07-14T21:48:11.119Z] <@U0105PTF3E2>: so when you guys start up the api you don't see any of that?
+[2020-07-14T21:50:06.119Z] <@U0105PTF3E2>: yeah, i just tried like that and i don't get the errors
+[2020-07-14T21:50:25.119Z] <@U0105PTF3E2>: i have been running it through my launch.json (so through vscode)
+[2020-07-14T21:50:32.120Z] <@U0105PTF3E2>: haven't seen this until recently
+[2020-07-14T21:50:37.120Z] <@U0105PTF3E2>: i am also currently on staging
+[2020-07-14T22:39:08.007Z] <@U0105PTF3E2>: i fixed my PR's then have been doing PRs since
+[2020-07-14T22:53:54.009Z] <@U0105PTF3E2>: i don't know if anyone has really looked at it. you had approved one of them but that was before i was done with it
+[2020-07-14T22:55:20.011Z] <@U0105PTF3E2>: before we do a release we need to get this one in too <https://github.com/Fulfil0518/Fulfil-ionic-app/pull/320>. you can't get to a lot of item pages
+[2020-07-14T23:01:12.012Z] <@U0105PTF3E2>: i planned on doing an immediate follow up PR that added back the ability to "bypass payment" but if you are uncomfortable with this, i can do it on this PR.
+[2020-07-14T23:01:57.012Z] <@U0105PTF3E2>: this has just sat and required a ton of merges up to this point. the sooner i get the rework in, the faster i can get to the smaller fixes
+[2020-07-14T23:02:04.013Z] <@U0105PTF3E2>: yep
+[2020-07-14T23:02:17.013Z] <@U0105PTF3E2>: is my #1 priority after its merged
+[2020-07-14T23:34:57.236Z] <@U0105PTF3E2>: Sorry for the delayed response but I don't closely monitor this channel. If you let me know what your method for creating orders is currently I can look into any discrepancy we might have
+[2020-07-15T16:31:00.122Z] <@U0105PTF3E2>: <!here> - <https://us02web.zoom.us/j/4349559527> for standup
+[2020-07-15T17:50:32.000Z] <@U0105PTF3E2>: some that we have sort of recently been writing
+[2020-07-15T17:50:46.000Z] <@U0105PTF3E2>: but it is on a "as we talk about new features" basis
+[2020-07-15T17:51:08.001Z] <@U0105PTF3E2>: <https://www.dropbox.com/home/Fulfil%20Team%20Folder/Fulfil%20Automation/Software/Cloud>
+[2020-07-15T17:51:14.001Z] <@U0105PTF3E2>: here is our dropbox specifically
+[2020-07-15T17:51:18.001Z] <@U0105PTF3E2>: the cloud team
+[2020-07-15T17:53:17.001Z] <@U0105PTF3E2>: higher lvl one <https://www.dropbox.com/home/Fulfil%20Team%20Folder>
+[2020-07-15T17:53:44.002Z] <@U0105PTF3E2>: oh yeah, did anyone give you this? <https://www.dropbox.com/scl/fi/djcdw7m0vupnltleauh40/New-Hire-Training-Presentation.pptx>
+[2020-07-15T17:53:59.002Z] <@U0105PTF3E2>: here is the cloud dev one
+[2020-07-15T17:54:00.002Z] <@U0105PTF3E2>: <https://docs.google.com/document/d/1y7ecZNxdfcpG8hKzE7YKXijEgVEBuFUUjYT_t6z4p8Q/edit#heading=h.z6ne0og04bp5>
+[2020-07-15T17:54:10.003Z] <@U0105PTF3E2>: might be some helpful stuff there for you but its mostly technical
+[2020-07-15T17:55:15.003Z] <@U0105PTF3E2>: :thumbsup:
+[2020-07-15T18:04:28.122Z] <@U0105PTF3E2>: has anyone touched the cart creation code on either the FE or BE?
+[2020-07-15T18:05:27.123Z] <@U0105PTF3E2>: for context, I am doing the same thing on my stripe branch as we used to to get a new cart. On the front end, all we do is delete the cart id from local storage, then we call createCartSession
+[2020-07-15T18:06:06.123Z] <@U0105PTF3E2>: it doesn't seem to be workin on my branch so i tested staging at it looks like it isn't working there either. if i delete my cart id from local storage and refresh, i get the same cart always
+[2020-07-15T18:06:43.123Z] <@U0105PTF3E2>: it has been just these 2 lines for as long as i have looked at the code\n```await this.storage.set('cart', null);\n        await this.createCartSession(userId);```
+[2020-07-15T18:08:11.124Z] <@U0105PTF3E2>: ok, so maybe i need to do something to the cart on checkout in the BE
+[2020-07-15T18:08:13.124Z] <@U0105PTF3E2>: thanks
+[2020-07-15T18:09:06.124Z] <@U0105PTF3E2>: ah, it looks like we remove the user id from the cart in the old checkout process...
+[2020-07-15T18:35:24.126Z] <@U0105PTF3E2>: no
+[2020-07-15T18:35:26.126Z] <@U0105PTF3E2>: don't do this
+[2020-07-15T18:36:00.126Z] <@U0105PTF3E2>: the reason it seems to lint the whole project is because the git commit hook is checking all files staged in your branch
+[2020-07-15T18:36:27.127Z] <@U0105PTF3E2>: when you merge a branch into your's all the files from the merged branch are now staged and it asks you to fix the lint errors
+[2020-07-15T18:36:50.127Z] <@U0105PTF3E2>: the easiest way to avoid fixing lint errors in files you have not changed is to REBASE your branch (not merge)
+[2020-07-15T18:37:17.127Z] <@U0105PTF3E2>: if you simply use the --no-verify then you will be potentially commiting tons of lint errors...
+[2020-07-15T18:40:46.127Z] <@U0105PTF3E2>: manually run the linter on the files you know you changed?
+[2020-07-15T18:41:02.128Z] <@U0105PTF3E2>: or you can reset your branch to the last known good state and rebase from there
+[2020-07-15T18:41:11.128Z] <@U0105PTF3E2>: or you can just commit and we will fix it some day
+[2020-07-15T18:41:31.128Z] <@U0105PTF3E2>: seems like lots of people have been bypassing the commit hook with no verify
+[2020-07-15T20:44:31.129Z] <@U0105PTF3E2>: need a quick few reviews on <https://github.com/Fulfil0518/Fulfil-api/pull/475> to fix cart not clearing after checkout.
+[2020-07-15T21:08:01.130Z] <@U0105PTF3E2>: thanks
+[2020-07-15T21:32:19.131Z] <@U0105PTF3E2>: findOne as in any model .findOne?
+[2020-07-15T21:33:55.131Z] <@U0105PTF3E2>: my stripe branch that went in did modify the body parsing so be aware of that for any fires
+[2020-07-15T22:26:18.133Z] <@U0105PTF3E2>: i can try to help
+[2020-07-16T00:51:21.138Z] <@U0105PTF3E2>: what was the issue with this? i have seen a few issues where we couldn't communicate with stripe
+[2020-07-16T00:51:34.138Z] <@U0105PTF3E2>: and it appropriately kept failing until that connection came back up
+[2020-07-16T00:51:58.139Z] <@U0105PTF3E2>: i couldn't figure out why communication with stripe was failing but it miraculously started working after i got lunch
+[2020-07-16T00:52:31.139Z] <@U0105PTF3E2>: k
+[2020-07-16T00:52:49.140Z] <@U0105PTF3E2>: yeah i just did that and was able to checkout
+[2020-07-16T01:00:50.143Z] <@U0105PTF3E2>: it concerns me that the version deployed looks like it is not the latest master code...
+[2020-07-16T01:03:04.144Z] <@U0105PTF3E2>: i guess the webhook didn't exist
+[2020-07-16T02:52:14.146Z] <@U0105PTF3E2>: holy shit...
+[2020-07-16T02:52:28.146Z] <@U0105PTF3E2>: the gcp rolling deploy looked like it had finished...
+[2020-07-16T17:46:42.156Z] <@U0105PTF3E2>: it is a little big yeah
+[2020-07-16T18:30:38.156Z] <@U0105PTF3E2>: checkout PRs\n<https://github.com/Fulfil0518/Fulfil-api/pull/479>\n<https://github.com/Fulfil0518/Fulfil-ionic-app/pull/358>
+[2020-07-16T18:33:29.017Z] <@U0105PTF3E2>: doesn't look like you are in the codeowners file in staging
+[2020-07-16T18:45:21.004Z] <@U0105PTF3E2>: ...
+[2020-07-16T18:48:35.005Z] <@U0105PTF3E2>: ask him for the coverage report
+[2020-07-16T18:48:50.005Z] <@U0105PTF3E2>: i literally just put in the webhook endpoint
+[2020-07-16T18:48:59.005Z] <@U0105PTF3E2>: and one of my follow on tasks is to unit test it
+[2020-07-16T18:49:19.006Z] <@U0105PTF3E2>: but its a colossal bitch
+[2020-07-16T18:49:44.007Z] <@U0105PTF3E2>: also, we literally have 0 meaningful tests in the app and dashboard
+[2020-07-16T18:49:56.007Z] <@U0105PTF3E2>: ask for the coverage report
+[2020-07-16T18:50:02.008Z] <@U0105PTF3E2>: lol
+[2020-07-16T18:50:16.008Z] <@U0105PTF3E2>: yeah
+[2020-07-16T18:50:42.009Z] <@U0105PTF3E2>: i don't know if that is denial, or just outright lying for confidence purposes?
+[2020-07-16T18:54:01.009Z] <@U0105PTF3E2>: fuk maybe...
+[2020-07-16T18:54:11.010Z] <@U0105PTF3E2>: he worked at google for 10 years
+[2020-07-16T18:54:20.010Z] <@U0105PTF3E2>: but i guess that was a while ago
+[2020-07-16T18:54:36.010Z] <@U0105PTF3E2>: i will say, for a startup we have DECENT level of those things
+[2020-07-16T18:54:47.011Z] <@U0105PTF3E2>: its surprising to me that we do have a lot of this stuff
+[2020-07-16T18:54:59.011Z] <@U0105PTF3E2>: but literally none of it is perfect or even good at this point
+[2020-07-16T18:59:06.012Z] <@U0105PTF3E2>: my gut tells me that he thinks he could have just come up with a great experience
+[2020-07-16T18:59:17.013Z] <@U0105PTF3E2>: but, we have talked a few times before everyone started
+[2020-07-16T18:59:33.013Z] <@U0105PTF3E2>: and he never talked like having prod or ux would be a bad thing
+[2020-07-16T18:59:53.014Z] <@U0105PTF3E2>: he talks (what feels like) pretty honestly with me
+[2020-07-16T18:59:58.014Z] <@U0105PTF3E2>: when its just the 2 of us
+[2020-07-16T19:00:13.015Z] <@U0105PTF3E2>: well yeah, he def has that mentallity
+[2020-07-16T19:00:21.015Z] <@U0105PTF3E2>: honestly he could "do it all"
+[2020-07-16T19:00:48.016Z] <@U0105PTF3E2>: as is evident with our current experience it wont be as good as someone dedicated to the ux and stuff
+[2020-07-16T19:01:04.016Z] <@U0105PTF3E2>: but in terms of it actually functioning
+[2020-07-16T19:22:30.157Z] <@U0105PTF3E2>: Im really hoping to get some quick turnaround on :point_up: so i can continue with checkout fixes. please review
+[2020-07-16T23:40:01.164Z] <@U0105PTF3E2>: anyone ever gotten this? TypeError: Order.findOne is not a function
+[2020-07-16T23:40:25.165Z] <@U0105PTF3E2>: its failing on this line let order = await Order.findOne({cart_id: params.cart_id});
+[2020-07-16T23:40:47.165Z] <@U0105PTF3E2>: i literally do the same thing in another function called earlier in the checkout workflow
+[2020-07-16T23:44:03.165Z] <@U0105PTF3E2>: omg hahaha
+[2020-07-16T23:44:27.165Z] <@U0105PTF3E2>: my stupid vs code auto imported the fucking Order model with a require at some point...
+[2020-07-17T00:27:43.168Z] <@U0105PTF3E2>: that looks like an error on their side no?
+[2020-07-17T00:36:32.168Z] <@U0105PTF3E2>: are they calling an api endpoint when they got the error?
+[2020-07-17T00:37:12.169Z] <@U0105PTF3E2>: oh wtf really?
+[2020-07-17T00:37:21.169Z] <@U0105PTF3E2>: i didn't know that
+[2020-07-17T00:38:09.170Z] <@U0105PTF3E2>: but the api is just an http service? they cant make a request from their code?
+[2020-07-17T00:38:29.170Z] <@U0105PTF3E2>: so u think the api is broken or the wrapper?
+[2020-07-17T00:41:19.171Z] <@U0105PTF3E2>: ya
+[2020-07-17T00:41:32.172Z] <@U0105PTF3E2>: :thinking_face:
+[2020-07-17T00:42:06.172Z] <@U0105PTF3E2>: did the db clear do something like mess with the structure or a index or anything?
+[2020-07-17T00:51:27.173Z] <@U0105PTF3E2>: i have 3 pr's up to hopefully solidify checkout... PRs needed plz\n<https://github.com/Fulfil0518/Fulfil-ionic-app/pull/359>\n<https://github.com/Fulfil0518/Fulfil-api/pull/479>\n<https://github.com/Fulfil0518/Fulfil-api/pull/482>
+[2020-07-17T02:56:20.174Z] <@U0105PTF3E2>: So is that code in the wrapper or their code?
+[2020-07-17T03:01:22.175Z] <@U0105PTF3E2>: ? Sounds strange but at least it's solved for now
+[2020-07-17T15:52:10.177Z] <@U0105PTF3E2>: I'm pretty sure I started to type <http://Order.fi|Order.fi> and intellisense appeared with what I wanted so I hit enter and that usually auto imports
+[2020-07-17T18:02:13.000Z] <@U0105PTF3E2>: u invited to the allhands?
+[2020-07-17T18:03:08.000Z] <@U0105PTF3E2>: <https://us02web.zoom.us/j/83877981701?pwd=VFA3VXpDYXZIbUE3eHNVdHd2a3Jtdz09>
+[2020-07-17T19:27:23.177Z] <@U0105PTF3E2>: i know eventually we will need that but i thought we had discussed not worrying about this for now. Login is broken any way i thought.
+[2020-07-17T19:27:51.177Z] <@U0105PTF3E2>: I still need reviews
+[2020-07-17T19:28:10.177Z] <@U0105PTF3E2>: you also cannot get to your order history in desktop
+[2020-07-17T19:44:23.178Z] <@U0105PTF3E2>: oh shit ur right
+[2020-07-17T19:44:30.178Z] <@U0105PTF3E2>: i forgot we put it there
+[2020-07-17T20:02:07.179Z] <@U0105PTF3E2>: i fixed the conflicts by merging master into staging and resolving the conflicts
+[2020-07-17T20:02:30.180Z] <@U0105PTF3E2>: dude... it has something to do with my last PR - <https://github.com/Fulfil0518/Fulfil-api/pull/482>
+[2020-07-17T20:02:55.180Z] <@U0105PTF3E2>: all of the things it was bitching about were almost 100% of the changes that went in as part of PR 482
+[2020-07-17T20:02:59.181Z] <@U0105PTF3E2>: i THINK it was because
+[2020-07-17T20:03:06.181Z] <@U0105PTF3E2>: i had 2 branches
+[2020-07-17T20:03:58.181Z] <@U0105PTF3E2>: staging ->  lobato-stripe-integration-enhancements -> lobato-support-payment-bypass
+[2020-07-17T20:04:10.182Z] <@U0105PTF3E2>: when i merged the first one lobato-stripe-integration-enhancements
+[2020-07-17T20:05:03.182Z] <@U0105PTF3E2>: the second one (which was pr 482) automatically set staging as its base because the branch it was set to merge into got deleted
+[2020-07-17T20:05:12.183Z] <@U0105PTF3E2>: that somehow fucked the merge or something...
+[2020-07-17T20:09:38.183Z] <@U0105PTF3E2>: some tests are failing... I think they are tests that had been fixed though.. the API Endpoint Tester tests
+[2020-07-17T20:19:16.184Z] <@U0105PTF3E2>: :point_up: because the merge once again removed the layout.ejs file. i just added it back in to fix staging.
+[2020-07-17T20:36:13.186Z] <@U0105PTF3E2>: master build failed due to tests but when i checkout the master branch and run things locally it works...
+[2020-07-17T20:36:47.186Z] <@U0105PTF3E2>: only that the darn master branch isnt deploying atm
+[2020-07-17T20:37:56.186Z] <@U0105PTF3E2>: staging branch built fine before the merge but this could have been due to other tests being run at the same time...?
+[2020-07-17T20:38:34.187Z] <@U0105PTF3E2>: yeah, its the same 8 API Endpoint Tester tests <https://semaphoreci.com/fulfil0518/fulfil-api/branches/master/builds/10612>
+[2020-07-17T20:39:01.187Z] <@U0105PTF3E2>: k
+[2020-07-17T20:39:55.187Z] <@U0105PTF3E2>: oh yeah wow... even the master build is doing npm run docker:staging commands...
+[2020-07-17T20:40:33.001Z] <@U0105PTF3E2>: so much for our world class ci/cd pipe eh?
+[2020-07-17T20:40:45.001Z] <@U0105PTF3E2>: our prod pipeline is literally running staging commands...
+[2020-07-17T20:41:20.001Z] <@U0105PTF3E2>: and not only that but
+[2020-07-17T20:41:42.002Z] <@U0105PTF3E2>: the ticket i created that says our tests pipeline could be running on the wrong image...
+[2020-07-17T20:41:56.002Z] <@U0105PTF3E2>: the issue has been biting us in the ass all week
+[2020-07-17T20:44:29.188Z] <@U0105PTF3E2>: hooray! it worked
+[2020-07-17T20:45:23.188Z] <@U0105PTF3E2>: ok... it does seem to be the race condition that i identified earlier. the rebuild seemed to work
+[2020-07-17T20:45:32.188Z] <@U0105PTF3E2>: it is deploying now
+[2020-07-17T20:46:41.190Z] <@U0105PTF3E2>: did you happen to merge any changes into your branch around 10-20 min ago?
+[2020-07-17T20:47:06.190Z] <@U0105PTF3E2>: yeah lol
+[2020-07-17T20:48:35.191Z] <@U0105PTF3E2>: i don't know enough about semaphore to be 100% sure why but i think because we have the build settings here <https://semaphoreci.com/fulfil0518/fulfil-api/settings> configured to run staging commands, it just does that on every single build
+[2020-07-17T20:48:49.191Z] <@U0105PTF3E2>: it doesn't look at the branch at all
+[2020-07-17T20:48:59.191Z] <@U0105PTF3E2>: the deployments are handled differently
+[2020-07-17T21:09:40.192Z] <@U0105PTF3E2>: <@UCBMSR9MY> or anyone else - if i place an order in prod (which i just did id: 155284)  and it generates a pubsub (which it did id: 7492), should i delete that pubsub? is that going to screw up the factory or their testing or whatever?
+[2020-07-17T21:27:42.195Z] <@U0105PTF3E2>: ok it looks like the prod deployment is done. everyone take some time to test again and find more bugs when you aren't working on bugs
+[2020-07-17T21:31:58.196Z] <@U0105PTF3E2>: if you go through checkout, feel free to use the different <https://stripe.com/docs/testing|stripe test cards>. I don't think international stuff or odd ones will work and i certainly haven't tested all but the extra security ones and a bunch of others seem to work well
+[2020-07-17T21:38:37.197Z] <@U0105PTF3E2>: damn right it did
+[2020-07-17T21:38:45.197Z] <@U0105PTF3E2>: bypass also works
+[2020-07-20T16:23:02.011Z] <@U0105PTF3E2>: do these integration tests include using the app (ie. <http://fulfil.store/>)?
+[2020-07-20T16:48:07.000Z] <@U0105PTF3E2>: this is nuts...
+[2020-07-20T16:48:15.000Z] <@U0105PTF3E2>: why do a native app right now...
+[2020-07-20T16:48:26.000Z] <@U0105PTF3E2>: our app is fundamentally broken in so many ways
+[2020-07-20T16:48:49.001Z] <@U0105PTF3E2>: and we have not even built the mobile version since i have been here
+[2020-07-20T16:56:47.002Z] <@U0105PTF3E2>: thats what i was hoping for
+[2020-07-20T17:23:57.003Z] <@U0105PTF3E2>: u mean that for me or matt?
+[2020-07-20T17:33:23.003Z] <@U0105PTF3E2>: k
+[2020-07-20T17:33:28.003Z] <@U0105PTF3E2>: cool
+[2020-07-20T17:56:54.000Z] <@U0105PTF3E2>: set the channel description: used by CI to communicate build/deployment failures
+[2020-07-20T19:06:11.007Z] <@U0105PTF3E2>: what part is failing?
+[2020-07-20T19:06:17.007Z] <@U0105PTF3E2>: looks like lots of green to me
+[2020-07-20T19:07:45.008Z] <@U0105PTF3E2>: Looks like the branch was merged when it was trying to do something
+[2020-07-20T19:07:50.008Z] <@U0105PTF3E2>: yeah
+[2020-07-20T19:07:56.009Z] <@U0105PTF3E2>: but staging didn't fail
+[2020-07-20T19:08:53.009Z] <@U0105PTF3E2>: as long as staging didn't fail after it was merged in its w/e
+[2020-07-20T20:00:31.012Z] <@U0105PTF3E2>: is anyone having issues adding items to the cart?
+[2020-07-20T20:01:47.012Z] <@U0105PTF3E2>: yeah i am local and i have the same error as ankit. I just updated and am restarting my server
+[2020-07-20T20:03:40.013Z] <@U0105PTF3E2>: locally, the item 9609 is a can of beans. when i try to use that same item on staging, it is out of stock
+[2020-07-20T20:16:27.013Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/Fulfil-api/pull/491>
+[2020-07-20T21:54:11.014Z] <@U0105PTF3E2>: staging app and api are building. once they are deployed ill let everyone know here and we can do a bunch of testing before doing another prod release
+[2020-07-20T22:00:36.015Z] <@U0105PTF3E2>: api tests failed...
+[2020-07-20T22:00:41.015Z] <@U0105PTF3E2>: running the build again...
+[2020-07-20T22:05:15.015Z] <@U0105PTF3E2>: worked the second time... these non deterministic builds/tests are getting annoying
+[2020-07-20T22:19:58.017Z] <@U0105PTF3E2>: ok, looks like staging is deployed. lets all test
+[2020-07-20T22:37:34.018Z] <@U0105PTF3E2>: when this happens, it is because the checkout/init call failed. i have seen this happening a lot lately because of 401 unauthorized
+[2020-07-20T22:38:16.019Z] <@U0105PTF3E2>: im not sure why this is happening. i have 2 theories... 1. the user auth stuff or 2. I check to see if the user id passed has access to the cart id passed
+[2020-07-20T22:39:05.019Z] <@U0105PTF3E2>: so when you get that, check the id's in the request and see if things align in the db. if they don't, you might fix it by changing the DB or by deleting your local storage
+[2020-07-20T22:39:50.019Z] <@U0105PTF3E2>: i need to investigate why things are getting out of sync between the order's and cart (if this is the actual problem)
+[2020-07-20T22:49:18.021Z] <@U0105PTF3E2>: hmm, im looking at the initializeCheckoutProcess and the only 401 is when there is no req.auth.user
+[2020-07-20T22:51:11.021Z] <@U0105PTF3E2>: ah, my init is failing because i got a 401
+[2020-07-20T22:51:25.021Z] <@U0105PTF3E2>: if you fail there, its not because you got the same thing  as me
+[2020-07-20T22:52:08.022Z] <@U0105PTF3E2>: what is your cart id?
+[2020-07-20T22:52:58.023Z] <@U0105PTF3E2>: im hoping this is a data issue
+[2020-07-20T22:57:50.023Z] <@U0105PTF3E2>: <@UCBMSR9MY> thinks we should push to prod to hopefully eliminate/minify the data issues we have while testing
+[2020-07-20T22:58:51.024Z] <@U0105PTF3E2>: ut oh...
+[2020-07-20T23:02:30.025Z] <@U0105PTF3E2>: that was definitely my understanding of prices when i implemented checkout stuff... i should not have assumed though..
+[2020-07-20T23:06:02.025Z] <@U0105PTF3E2>: did you have a ton of stuff in your cart?
+[2020-07-20T23:06:23.026Z] <@U0105PTF3E2>: ah
+[2020-07-20T23:06:27.026Z] <@U0105PTF3E2>: cool
+[2020-07-20T23:06:36.026Z] <@U0105PTF3E2>: just trying to follow it all in the db
+[2020-07-20T23:11:02.028Z] <@U0105PTF3E2>: product id 9572 was in your cart 155156 and does have a null price
+[2020-07-20T23:11:46.029Z] <@U0105PTF3E2>: could you test checkout now (i changed it in the dev db)
+[2020-07-20T23:11:57.029Z] <@U0105PTF3E2>: just to see if it confirms our theory
+[2020-07-20T23:12:56.030Z] <@U0105PTF3E2>: hawt
+[2020-07-20T23:13:18.030Z] <@U0105PTF3E2>: im going to push to prod like matt requested.
+[2020-07-20T23:13:24.030Z] <@U0105PTF3E2>: we should fix this price issue
+[2020-07-20T23:15:13.030Z] <@U0105PTF3E2>: in the api, the product model has\n```price: {\n      type: 'number',\n      required: false,\n      allowNull: true,\n    }```
+[2020-07-20T23:16:30.031Z] <@U0105PTF3E2>: i thought <@U015EQS4HT4|Zach Boone> said there are some products that have no price
+[2020-07-20T23:19:31.032Z] <@U0105PTF3E2>: nice. you run that?
+[2020-07-20T23:19:59.033Z] <@U0105PTF3E2>: lol
+[2020-07-20T23:25:59.036Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/Fulfil-api/pull/492>\n<https://github.com/Fulfil0518/Fulfil-ionic-app/pull/377>
+[2020-07-20T23:26:30.036Z] <@U0105PTF3E2>: im going to push the api to prod
+[2020-07-20T23:27:52.037Z] <@U0105PTF3E2>: oops, should say that in the release channel
+[2020-07-20T23:29:37.037Z] <@U0105PTF3E2>: added
+[2020-07-20T23:29:53.038Z] <@U0105PTF3E2>: <#CMEELDN74> if anyone isn't in it
+[2020-07-20T23:43:39.039Z] <@U0105PTF3E2>: does anyone have any insight into the API Endpoint Tester tests? they failed yet again on a build (the latest build of master). each one of the tests fails because it is expecting a 200 and ends up getting a 401
+[2020-07-20T23:44:53.001Z] <@U0105PTF3E2>: i am not but like i linked in the other thread, its not enforced in the api
+[2020-07-20T23:51:55.039Z] <@U0105PTF3E2>: master branch of the api is broken
+[2020-07-20T23:52:11.040Z] <@U0105PTF3E2>: tests fail to run on semaphore and locally
+[2020-07-20T23:59:29.041Z] <@U0105PTF3E2>: ah classic
+[2020-07-20T23:59:37.041Z] <@U0105PTF3E2>: forgot about the real user being needed
+[2020-07-21T00:15:34.042Z] <@U0105PTF3E2>: good to merge?
+[2020-07-21T00:17:36.042Z] <@U0105PTF3E2>: you updated master or staging only?
+[2020-07-21T00:18:22.043Z] <@U0105PTF3E2>: i made one
+[2020-07-21T00:18:34.043Z] <@U0105PTF3E2>: its... showing up as out of date...?
+[2020-07-21T00:19:07.044Z] <@U0105PTF3E2>: <https://github.com/Fulfil0518/Fulfil-api/pull/494>
+[2020-07-21T00:19:08.044Z] <@U0105PTF3E2>: wtf
+[2020-07-21T00:19:10.044Z] <@U0105PTF3E2>: lol
+[2020-07-21T00:19:21.044Z] <@U0105PTF3E2>: i created it after i approved your's and after you merged to staging
+[2020-07-21T00:19:47.045Z] <@U0105PTF3E2>: no i mean...
+[2020-07-21T00:19:59.045Z] <@U0105PTF3E2>: it was complaining about being out of date
+[2020-07-21T00:20:13.045Z] <@U0105PTF3E2>: like, it wanted me to update before merging or something
+[2020-07-21T00:20:49.046Z] <@U0105PTF3E2>: maybe it was just github being odd. sry
+[2020-07-21T00:28:12.046Z] <@U0105PTF3E2>: semaphore build/container deploy finished. gcp is deploying now
+[2020-07-21T00:28:28.046Z] <@U0105PTF3E2>: :thankyou: <@U013TF1F70W|tim>
+[2020-07-21T02:47:24.047Z] <@U0105PTF3E2>: new bug <https://fulfil-group.monday.com/boards/313348313/pulses/655364035> adding to cart from homepage but my guess is other places as well
+[2020-07-21T15:32:28.003Z] <@U0105PTF3E2>: I can't right now but the plan works for me
+[2020-07-21T15:37:01.004Z] <@U0105PTF3E2>: Nah that's fine
+[2020-07-21T17:20:17.000Z] <@U0105PTF3E2>: i can talk now or sometime today if you want
+[2020-07-21T17:20:23.000Z] <@U0105PTF3E2>: until matt pulls me into some shit
+[2020-07-21T17:20:31.001Z] <@U0105PTF3E2>: or we can schedule a diff day
+[2020-07-21T17:20:32.001Z] <@U0105PTF3E2>: w/e
+[2020-07-21T17:20:47.001Z] <@U0105PTF3E2>: i was on super late yesterday dealing w/ shit
+[2020-07-21T17:20:53.002Z] <@U0105PTF3E2>: and the app is in a decent spot
+[2020-07-21T17:21:09.002Z] <@U0105PTF3E2>: so ima be taking it easy unless there is some hot shit that comes up
+[2020-07-21T17:23:42.003Z] <@U0105PTF3E2>: lol lame
+[2020-07-21T17:23:53.003Z] <@U0105PTF3E2>: we can do it next week or w/e too
+[2020-07-21T17:24:00.003Z] <@U0105PTF3E2>: doesn't matter to me
+[2020-07-21T19:27:59.050Z] <@U0105PTF3E2>: crap... i never set that up
+[2020-07-21T19:30:07.052Z] <@U0105PTF3E2>: :point_up: is a good idea. that way someone isn't inundated with requests right before the tests lol
+[2020-07-21T19:31:01.000Z] <@U0105PTF3E2>: i just tried :point_up: . you need a verification code from his email for first time login
+[2020-07-21T19:33:05.004Z] <@U0105PTF3E2>: nope
+[2020-07-21T19:33:23.004Z] <@U0105PTF3E2>: looking around
+[2020-07-21T19:35:44.053Z] <@U0105PTF3E2>: it requires an email code though
+[2020-07-21T19:35:50.053Z] <@U0105PTF3E2>: once you use the credentials on it
+[2020-07-21T19:42:16.005Z] <@U0105PTF3E2>: i think there was something in the <#C011QUY29DK> channel
+[2020-07-21T19:42:18.005Z] <@U0105PTF3E2>: about it
+[2020-07-21T19:56:25.055Z] <@U0105PTF3E2>: oh nice
+[2020-07-21T19:56:32.055Z] <@U0105PTF3E2>: he also just responded to me
+[2020-07-21T19:56:40.055Z] <@U0105PTF3E2>: worst case, you can stream it
+[2020-07-21T19:59:05.056Z] <@U0105PTF3E2>: i got access too
+[2020-07-21T21:01:36.058Z] <@U0105PTF3E2>: then 2:22 till the lfb showed up with the goods?
+[2020-07-21T21:01:59.058Z] <@U0105PTF3E2>: any video of the actual drops into the bag?
+[2020-07-21T21:26:28.061Z] <@U0105PTF3E2>: that must be why all the new sentry errors :laughing:
+[2020-07-21T21:27:21.062Z] <@U0105PTF3E2>: :thumbsup:
+[2020-07-21T21:28:39.063Z] <@U0105PTF3E2>: ah i see some being dropped now live on nest
+[2020-07-21T22:34:26.064Z] <@U0105PTF3E2>: i got some stuff going on and i will be unavailable for the rest of the day. ill be back on tomorrow in the morning
+[2020-07-21T22:35:23.065Z] <@U0105PTF3E2>: good work on the demo. im proud at what we accomplished and hope you all are as well
+[2020-07-22T16:14:15.000Z] <@U0105PTF3E2>: <https://www.dropbox.com/home/Fulfil%20Team%20Folder/Fulfil%20Automation/Software/Cloud>
+[2020-07-22T16:30:09.000Z] <@U0105PTF3E2>: if you do want some time to talk today
+[2020-07-22T16:30:14.000Z] <@U0105PTF3E2>: lets do it asap
+[2020-07-22T16:30:20.000Z] <@U0105PTF3E2>: my pup isn't doing well
+[2020-07-22T16:30:34.001Z] <@U0105PTF3E2>: we are actually doing in home euthanization today
+[2020-07-22T16:30:44.002Z] <@U0105PTF3E2>: yeah
+[2020-07-23T16:29:05.086Z] <@U0105PTF3E2>: ah yeah we def cant squash into master
+[2020-07-23T16:59:36.000Z] <@U0105PTF3E2>: this fucking guy...
+[2020-07-23T16:59:57.000Z] <@U0105PTF3E2>: def worth it to get him over someone like adriene or sean...
+[2020-07-23T17:00:35.001Z] <@U0105PTF3E2>: lol
+[2020-07-23T17:01:46.002Z] <@U0105PTF3E2>: "see, my code works!"\n... dude... you commented out code
+[2020-07-23T17:02:15.002Z] <@U0105PTF3E2>: lol
+[2020-07-23T17:05:57.003Z] <@U0105PTF3E2>: i THINK somewhere around the same time as me
+[2020-07-23T17:05:58.003Z] <@U0105PTF3E2>: but im not sure
+[2020-07-23T17:06:47.005Z] <@U0105PTF3E2>: he is a licensed psychiatrist i think... like he has a degree and at least WAS licensed
+[2020-07-23T17:07:10.006Z] <@U0105PTF3E2>: im not sure if he went back to school for programming or just picked it up
+[2020-07-23T17:07:18.006Z] <@U0105PTF3E2>: matt said he started his own company
+[2020-07-23T17:07:24.006Z] <@U0105PTF3E2>: and jumped into programming there
+[2020-07-23T17:07:29.007Z] <@U0105PTF3E2>: and matt worked with him in the past
+[2020-07-23T17:08:39.008Z] <@U0105PTF3E2>: jfc... he just copy pasted shit all over...
+[2020-07-23T17:09:21.009Z] <@U0105PTF3E2>: part of the reason checkout has taken me so long is cuz all the code that is there is a fucking mess
+[2020-07-23T17:09:36.009Z] <@U0105PTF3E2>: i could have easily been done if i just copy pasted horrible shit
+[2020-07-23T17:17:19.010Z] <@U0105PTF3E2>: oh u know what... maybe he was just a psychologists
+[2020-07-23T17:17:42.011Z] <@U0105PTF3E2>: yeah
+[2020-07-23T17:17:45.011Z] <@U0105PTF3E2>: there is no way
+[2020-07-23T18:00:03.096Z] <@U0105PTF3E2>: just prod or anywhere?
+[2020-07-23T18:19:00.011Z] <@U0105PTF3E2>: this is
+[2020-07-23T18:19:05.012Z] <@U0105PTF3E2>: some fucking garbage ass code...
+[2020-07-23T18:22:11.012Z] <@U0105PTF3E2>: indeed
+[2020-07-23T19:23:21.097Z] <@U0105PTF3E2>: :thumbsup:
+[2020-07-23T19:59:50.105Z] <@U0105PTF3E2>: i don't have any orders in prod and i don't want to create one lol
+[2020-07-23T19:59:54.105Z] <@U0105PTF3E2>: checking staging
+[2020-07-23T20:01:15.105Z] <@U0105PTF3E2>: im getting more 401's on staging
+[2020-07-23T20:01:40.106Z] <@U0105PTF3E2>: do you have any errors in console or network tab <@UCBMSR9MY>?
+[2020-07-23T20:02:34.106Z] <@U0105PTF3E2>: ah
+[2020-07-23T20:38:49.106Z] <@U0105PTF3E2>: yeah, im stepping through the code locally, my userid is `893` which is in the dev db. stepping through the authenticate middleware and helper i keep getting user=false, then when my debugger hits on OrderController.etOrdersByUserToken()  it obviously returns the 401
+[2020-07-23T22:03:45.005Z] <@U0105PTF3E2>: minor comment but otherwise approved
+[2020-07-24T00:00:27.007Z] <@U0105PTF3E2>: Nah
+[2020-07-27T01:52:03.126Z] <@U0105PTF3E2>: I wish we could though lol. I cry a little every time I type `order/`
+[2020-07-27T17:12:02.013Z] <@U0105PTF3E2>: what teaser stuff are you guys talking about?
+[2020-07-27T17:16:14.014Z] <@U0105PTF3E2>: i found what she posted
+[2020-07-27T17:16:25.014Z] <@U0105PTF3E2>: and your post after
+[2020-07-27T17:16:31.014Z] <@U0105PTF3E2>: if that is what this is
+[2020-07-27T17:16:33.014Z] <@U0105PTF3E2>: thanks
+[2020-07-27T17:19:34.015Z] <@U0105PTF3E2>: lol dude
+[2020-07-27T17:19:42.015Z] <@U0105PTF3E2>: matt himself ripped all of that code out
+[2020-07-27T17:19:56.016Z] <@U0105PTF3E2>: because it was all 1. completely not working in literally any sense
+[2020-07-27T17:20:34.016Z] <@U0105PTF3E2>: and 2. a garbled mess of shit incoherent code
+[2020-07-27T17:23:39.018Z] <@U0105PTF3E2>: yeah
+[2020-07-27T17:23:55.018Z] <@U0105PTF3E2>: we do this shit all the time
+[2020-07-27T17:24:14.018Z] <@U0105PTF3E2>: work on these not well thought out not high priority things
+[2020-07-27T17:32:15.019Z] <@U0105PTF3E2>: lmao
+[2020-07-27T17:33:01.020Z] <@U0105PTF3E2>: just look in the backlog for ALL of the checkout stuff i still have created
+[2020-07-27T17:33:16.020Z] <@U0105PTF3E2>: 100% chance matt will say that the checkout is totally rock solid good to go
+[2020-07-27T17:33:28.020Z] <@U0105PTF3E2>: and it barely works...
+[2020-07-27T17:33:35.021Z] <@U0105PTF3E2>: ...
+[2020-07-27T17:33:42.021Z] <@U0105PTF3E2>: this wont work on prod
+[2020-07-27T17:33:51.021Z] <@U0105PTF3E2>: we literally cannot accept a legitimate payment
+[2020-07-27T17:34:02.022Z] <@U0105PTF3E2>: its ALL through their TEST integration
+[2020-07-27T17:34:10.022Z] <@U0105PTF3E2>: if we went live tomorrow, no1 could pay with a real card
+[2020-07-27T17:34:23.022Z] <@U0105PTF3E2>: its not not not
+[2020-07-27T17:34:37.023Z] <@U0105PTF3E2>: stripe has a test and a live environment
+[2020-07-27T17:34:49.023Z] <@U0105PTF3E2>: in the test environment
+[2020-07-27T17:34:54.023Z] <@U0105PTF3E2>: you literally cannot accept a real card
+[2020-07-27T17:35:03.024Z] <@U0105PTF3E2>: and to integrate with thier live env
+[2020-07-27T17:35:10.024Z] <@U0105PTF3E2>: you HAVE to communicate over HTTPS
+[2020-07-27T17:35:13.024Z] <@U0105PTF3E2>: which we DONT HAVE
+[2020-07-27T17:35:25.025Z] <@U0105PTF3E2>: but he is!?!?!
+[2020-07-27T17:36:00.025Z] <@U0105PTF3E2>: we need to figure out epics man...
+[2020-07-27T17:36:06.025Z] <@U0105PTF3E2>: i feel like part of the problem is monday
+[2020-07-27T17:36:13.026Z] <@U0105PTF3E2>: its so simplistic
+[2020-07-27T17:37:13.027Z] <@U0105PTF3E2>: lets
+[2020-07-27T18:31:21.027Z] <@U0105PTF3E2>: i like that there are literally any requirements documented anywhere
+[2020-07-27T18:31:25.028Z] <@U0105PTF3E2>: lol
+[2020-07-27T18:32:16.028Z] <@U0105PTF3E2>: i think this one is small enough where it could just be a single monday ticket that links to the doc or just has that as info on the ticket
+[2020-07-27T18:32:27.029Z] <@U0105PTF3E2>: idk how we do it for larger things with monday
+[2020-07-27T18:33:12.030Z] <@U0105PTF3E2>: but i liked being part of the discussion. ideally a designer would have wires going into that or we would wait to work on it until after wires are done
+[2020-07-27T18:34:16.031Z] <@U0105PTF3E2>: i like it
+[2020-07-27T18:34:26.031Z] <@U0105PTF3E2>: if we don't have a starting point people just fucking go off
+[2020-07-27T18:35:51.032Z] <@U0105PTF3E2>: enough foundation for meaningful conversations but enough room for creativity
+[2020-07-27T20:45:52.136Z] <@U0105PTF3E2>: i have been investigating some failures in the stripe webhook and i think i realized what is happening. Has anyone been creating orders on their local app using a stripe test card like 4242?
+[2020-07-27T20:47:44.136Z] <@U0105PTF3E2>: <@UG3PMBZ50|Sanjay Radadiya> when you build the .apk or the ios version, what environment is set?
+[2020-07-27T23:01:30.138Z] <@U0105PTF3E2>: isnt there a way we could enforce/make all of those things  easily visible through db schema or something?
+[2020-07-27T23:02:51.139Z] <@U0105PTF3E2>: also, shouldn't there be a discussion about different types of names like short names, full names that product and other groups are part of the discussion on? <@U0168TK03V0|Alex (he/him)> <@U015U5QCW79|Oksana>
+[2020-07-27T23:42:44.140Z] <@U0105PTF3E2>: why the strictness of the name for now? just for display purposes?
+[2020-07-27T23:44:04.141Z] <@U0105PTF3E2>: <@UCBMSR9MY> uhh... do you know anything about this? this seems very dangerous
+[2020-07-27T23:44:15.141Z] <@U0105PTF3E2>: yeah... what <@U0168TK03V0|Alex (he/him)> said :point_up:
+[2020-07-27T23:49:16.142Z] <@U0105PTF3E2>: maybe <@UCBMSR9MY> has more perspective/insight into this?
+[2020-07-27T23:51:26.144Z] <@U0105PTF3E2>: "intern over here is telling us you guys are idiots... whats up with this?"
+[2020-07-27T23:51:29.144Z] <@U0105PTF3E2>: go tell them that
+[2020-07-27T23:52:05.144Z] <@U0105PTF3E2>: lmao
+[2020-07-27T23:53:46.145Z] <@U0105PTF3E2>: hopefully. just wanted to make sure we are all on the same page
+[2020-07-28T19:36:35.164Z] <@U0105PTF3E2>: you mean store.fulfil.app not store.fulfil.storeright?
+[2020-07-28T19:37:29.164Z] <@U0105PTF3E2>: im just trying to make sure i know what configurations we are talking about
+[2020-07-28T19:42:06.165Z] <@U0105PTF3E2>: based on my discussion with sanjay earlier, we don't need another branch and we don't need to change the capacitor appId. He was doing it because the existing app that was registered with apple was registered under ai.fulful.store . the alternative is change/create a new app registration to match the current appId
+[2020-07-28T19:54:19.166Z] <@U0105PTF3E2>: what is the bundle id?
+[2020-07-28T20:05:31.166Z] <@U0105PTF3E2>: oh shit... u lift bro bruh?
+[2020-07-28T22:57:40.018Z] <@U0105PTF3E2>: where this time?
+[2020-07-28T22:57:57.018Z] <@U0105PTF3E2>: any news on that "add to cart" bug they mentioned?
+[2020-07-28T23:06:11.020Z] <@U0105PTF3E2>: oooh
+[2020-07-28T23:06:34.020Z] <@U0105PTF3E2>: ```api_key: {\n      type: 'string',\n      required: false,\n      allowNull: true,\n    },```
+[2020-07-28T23:07:22.020Z] <@U0105PTF3E2>: could change that? not sure if it would surface as a good error on the dashboard side though
+[2020-07-28T23:07:31.020Z] <@U0105PTF3E2>: or if they are using sql cowboy then it wont help much
+[2020-07-28T23:07:42.021Z] <@U0105PTF3E2>: ah
+[2020-07-29T02:23:32.184Z] <@U0105PTF3E2>: Appid is is what Matt said matters, not bundle Id. Are we mixing words?
+[2020-07-29T02:24:44.186Z] <@U0105PTF3E2>: capacitor.config.json has a property in it called appId and Sanjay says that needs to match what is registered with apple.
+[2020-07-29T02:25:07.187Z] <@U0105PTF3E2>: So don't say bundle Id anymore cuz my tiny brain is hurting
+[2020-07-29T02:26:19.189Z] <@U0105PTF3E2>: What calls it bundleid?
+[2020-07-29T02:26:39.190Z] <@U0105PTF3E2>: Ah
+[2020-07-29T02:26:42.190Z] <@U0105PTF3E2>: Ok
+[2020-07-29T02:26:49.190Z] <@U0105PTF3E2>: Sry lol
+[2020-07-29T16:15:46.033Z] <@U0105PTF3E2>: dude..
+[2020-07-29T16:15:58.033Z] <@U0105PTF3E2>: we can't win with these contractors
+[2020-07-29T16:16:10.033Z] <@U0105PTF3E2>: the ticket you wrote about email validation
+[2020-07-29T16:16:17.033Z] <@U0105PTF3E2>: <https://fulfil-group.monday.com/boards/313348313/views/5305047>
+[2020-07-29T16:16:25.034Z] <@U0105PTF3E2>: do you have github?
+[2020-07-29T16:18:45.034Z] <@U0105PTF3E2>: anyway, ankit "fixed" it by trimming whitespace in an onchange method...
+[2020-07-29T16:19:21.035Z] <@U0105PTF3E2>: i hate when an app modifies what i type while im doing it
+[2020-07-29T16:24:55.036Z] <@U0105PTF3E2>: our designer, is he good ux or just design?
+[2020-07-29T16:26:14.037Z] <@U0105PTF3E2>: fuk
+[2020-07-29T16:29:21.037Z] <@U0105PTF3E2>: just that he is design and not ux
+[2020-07-29T16:58:10.039Z] <@U0105PTF3E2>: lol. hai is just saying we need to evaluate it, matt acting like its go time to start the conversation
+[2020-07-29T17:16:55.040Z] <@U0105PTF3E2>: ya i think so. we really need to strategize on processes
+[2020-07-29T17:17:12.041Z] <@U0105PTF3E2>: matt likes to subvert things, even his own previous objectives
+[2020-07-29T17:17:51.041Z] <@U0105PTF3E2>: idk
+[2020-07-29T17:17:57.042Z] <@U0105PTF3E2>: we will def have to collab on this
+[2020-07-29T17:26:35.042Z] <@U0105PTF3E2>: he just say cart persona?
+[2020-07-29T17:26:52.042Z] <@U0105PTF3E2>: u know what he is talkinga bout?
+[2020-07-29T17:27:03.043Z] <@U0105PTF3E2>: lmao
+[2020-07-29T17:42:52.204Z] <@U0105PTF3E2>: <!here> Since we didn't get a chance to standup today, lets thread off of this. post what you did yesterday, what you will do today and if you have any blockers or need any assistance
+[2020-07-29T17:43:47.205Z] <@U0105PTF3E2>: Y - focused on the app builds and started looking into appflow\nT - Sanjay and i are looking into removing the android/ios folder and only generating it at build time. Continue to look into appflow\nBlockers - none
+[2020-07-29T17:46:47.044Z] <@U0105PTF3E2>: i have a meeting 11-12 with matt, tim and zach to talk about demo bugs (you should probably be in on that?)
+[2020-07-29T17:47:00.044Z] <@U0105PTF3E2>: other then that, im free to brainstorm any time really
+[2020-07-29T17:47:51.046Z] <@U0105PTF3E2>: you could hit him up for an inv. he mentioned the demo bugs in his standup report so you could use that as an in
+[2020-07-29T17:47:56.046Z] <@U0105PTF3E2>: or w/e
+[2020-07-29T17:48:04.046Z] <@U0105PTF3E2>: sure 130 is fine
+[2020-07-29T17:56:58.001Z] <@U0105PTF3E2>: live (or you can watch later) antitrust hearing on <https://judiciary.house.gov/>
+[2020-07-29T18:32:02.022Z] <@U0105PTF3E2>: i was just about to ask if it was on the standup zoom <https://us02web.zoom.us/j/89447737803>?
+[2020-07-29T18:37:14.023Z] <@U0105PTF3E2>: <https://status.semaphoreci.com/>
+[2020-07-29T18:37:25.024Z] <@U0105PTF3E2>: semaphore classic is having issues
+[2020-07-29T18:37:31.024Z] <@U0105PTF3E2>: its not us
+[2020-07-29T18:37:46.211Z] <@U0105PTF3E2>: <https://status.semaphoreci.com/>
+[2020-07-29T18:37:49.211Z] <@U0105PTF3E2>: they are having issues
+[2020-07-29T18:41:23.215Z] <@U0105PTF3E2>: i created a ticket in the icebox for it a while ago
+[2020-07-29T20:52:10.047Z] <@U0105PTF3E2>: ah fuk me
+[2020-07-29T20:52:10.047Z] <@U0105PTF3E2>: sry
+[2020-07-29T20:52:15.047Z] <@U0105PTF3E2>: on the phoen w/ cody
+[2020-07-29T21:59:46.048Z] <@U0105PTF3E2>: ok sry
+[2020-07-29T21:59:53.048Z] <@U0105PTF3E2>: am done helping cody
+[2020-07-29T22:05:33.049Z] <@U0105PTF3E2>: lets do it now
+[2020-07-29T22:05:37.049Z] <@U0105PTF3E2>: im burnt out on code atm
+[2020-07-29T22:05:46.050Z] <@U0105PTF3E2>: but im eating lunch
+[2020-07-29T22:05:54.050Z] <@U0105PTF3E2>: so ull have to talk mostly lol
+[2020-07-30T16:45:36.051Z] <@U0105PTF3E2>: duuuuuuuuuuuuuuuuuuuude
+[2020-07-30T16:45:43.051Z] <@U0105PTF3E2>: shut the fuck up
+[2020-07-30T16:46:46.052Z] <@U0105PTF3E2>: o
+[2020-07-30T16:46:47.052Z] <@U0105PTF3E2>: m
+[2020-07-30T16:46:48.052Z] <@U0105PTF3E2>: f
+[2020-07-30T16:46:49.052Z] <@U0105PTF3E2>: g
+[2020-07-30T16:59:54.053Z] <@U0105PTF3E2>: interesting that he gave that task to ankit
+[2020-07-30T17:00:07.053Z] <@U0105PTF3E2>: id be interested to see what kind of doc he comes up with
+[2020-07-30T17:24:36.221Z] <@U0105PTF3E2>: <@UBUKD7NU8|Allen> says that the fake VLS cannot work/wont be ready to go until the data sync works. if you guys can keep me posted on that <@U013TF1F70W|tim> <@UCBMSR9MY>
+[2020-07-30T17:28:17.222Z] <@U0105PTF3E2>: i commented on the pr. is it going to cause any issues with retrieving/modifying the inventory later if they don't have an api key?
+[2020-07-30T17:39:52.144Z] <@U0105PTF3E2>: my understanding of the current situation is this:\n1. we are deploying what we hope to be a fix to the "bulk reset" (data sync) endpoint\n2. once that is deployed we will be able to run the sync with will allow the virtual VLSs to be enabled and populated with data\n3. then we can start testing end to end orders\nIs this accurate?
+[2020-07-30T17:45:29.224Z] <@U0105PTF3E2>: ya, doing it
+[2020-07-30T17:45:54.145Z] <@U0105PTF3E2>: <@U013TF1F70W|tim> finished deploying the fix. The bulk reset should work now <@UBUKD7NU8|Allen>
+[2020-07-30T17:59:12.146Z] <@U0105PTF3E2>: i am not necessarily concerned with if it is end to end tests with real or virtual VLS, but my understanding from <@UCBMSR9MY> and <@UBUKD7NU8|Allen> was that we were shooting for virtual to start. But i can't start testing until the data sync works and the VLSs are "ready" (means different things depending on if we use real or virtual)
+[2020-07-30T18:28:01.147Z] <@U0105PTF3E2>: what do we currently need to enable testing?
+[2020-07-30T19:01:06.005Z] <@U0105PTF3E2>: works for me, i don't know whats going on with demos though
+[2020-07-30T19:02:48.224Z] <@U0105PTF3E2>: does the data sync do anything to the cartitem table? or does anyone know of anything else that could be deleting rows from that table?
+[2020-07-30T19:48:32.148Z] <@U0105PTF3E2>: any updates?
+[2020-07-30T19:48:51.149Z] <@U0105PTF3E2>: any updates?
+[2020-07-30T20:07:56.012Z] <@U0105PTF3E2>: anyone know how to join a group on a mac? All of the documentation i found says get invited or "join one through Outlook on the Web"
+[2020-07-30T20:12:10.012Z] <@U0105PTF3E2>: I had to follow the instructions <https://support.microsoft.com/en-us/office/join-a-group-in-outlook-2e59e19c-b872-44c8-ae84-0acc4b79c45d?ui=en-us&rs=en-us&ad=us#ID0EAABAAA=Online&ID0EAACAAA=Web|here> by logging into <https://outlook.office365.com/mail/inbox|outlook web>
+[2020-07-30T20:16:23.236Z] <@U0105PTF3E2>: i suggest we also check the db as we go.\n• Check the cartitem table to ensure the items for your cart_id are accurate. \n• check the cart and ensure it has the correct user_id\n• check the order and ensure it has the correct cart_id and other information (this is created on checkout when you enter your address)\n• after you checkout ensure \n• the cart has an updated user_id\n• the cartitems still exist\n• the order is updated\n• and the pubsub is generated
+[2020-07-30T20:19:47.237Z] <@U0105PTF3E2>: the pubsub appears to have been one failure point yesterday
+[2020-07-31T16:36:09.054Z] <@U0105PTF3E2>: ya he should
+[2020-07-31T16:46:35.055Z] <@U0105PTF3E2>: this guy
+[2020-07-31T16:48:43.055Z] <@U0105PTF3E2>: not even going to ask zac h to finish
+[2020-07-31T16:50:49.056Z] <@U0105PTF3E2>: one day...
+[2020-07-31T16:58:56.056Z] <@U0105PTF3E2>: we so very badly need a better prioritization system
+[2020-07-31T16:59:00.056Z] <@U0105PTF3E2>: lol
+[2020-07-31T17:06:11.008Z] <@U0105PTF3E2>: u mean our standup zoom? <https://us02web.zoom.us/j/89447737803>?
+[2020-07-31T19:00:09.058Z] <@U0105PTF3E2>: lol
+[2020-07-31T20:28:16.059Z] <@U0105PTF3E2>: was just going to reach out
+[2020-07-31T20:28:19.059Z] <@U0105PTF3E2>: iv started it
+[2020-07-31T20:28:24.059Z] <@U0105PTF3E2>: but its far from done lol
+[2020-07-31T20:33:15.060Z] <@U0105PTF3E2>: and?
+[2020-07-31T20:35:28.061Z] <@U0105PTF3E2>: this project
+[2020-07-31T20:35:31.061Z] <@U0105PTF3E2>: is a fucking disaster
+[2020-07-31T20:35:54.061Z] <@U0105PTF3E2>: we can't use interns anymore either... jfc
+[2020-07-31T21:01:10.244Z] <@U0105PTF3E2>: should i even attend? trying to do the dashboard thing
+[2020-07-31T21:04:43.245Z] <@U0105PTF3E2>: agree
+[2020-07-31T21:04:48.245Z] <@U0105PTF3E2>: sorry
+[2020-07-31T22:03:23.062Z] <@U0105PTF3E2>: value of cart complicates this
+[2020-07-31T22:03:28.063Z] <@U0105PTF3E2>: by quite a bit
+[2020-07-31T22:03:32.063Z] <@U0105PTF3E2>: ima leave it off for now
+[2020-07-31T22:04:20.063Z] <@U0105PTF3E2>: quick call?
+[2020-07-31T22:05:31.064Z] <@U0105PTF3E2>: ...
+[2020-07-31T22:05:33.064Z] <@U0105PTF3E2>: i hear u
