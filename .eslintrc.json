@@ -1,0 +1,30 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["airbnb-base"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["@babel/preset-env"]
+    }
+  },
+  "parser": "@babel/eslint-parser",
+  "rules": {
+    "no-console": "off",
+    "import/extensions": ["error", "ignorePackages", { "js": "never" }],
+    "no-unused-vars": ["warn"],
+    "max-len": ["warn", { "code": 120 }],
+    "object-curly-newline": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js"]
+      }
+    }
+  }
+}

@@ -1,0 +1,551 @@
+resolving this as its a dupe
+---
+finally done i think
+---
+k
+---
+brt
+---
+sorry... back on with him
+---
+k. done
+---
+rip. Kiril has a question. on call w/ him atm
+---
+k. done
+---
+"real quick"...
+---
+i got food but am on the phone w/ my CC real quick
+---
+Sup?
+---
+Y
+---
+Trying to find food
+---
+just the start
+---
+that is great. we can def do it by then
+---
+Reach out to <@U04UD3CHNSJ|Vincent> when picking this up:
+"the actual work isn't hard but we need to document what these 70 things mean and that i think is nontrivial research"
+---
+Reach out to <@U04UD3CHNSJ|Vincent> before implementing to get some details:
+"slot state changed, we probably want to preflight the processing of this. get some metrics from the factory event and monitoring in place, get a sense of what the volume is before we enrich it in case it causes an issue"
+---
+<@U04UD3CHNSJ|Vincent>, is my understanding correct that these are mostly just enriching and exposing the new factory events? shouldn't be a huge effort right?
+---
+hey all, if anyone is looking for work to do, the next two priorities is
+<https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08KYN1KGNL>
+and
+<https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08JZ01F1FW>
+does anyone think they can pick either of these up early next week?
+---
+i can see if anyone can get them done by next week
+---
+what is the ask specifically?
+"by what date do we expect to resolve GRAF-956 and GRAF-958?"
+---
+but he changed it to this warning and "this is for debugging only"
+---
+im pretty sure its going to fire whenever its actually out of sync. so yeah i think so right?
+---
+yeah i think so. the normal_items in the new_order_placed pubsub should always be EVERYTHING amazon ordered. the reserved_items is what now reflects what we think was "available"
+---
+the "bypass reservation" feature made it so we send all of the items now. we don't care why anything is out of stock or even check if its unavailable
+---
+we do send it now
+---
+:rolling_on_the_floor_laughing:
+---
+just making sure
+---
+k
+---
+it was an api only change really so we are already doing it
+---
+not sure if you are purposefully telling them that its in RC
+---
+the "bypass reservations" is in prod now
+---
+good. i hate having time to prepare
+---
+is it just me or did this meeting just popped up?
+---
+this is interesting though... if inventory becomes unavailable before the order makes it to the factory, that wont count against our factory perfect (will be taken out of available inventory and not added to cart, so will not end up in reserved_items). but if the inventory becomes unavailable for the exact same reason any time after the order is sent to the factory... that does count against our metrics... this feels odd
+
+this doesn't matter in the happy path obviously. since our partners aren't necessarily keeping perfect track of every inventory count, the reality is we will sometimes get orders for items that are legitimately out of stock and we have no chance to fulfill... but system availability affecting this feels... bad :man-shrugging:
+---
+not sure what this is but im too late and its merged lol. sorry for the delay
+---
+if we only send the reserved_items , then amazon should get item short events and be aware... we can't always give them everything they order and thats a reality... the point of the reserved_items is to give any interested parties (factory, data, etc) info on what we thought was available at that time. so, this means that our factory perfect rate should probably be measured against the reserved_items  maybe? obviously we want to do our best to get the customer everything they ordered (normal_items), but we can probably only fulfil the reserved_items
+---
+oh... whoops. andre already explained it... sorry
+---
+> <@U0105PTF3E2|Michael Lobato> to confirm, factory should only be trying to pack the reserved_items?
+absolutely not. we should always shoot for packing all of the normal_items . the reserved_items is what the cloud thinks we have in stock but the normal_items is everything the partner's customer ordered and ultimately what we should shoot for fulfilling
+---
+:thread: How should we deal with pings for @ dashboard-team
+---
+<https://docs.google.com/document/d/1M7kP0jdtxK15w1FeAFm5UOIriojrtVXF0ko7WLbpm9I/edit?tab=t.0>
+---
+HoG also uses Daily item sales. the task creator can specify how much % of DIS to retain in the system
+---
+huge shout out to <@U015EQS4HT4|Zach Boone> for this... he had this idea so long ago and it couldn't have happened at a better time. Cloud systems are struggling because of mongo sync v1.. Additional shout out to <@U04UD3CHNSJ|Vincent> for taking on supporting this effort. thank you both very much
+---
+i also need to hop to swe sync
+---
+> Mismatching role groups between the Cognitos
+what does this mean? between the Cognito service/instance we are using and the  one we are switching to? as in, there is no work for Fulfil and we need to wait for the roles to be updated on the new service/instance?
+---
+is the product the one below?
+---
+i really thought i was going to be able to investigate it yesterday
+---
+Re ran these yesterday and most passed. Forgot to post here
+---
+interesting spikes though... <https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingress-prometheus-nextgen?orgId=1&var-controller_class=All&var-namespace=All&var-ingress=frapi-ai&var-ingress=frapi&var-pod=All&from=1743129053122&to=1743133613382&var-datasource=P7891B9228D7E2494|https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingres[…]9053122&amp;to=1743133613382&amp;var-datasource=P7891B9228D7E2494>
+---
+i guess it dropped... so ima wait a bit and see if its fine
+---
+wait... why does the heatmap look ok but the "average" graph next to it has spikes
+---
+wtf... latency looks good on this fucking heat map...
+---
+is the <https://fulfilsolutions.slack.com/archives/C02T7GDDUQ6/p1743132880789909|frapi latency> related to this?
+---
+i was just starting to see whats up w/ these alarms
+---
+:woohoo:
+---
+:+1:
+---
+popping out for my son's breakdancing class soon. still be online sans driving
+---
+only b/c amazon was distracted... don't you dare mistake that for them being more chill in general
+---
+so, whats the plan for this? we are waiting until next week to switch? is there are particular reason we don't want to do it asap? could we at least get an official date on the calendar so we are all aligned on exactly when to switch things up?
+---
+yes, partial short use case
+---
+different if substituted.
+---
+sure
+---
+idc
+---
+want to hop on a call and get it done sometime?
+---
+also, did you end up talking w/ scott?
+---
+when u doing release notes? today?
+---
+chucklefish is great. Almost everything they put out is gold. publishing and developing
+---
+I'm heartbroken buddy. there is no replacing the impact you bring to our culture. You will be sorely missed.
+---
+<https://issues.labcollab.net/browse/GRAF-958> = <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08JZ01F1FW>. same deal. these are pretty new tickets so we just haven't gotten around to it. working on other fires still.\
+---
+<https://issues.labcollab.net/browse/GRAF-956> = <https://fulfilsolutions.slack.com/lists/TBREQ41DK/F089E7BJA9F?record_id=Rec08KYN1KGNL>. no one has had time to pick up the task but its at the top of our list. liz has the new event mostly done i think and we need to start sending it to the partner
+---
+we have a change that will be merged shortly that will fix the reserved_items being used. alternatively, data could use a different data source (im not sure what though) to determine what was in stock at the time
+---
+weird... ill have to see why i didn't get pinged by pager duty. sorry. and thank you
+---
+wtfFFF is up w/ these e2e tests?!?
+---
+plz <https://fulfilsolutions.slack.com/archives/C02T7GDDUQ6/p1743010300582289|help>, im dumb
+---
+i don't think we should revert. before this change, we would have only sent 7 items to the factory and they still would have been shorted. this just exposed the issue we have had (thats why amazon has been complaining about the discrepancy between what we were saying the amount of shorts was, and what they were saying)
+---
+so we should table working on this for now, correct?
+---
+<https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1743018150569849|order shorts> -
+---
+Wtf... Did you get pinged about this? I been dealing w/ pages all week and I missed this one?
+---
+Ill make a note and check tomorrow
+---
+It def wasn't one of the partner permissions used by az?
+---
+So we need to give someone permission to something?
+---
+maybe we can just do a free form input field? allow the user to type whatever they want and we filter it on on the backend?
+
+also, i don't like a single timestamp. a time range seems much better to me.
+
+thoughts?
+---
+how are we going to create a filter for failure conditions? is this field freeform text or something? some of these are crazy like
+```Innermost message: MarsShuttle A1A Shuttle is in a position that would collide with a tray crossing through 663e8eb36544fee453a76715```
+and drastically different than something like
+```Innermost message: InductionLoopMoveAndStopOnSensor failed```
+do we have a list of common words or tags or something that we could do some sort of include/regex match on?
+
+wasn't this the next part of <@U07J6SYC508|Nigel Bess>’s proposal where we build specific faults/failures or something?
+
+ah, i think this<https://github.com/Fulfil0518/fulfil-dashboard/pull/1618| PR> is what i was thinking about? am i conflating two completely different features?...
+---
+<@U04EH1U6NAU|Matheus Pellegrini>, you were the one who just dealt w/ this junk right? amazon says they haven't been sending 0 but still had something happen w/ expiration date. could you take a look sometime and just see if we can see what happened? you don't have to fix it (unless its super obvious), just a quick investigation
+---
+<@U06M6D24NH4|Andre Luis Moreira> /<@U06NWFAAXFE|Christian Soto>, can you confirm this? if so, can you please create a bug ticket and try to fix asap?
+---
+i think we have a bug in the bypass reservation logic. based on these skipped reservations, we should have sent the factory a message with the normal_items having all of the items that amazon wanted, but a reserved_items that is missing 44039, instead we sent this
+```"reserved_items": [
+      {
+        "product_id": 11294,
+        "quantity": 2
+      },
+      {
+        "product_id": 21884,
+        "quantity": 1
+      },
+      {
+        "product_id": 22158,
+        "quantity": 1
+      },
+      {
+        "product_id": 24530,
+        "quantity": 1
+      },
+      {
+        "product_id": 26703,
+        "quantity": 1
+      },
+      {
+        "product_id": 29221,
+        "quantity": 1
+      },
+      {
+        "product_id": 44039,
+        "quantity": 2
+      }
+    ]```
+---
+so that lines up.
+---
+the time those were created was Wednesday, March 26, 2025 12:31:00.724 PM
+---
+this is promising. the stock item reservations does have two "skipped"
+---
+the main issue right now seems to be, cloud thought that item had inventory because the "reserved_items"of the message to factory doesn't match what we think actual inventory was
+---
+well, i mean, this is partly what we wanted... regardless of what cloud thinks inventory is, we are sending all of amazon's order to factory...
+---
+however, deleted at are all <= 3/18
+---
+this is CURRENT prod mysql so doesn't tell us what it looked like at that time exactly
+---
+2 is active, 3 is packed
+---
+here is current stock items for that product in mysql
+---
+im pretty unfamiliar with it though
+---
+the inventory report should give us insights into if we thought we had any in the system
+---
+active means that it isn't offboarded by fulfil or by amazon... it just means we can induct and dispense and whatnot
+---
+yeah this is active in the catalog, not in the system
+---
+sorry, im just taking notes as i investigate.. idk what the issue could be
+---
+its active...
+---
+i think this is the entry for the product in the catalog
+```{"product_code":"B0BBWG5C2W","product_debug_id":44039,"eligibility":"active","name":"OLIPOP Prebiotic Soda Pop, Tropical Punch, A New Kind of Soda Packed with Prebiotics, Fiber, and Botanicals, Gluten Free, Vegan, GMO Free, 12oz","temperature_environment":"chilled","image_url":"<https://m.media-amazon.com/images/I/41sM+TMKi9L.jpg>","thumbnail_url":"<https://m.media-amazon.com/images/I/41sM+TMKi9L.jpg>","fulfillment_method":"dispense_to_bag","pad_time_days":1,"inspection_schedule":null,"expirable":true,"induction_modifications":[],"scannables":[{"code":"850027702049","type":"upc-a"},{"code":"0850027702049","type":"ean"},{"code":"00850027702049","type":"gtin"},{"code":"850027702049","type":"gtin"}],"sell_by":null,"tray_storage":{"category":"non_organics","layer_id":"layer_1"},"cartonization_group_category":"not-implemented","lane_configs":[{"max_quantity_per_lane":6,"tray_type":"138"}]}```
+---
+here is catalog <https://console.cloud.google.com/storage/browser/partner-catalog-report-prod/amazon-plm?invt=AbtGag&project=fulfil-web&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22,%22s%22:%5B(%22i%22:%22objectListDisplayFields%2FtimeCreated%22,%22s%22:%221%22),(%22i%22:%22displayName%22,%22s%22:%220%22)%5D))&prefix=&forceOnObjectsSortingFiltering=true|reports>. closest one to that time i think is <https://ff72157cdcbe134fa3f6867b4a35a687e781496d15b756e8538bfb1-apidata.googleusercontent.com/download/storage/v1/b/partner-catalog-report-prod/o/amazon-plm%2Fcatalog-report-0caeb289-5b99-4699-80eb-720165c5378d.json?jk=AbSFce6w9AMZU-RvNBEYUHPZkjL_NiOvw9Ng06ChczHBZBZ1Am2-U763jPbaB4fuR_wJaiR4E7f8aoAk41Keu5_lfW2RnbfBk89n_SAp3ce8NelZTc1YrLwR6m-XxsquaD32hebeIeJf4UzyS61ut0uxYi-67IcmbWonhIqnUxlz-9w5sa1vzKbr3icuvPoe4-4XF39b_mVXtG0VhNmnNUjqmeSBxXJ9LXdSStb0AFJsISyQKEhrBBZ48HdgdeUbwD6E_pIQnroVX50fUHfvl2M5Yy2LsX61bHrbxvqy9amr4SpWyweY-MvAOeIcXbqnQ4ZeOUpfSW6eFbz-N5nAmCdZamFck89CZouM8tAGVKBgbZTkZMWz2vkEk5S47vW5m4kqaE38hZ7Sbxkf8RJzQFB6lecD5rMZ6jiCSaXlZC4jSx3a3iqarflw7Pb3Tfl1anNezwcbD9XBXg2T7kXMfpACIWlzMeniD5o4QD03iss_h9taLCRqryc3Ng5KK4uQzSPbH3TMPgN6Fv05I8I3iSzHUd19e3_cuqvxPCwknrU7gQAqTTa60y2lMuzMyaYv-NxzT7arXta-QvL0IHoY5L9yJMnkB2fkOEEOZ4b2avb1X9zZa4O0xLJeQkP6xV-SCtYFaOj6YiQvG3xRMZApJtDeEUy9BfT5k62LeYkWx0hVC5k6fkTAO0KTVYgtmEuZOVb0xVxI9KDXYNOZ1I1AU7tE70YuRfVh-xbgsaLtqzAncHJ3c9iAl4ECMku8L1owF32yzV43V2iGvUVl_CynGgzx0pAdcCgm2ZAnWX2lSybdjSiwUVufbzmSA0suICBXuUaVH12UjZ5RthK0UVJ7VeE4WiKDmmN2X0OG41xYa2sXoerAKxqD0g3ZCEDVuEWkkTdqQncADX7FUpWXXA3t0LFlFPzw5WwMN770EO80BlU5tLNJGJ7-r8WjZzq2mtQwk97bFsblSRXn-TnJy_qXzbU7KgZ1LaCRrJfWmNSOKRgUlS3MEORj83jXtof465YOuYZqWoGlrQWMexmvgpngduOWXmbtZEvUY7vVlMz-iybI0yYMwxhOxGMVzhTEtuUCK0Il0XtPwDhgadE9wRlUPjz9fsWbbKiJIvOIZxM85LS3NkCLOns2Ua7cWK4ehtTgr2CWaSVGnk2yHbW0lR-sAk-juC4NR396HqHmQlHLIpIm4GzaTUBHq4gkPl7pfFHaZC-3QUDKOC9D-Tw88Q&isca=1|this one >
+---
+i don't see that product in the inventory report...
+---
+idk if these are the right timestamps but grabbing an inventory report from <https://console.cloud.google.com/storage/browser/partner-inventory-report-prod/amazon-plm;tab=objects?invt=AbtGag&project=fulfil-web&pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22,%22s%22:%5B(%22i%22:%22objectListDisplayFields%2FtimeCreated%22,%22s%22:%221%22),(%22i%22:%22displayName%22,%22s%22:%220%22)%5D))&prefix=&forceOnObjectsSortingFiltering=true|here>, around what I think is the samish time <https://ff00e63fc4520c41d514f57af6273b0506399070870d0d7ae81aa10-apidata.googleusercontent.com/download/storage/v1/b/partner-inventory-report-prod/o/amazon-plm%2Fc75c30f1-368b-4b8e-a654-5945683bd0f9.json?jk=AbSFce4Pq0_J88VQ-GrsCe1AQMWFJ0AEClfYa41SHP98vhnxNYiq9TimnESv_TxYuKw8kq28RW0FK6ROtMEPJFhuoWwySldcKSsXRyII3u_ONQuh4q2mVgmEKP5jWIn7aUXEz99JQD7XkbrAtmPFP87KrNQJDS9_K-skxJeEMX6bwoofo_wF9asg1R0-oWdtrhZ1TP85aGhoKBEYIYVQAtL8iFviN223_hwpgpeweas4F00bdBL8B2JtM942sFR5XpSTxkZOOjsdm7K9jRmqYpydf_6z9wI7BwwqfE44c94op0NiNCBmVZw5DHaiJRYQEOyMcqGDM8isD5FB0VpPJjJzTCpL7s_f0h6zYTWqI9_UFfv8hP5N-kW8yYg3qs5pkymqKx0rH_u6Q8lRDzcnf88CZW6uitQqWiYTBBSVlZmoxTAJN27-dU-SYE6djgYfZL6TjlO-hGXVFpo2tio0Phn19Q1nt4Eglio2lnbTGph_rPaxU6SjQIEjLvlE-BHxdK94mKwzs81j44a0wr1lH9RLGk-G9tHzY-bXhj_Sw3piUHrh5STDf8bUtbgjYkG6xdl5GK1F32ILg7PJQiKXQh3PYauTFoDJEc20EGQC7nrK1B14VsZsAFaVouuHbcHyB7TNbxqlIqLm-Uw5b-zgBJ40f9CHE3TynHuy6UHN4b34GHiBks_v77xSzeFCuBjumF8YwKgT6oUIYm_m1QxrR0rF1FMeA_Q_wu0DqpLnEYcMp3p79EiQQFfEgHjasUj_b3NML9tMG2Zy4m6ftcvAdISdq_EzClLTetJ22uRvA2y20eH8luIuAlGUGmM19om48TbKMWuGKgRswn5vA0dSgaLuouzFX3EEcIfI0Bthcg-ovK09zyVOF1mRvW4WdOHoi7k0622oYtYWIX0u6zdp2p-MkWdoMiD71ebbYvcZXlOAqsc2nfPfOouw-PmJLHkHMhcl4ded13TgoqaNniQZm2WqxnScy-D0jUi39iWxbNCE_OTVzY4ohGv_3KbQJNAxU3WIhk5-QueFTYSfu-4wyssr5RcNqGqrBHA7nj_ILYYKX9R1dPQyxBUrlDTldhmMlRMCJ9HIl6HFT353DH4kATwZLoDUH3Q3hoIKgl7oVaGUJYY_in1LeVh1HWyw-yycR-aV_dE5zLySeplVi0US3teeWV5QnBylO5Y1lGGbJ__Irqr76wMXXNWngELuWfLU&isca=1|here>?
+---
+we are talkinga bout 44039 (B0BBWG5C2W ) right? Based on <https://grafana.fulfil-api.com/d/beg4y6ekj79q8b/partner-order-insights?orgId=1&var-DataSource=DOKYKGqV2&var-PartnerOrderId=112-6369692-3247423&var-FulfilOrderId=218926&var-fulfil_api_job=fulfil-prod%2Ffulfil-api&var-fulfil_api_batch_job=fulfil-prod%2Ffulfil-api-batch&from=now-6h&to=now|this> they ordered qty 2.
+---
+the earliest start pack time was 2025-03-26 12:31:00.880 . thats when we tried to add to cart and sent to the factory
+---
+• Release notes
+• ticket triage
+• Amazon QA questions support
+---
+can we (you and i) chat for just a bit about stuff that you do that will need to be obsorbed?
+---
+after the dev sync
+---
+i have a meeting w/ matt to talk about what we are going to do
+---
+did matt or anyone say how/what we are going to communicate w/ amazon?
+---
+nah, for this one it looks like for this order, amazon ordered 9 items and we thought there was 9 available
+---
+i have to hop off. sorry all
+---
+<https://docs.google.com/document/d/1ePgihHijVr-h8Smn1xAHiWPjVMhXbiL1dO0agWpqjzs/edit?tab=t.0>
+---
+works for me. but im remote on vpn
+---
+hmm,
+---
+You know how devastated i am buddy, but im happy for you.
+---
+ty
+---
+because <https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingress-prometheus-nextgen?orgId=1&refresh=1m&var-controller_class=All&var-namespace=All&var-ingress=frapi&var-pod=All&from=now-1h&to=now&var-datasource=P7891B9228D7E2494|this> dashboard doesn't seem to work for me
+---
+hey <@U02A7R0NLRX|Lev Lvovsky>, how can I see plm frapi metrics?
+---
+oh wait... that is for pio
+---
+<https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingress-prometheus-nextgen?orgId=1&refresh=1m&var-controller_class=All&var-namespace=All&var-ingress=frapi&var-pod=All&from=now-1h&to=now&var-datasource=prometheus-pioneer|this> dashboard for frapi shows zero 5xx
+---
+i can't recall a single time it has taken me anywhere useful
+---
+does this query link ever work?
+---
+sweet. ty
+---
+<@U0711JMAJTX|Keven de Oliveira>, what ended up happening with the vpn investigation? any meaningful findings/fixes made? <@U07H0RKJJPR|Alessandro Vaiz>, are we still encountering the 5xx/slow api requests on terminal and bot release?
+---
+got a question out here <https://fulfilsolutions.slack.com/archives/C06N29N5G9Y/p1743007826183519>
+---
+better picture
+---
+the sim our e2e tests run on has something going on that idk what to do about. <https://dashboard-partnerlatest-integration.np-fulfil-api.com/roverwatch?vendorstore=amazon-virtualplm>
+---
+i was going to run them again but...
+---
+12/16 today
+---
+they still want that
+---
+no...
+---
+anyone know why people are having to reset password on dashboard? could it be related to our cognito changes?
+---
+fml
+---
+aaaaaaand.... its <https://fulfilsolutions.slack.com/archives/C02T7GDDUQ6/p1742965889835019|resolved> i guess...
+---
+uhh... hmm. just scaled up to 8 pods
+---
+<https://grafana.fulfil-api.com/d/Hv6HwXqVz/kubernetes-compute-resources-pods?orgId=1&refresh=1m&var-datasource=idKYKM3nk&var-cluster=&var-namespace=fulfil-prod&var-pod=artifact-repository-cleanup-prod-29040480-5rgvc&var-pod=fulfil-api-batch-66667f77dd-dttsn&var-pod=fulfil-api-batch-66667f77dd-p592g&var-pod=fulfil-api-batch-66667f77dd-rhwxf&var-pod=fulfil-api-batch-66667f77dd-sj2lh|4 batch pods> don't look tooo bad...
+---
+there is 4 batch pods
+---
+mysql is healthy
+---
+store is closed, tons of shit is estopped and down,
+---
+<https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1742941865511429?thread_ts=1742934025.442609&amp;cid=C05JVN1UMFH>
+---
+question about how we are going to group them
+---
+Details on the changes that the factory is making is <https://fulfilsolutions.slack.com/archives/C0663STKJN6/p1742854897438869|here>
+---
+we could still have it put the text, and/or we could just make sure that it goes into the <#C02T7GDDUQ6> channel that has eyes on it.
+---
+oh well. some visibility is better than none. thanks for trying
+---
+we will 100% have to explain what they mean...
+---
+k sry
+---
+<https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1742937514239729?thread_ts=1742934025.442609&cid=C05JVN1UMFH|https://fulfilsolutions.slack.com/archives/C05JVN1UMFH/p1742937514239729?thread_ts=1742934025.442609&amp;cid=C05JVN1UMFH>
+---
+If a single slot changes its state, then an event will have one entry in the array but if a whole pack is estopped, an event (or multiple events depending on size of payload) will have an array with multiple slots
+---
+<https://fulfilsolutions.slack.com/archives/C073HNWR2MB/p1742937075278899>
+---
+<S07MB153QDA> (and anyone who cares about orders). we have been hard at work trying to alleviate the issues with shorts. One major change for this effort was released yesterday in our "bypass reservations" feature. The cloud should now be sending ALL of the items that a partner requests to the factory, not just the ones we have reservations for. We worked with factory and data to ensure this doesn't impact order execution or metrics but its a pretty big change. We are still working on adding more visibility to the dashboard in terms of showing substitutions and corrections, but this should at least give us more confidence that the factory has the most information possible to fulfill an order should new inventory come available during pick.
+---
+i gotta take a shit real quick and grab a bite to eat. ill dm u in a bit
+---
+been dealing w/ all kinds of fun shit all day
+---
+np man
+---
+<@W01AHL4E882> and <@U03B31814Q2>, for the StorageStackSlotStateChangedEvent - What do you think about us creating a new event that basically has an array/collection of slots? it will have pretty much the same data as the existing StorageStackSlotStateChangedEvent but it will have multiple slots at a time. if too many slots change state at once, we would group it into multiple events all around the same time. Of course, before we move forward with the final implementation we will run the exact schema by you, but we just want to understand if you think this approach will work.
+---
+yeah im around
+---
+also, are we batching it like zach is for the stockitem? there is a size limit on the gcp pubsub event and we want to make sure we don't exceed that.
+---
+or is the plan to batch it internally and shit out individual events to the partner?
+---
+did we run the event/schema by amazon?
+---
+ah ok. that explains why i couldn't find anything. was looking in the wrong spot. thanks Keven
+---
+oh, if you refresh, i think its back?
+---
+so i think the requests just aren't even making it there?
+---
+the network tab in the browser doesn't have any response info from frapi
+---
+im still investigating and still confused.
+based on <https://grafana.fulfil-api.com/d/Hv6HwXqVz/kubernetes-compute-resources-pods?orgId=1&refresh=1m&var-datasource=BdKLFMq7k&var-cluster=&var-namespace=fulfil-prod&var-pod=frapi-759887846b-9pcnw&var-pod=frapi-759887846b-mp962&var-pod2=frapi-v145-ptvzf&var-pod3=frapi-v146-ffttj&from=now-1h&to=now|this>, i THINK frapi is overall healthy
+---
+idk if thats related. we can create a new thread
+---
+ah sorry. i didn't see its been a while. i just assumed it was related
+---
+BQ related?
+---
+these errors make any sense to you <@U02HZSV4EL8|Liz Howard>?
+```{
+  "@t": "2025-03-25T16:00:01.8884757Z",
+  "@mt": "[500]: Unhandled Exception occurred. Unable to process the request.",
+  "@l": "Error",
+  "@x": "System.NullReferenceException: Object reference not set to an instance of an object.\n   at Fulfil.Libs.Data.Logging.ItemSnapshot..ctor(Item item, DateTime snapshotTime) in /code/src/Fulfil.Libs/Data/Logging/ItemSnapshot.cs:line 161\n   at Fulfil.FactoryRestApi.Controllers.BigQueryController.<>c__DisplayClass1_0.<GetItemsSnapshotByFilters>b__1(Item i) in /code/src/Fulfil.FactoryRestApi/Controllers/BigQueryController.cs:line 57\n   at System.Linq.Enumerable.SelectListIterator`2.Fill(ReadOnlySpan`1 source, Span`1 destination, Func`2 func)\n   at System.Linq.Enumerable.SelectListIterator`2.ToList()\n   at Fulfil.FactoryRestApi.Controllers.BigQueryController.GetItemsSnapshotByFilters(String typedFilters, Boolean returnJson) in /code/src/Fulfil.FactoryRestApi/Controllers/BigQueryController.cs:line 57\n   at lambda_method5884(Closure, Object, Object[])\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\n--- End of stack trace from previous location ---\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()\n--- End of stack trace from previous location ---\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\n   at Prometheus.HttpMetrics.HttpRequestDurationMiddleware.Invoke(HttpContext context)\n   at Prometheus.HttpMetrics.HttpRequestCountMiddleware.Invoke(HttpContext context)\n   at Prometheus.HttpMetrics.HttpInProgressMiddleware.Invoke(HttpContext context)\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)\n   at OtelExceptionHandler.InvokeAsync(HttpContext httpContext) in /code/src/Fulfil.FactoryRestApi/Middleware/OtelExceptionHandler.cs:line 25\n   at Fulfil.FactoryRestApi.Middleware.TraceIdMiddleware.InvokeAsync(HttpContext context) in /code/src/Fulfil.FactoryRestApi/Middleware/TraceIdMiddleware.cs:line 27\n   at AutoWrapper.Base.WrapperBase.InvokeAsyncBase(HttpContext context, AutoWrapperMembers awm)",
+  "SourceContext": "AutoWrapper.AutoWrapperMiddleware",
+  "RequestId": "0HNBB0BQM0JG5:00000001",
+  "RequestPath": "/bigquery/items-snapshot",
+  "ConnectionId": "0HNBB0BQM0JG5"
+}```
+---
+maybe <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22btl%22%3A%7B%22datasource%22%3A%22DOKYKGqV2%22%2C%22queries%22%3A%5B%7B%22refId%22%3A%22A%22%2C%22expr%22%3A%22%7Bapp_kubernetes_io_name%3D%5C%22frapi%5C%22%7D+%7C%3D+%60%5B500%5D%60%22%2C%22queryType%22%3A%22range%22%2C%22datasource%22%3A%7B%22type%22%3A%22loki%22%2C%22uid%22%3A%22DOKYKGqV2%22%7D%2C%22editorMode%22%3A%22builder%22%7D%5D%2C%22range%22%3A%7B%22from%22%3A%22now-3h%22%2C%22to%22%3A%22now%22%7D%7D%7D&orgId=1|these> are the correct logs
+---
+im confused. <https://grafana.fulfil-api.com/d/k8s-nginx-ingress-prometheus-ng/kubernetes-nginx-ingress-prometheus-nextgen?orgId=1&refresh=1m&var-controller_class=All&var-namespace=All&var-ingress=frapi&var-pod=All&from=now-1h&to=now&var-datasource=prometheus-pioneer|pio frapi> looks healthy?
+---
+what did we change?
+---
+all frapi requests failing
+---
+that roverwatch?
+---
+i have another meeting
+---
+Bjorn and Nigel have been complaining about sims in <#C0291DY4SAU> a bunch recently. Especially when trying to run HOG which runs on batch...
+---
+Check the associated thread and see if the discussion there has fixed the issue.
+---
+hmm... it looks like a bunch of these event enrichment failures are for dispense events in pioneer that don't have an order. i am pretty sure the dispenseevent mysql table requires an order id, but the factory definitely does do some dispense testing that isn't related to any order.
+---
+im running the tests against partnerlatest rn
+---
+didn't see your message
+---
+<@U07H0RKJJPR|Alessandro Vaiz>, this is a good example of the extra clarity we need on orders in dashboard
+---
+<@U08046TFEJC|Steve Steinmetz>, to answer your question, they ordered 12 and then did a correction.
+---
+thanks guys
+---
+anyway... ill figure this out
+---
+why doesn't this work then meta_url =~ `/partner/v1/orders`
+---
+this worked a swear...
+---
+oooh
+---
+why doesn't <https://grafana.fulfil-api.com/explore?schemaVersion=1&panes=%7B%22sc0%22%3A%7B%22datasource%22%3A%22DOKYKGqV2%22%2C%22queries%22%3A%5B%7B%22datasource%22%3A%7B%22type%22%3A%22loki%22%2C%22uid%22%3A%22DOKYKGqV2%22%7D%2C%22editorMode%22%3A%22code%22%2C%22expr%22%3A%22%7Bjob%3D%5C%22fulfil-prod%2Ffulfil-api%5C%22%7D+%7C%7E+%60%28111-1341789-2625819%7C218368%29%60+%7C%3D+%60external_order_id%60+%7C+json+%7C+meta_method+%3D+%60PUT%60+%7C+meta_url+%3D+%60%2Fpartner%2Fv1%2Forders%60%22%2C%22hide%22%3Afalse%2C%22queryType%22%3A%22range%22%2C%22refId%22%3A%22B%22%7D%5D%2C%22range%22%3A%7B%22from%22%3A%221742799600000%22%2C%22to%22%3A%221742885999000%22%7D%7D%7D&orgId=1|this >find it?
+---
+who wrote this piece of shit
+---
+ah wtf... i have a section for that in my grafana dashboard... and nothing showed up
+---
+ah, ok. i thought we merged it earlier
+---
+And ping on call
+---
+Its gonna be on prod?
+---
+Oh cool
+---
+<https://grafana.fulfil-api.com/d/beg4y6ekj79q8b/partner-order-insights?orgId=1&var-DataSource=DOKYKGqV2&var-PartnerOrderId=111-1341789-2625819&var-FulfilOrderId=218368&var-fulfil_api_job=fulfil-prod%2Ffulfil-api&var-fulfil_api_batch_job=fulfil-prod%2Ffulfil-api-batch&from=1742799600000&to=1742885999000|here> is the dashboard I used to investigate. maybe <@U06NWFAAXFE|Christian Soto> or <@U06M6D24NH4|Andre Luis Moreira> can investigate in the morning why we sent 12 to the factory and see if this is a bug with the new "bypass reservation" stuff?
+---
+amazon ordered 11 things originally
+```[
+        {
+          "product_code": "B00104LSBU",
+          "quantity": 2,
+          "substitutions": []
+        },
+        {
+          "product_code": "B0CXZBCTFC",
+          "quantity": 1,
+          "substitutions": []
+        },
+        {
+          "product_code": "B08PMD7FC1",
+          "quantity": 2,
+          "substitutions": []
+        },
+        {
+          "product_code": "B01B2OVUAG",
+          "quantity": 1,
+          "substitutions": []
+        },
+        {
+          "product_code": "B074H67KDV",
+          "quantity": 4,
+          "substitutions": []
+        },
+        {
+          "product_code": "B074H67LRP",
+          "quantity": 1,
+          "substitutions": []
+        }
+      ]```
+but we sent 12 to the factory...
+```[
+      {
+        "grade_id": 0,
+        "product_id": 25237
+      },
+      {
+        "grade_id": 0,
+        "product_id": 25237
+      },
+      {
+        "grade_id": 0,
+        "product_id": 41006
+      },
+      {
+        "grade_id": 0,
+        "product_id": 41006
+      },
+      {
+        "grade_id": 0,
+        "product_id": 25248
+      },
+      {
+        "grade_id": 0,
+        "product_id": 25248
+      },
+      {
+        "grade_id": 0,
+        "product_id": 12562
+      },
+      {
+        "grade_id": 0,
+        "product_id": 22053
+      },
+      {
+        "grade_id": 0,
+        "product_id": 22053
+      },
+      {
+        "grade_id": 0,
+        "product_id": 22053
+      },
+      {
+        "grade_id": 0,
+        "product_id": 22053
+      },
+      {
+        "grade_id": 0,
+        "product_id": 27335
+      }
+    ]```
+and then amazon requested a correction for
+```{
+          "product_code": "B074H67KDV",
+          "quantity": 1
+        }```
+so... im not sure why we sent 12 to the factory but the correction explains the 1 extra...
+---
+:eyes:
